@@ -409,23 +409,22 @@
     <section class="slider">
       <div class="hero-slider">
         <!-- Start Single Slider -->
-        <div
-          class="single-slider"
-          style="background-image: url('img/slider2.jpg')"
-        >
-          <div class="container">
+        <div class="single-slider" style="position: relative; overflow: hidden;">
+          <!-- Background Video -->
+          <video autoplay loop muted playsinline style="position: absolute; top: 50%; left: 50%; min-width: 100%; min-height: 100%; width: auto; height: auto; z-index: 1; transform: translate(-50%, -50%);">
+            <source src="" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <!-- Overlay -->
+          <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 2;"></div>
+          <!-- Content -->
+          <div class="container" style="position: relative; z-index: 3;">
             <div class="row">
               <div class="col-lg-7">
                 <div class="text">
-                  <h1>
-                    We Provide <span>Medical</span> Services That You Can
-                    <span>Trust!</span>
-                  </h1>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Mauris sed nisl pellentesque, faucibus libero eu, gravida
-                    quam.
-                  </p>
+                  <h1 style="color: #fff;">Transforming <span>Smiles</span>, Enhancing <span>Confidence!</span></h1>
+                  <p style="color: #fff;">From teeth alignment to smile makeovers, our expert care helps you achieve a confident, radiant smile. Let us bring out the best in your smile!</p>
+
                   <div class="button">
                     <a href="#" class="btn">Get Appointment</a>
                     <a href="#" class="btn primary">Learn More</a>
@@ -436,23 +435,24 @@
           </div>
         </div>
         <!-- End Single Slider -->
-        <div
-          class="single-slider"
-          style="background-image: url('img/slider.jpg')"
-        >
-          <div class="container">
+    
+        <!-- Start Second Slider -->
+        <div class="single-slider" style="position: relative; overflow: hidden;">
+          <!-- Background Video -->
+          <video autoplay loop muted playsinline style="position: absolute; top: 50%; left: 50%; min-width: 100%; min-height: 100%; width: auto; height: auto; z-index: 1; transform: translate(-50%, -50%);">
+            <source src="" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <!-- Overlay -->
+          <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 2;"></div>
+          <!-- Content -->
+          <div class="container" style="position: relative; z-index: 3;">
             <div class="row">
               <div class="col-lg-7">
                 <div class="text">
-                  <h1>
-                    We Provide <span>Medical</span> Services That You Can
-                    <span>Trust!</span>
-                  </h1>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Mauris sed nisl pellentesque, faucibus libero eu, gravida
-                    quam.
-                  </p>
+                  <h1 style="color: #fff;">We Create <span>Healthy</span> Smiles You Can <span>Trust!</span></h1>
+                  <p style="color: #fff;">Experience expert dental care in a warm, comfortable environment. From routine check-ups to advanced treatments, we ensure your smile stays bright and healthy.</p>
+
                   <div class="button">
                     <a href="#" class="btn">Get Appointment</a>
                     <a href="#" class="btn primary">About Us</a>
@@ -462,8 +462,10 @@
             </div>
           </div>
         </div>
+        <!-- End Second Slider -->
       </div>
     </section>
+    
     <!--/ End Slider Area -->
 
     <!-- Start Schedule Area -->
@@ -471,78 +473,89 @@
       <div class="container">
         <div class="schedule-inner">
           <div class="row">
+            <!-- Emergency Cases -->
             <div class="col-lg-4 col-md-6 col-12">
-              <!-- single-schedule -->
               <div class="single-schedule first">
                 <div class="inner">
                   <div class="icon">
                     <i class="fa fa-ambulance"></i>
                   </div>
                   <div class="single-content">
-                    <span>Lorem Amet</span>
+                    <span>Need Immediate Care?</span>
                     <h4>Emergency Cases</h4>
                     <p>
-                      Lorem ipsum sit amet consectetur adipiscing elit. Vivamus
-                      et erat in lacus convallis sodales.
+                      Dental emergencies? We provide immediate care for severe toothaches, broken teeth, and urgent dental procedures. 
+                      Contact us right away!
                     </p>
-                    <a href="#"
-                      >LEARN MORE<i class="fa fa-long-arrow-right"></i
-                    ></a>
+                    <a href="tel:+yournumber">CALL NOW<i class="fa fa-long-arrow-right"></i></a>
                   </div>
                 </div>
               </div>
             </div>
+    
+            <!-- Doctors Timetable -->
             <div class="col-lg-4 col-md-6 col-12">
-              <!-- single-schedule -->
               <div class="single-schedule middle">
                 <div class="inner">
                   <div class="icon">
                     <i class="icofont-prescription"></i>
                   </div>
                   <div class="single-content">
-                    <span>Fusce Porttitor</span>
+                    <span>Check Availability</span>
                     <h4>Doctors Timetable</h4>
                     <p>
-                      Lorem ipsum sit amet consectetur adipiscing elit. Vivamus
-                      et erat in lacus convallis sodales.
+                      Our expert team is available at convenient hours. Plan your visit by checking our doctor's availability in advance.
                     </p>
-                    <a href="#"
-                      >LEARN MORE<i class="fa fa-long-arrow-right"></i
-                    ></a>
+                    <a href="doctors-timetable.html">VIEW TIMETABLE<i class="fa fa-long-arrow-right"></i></a>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 col-md-12 col-12">
-              <!-- single-schedule -->
+    
+            <!-- Opening Hours -->
+            <!-- <div class="col-lg-4 col-md-12 col-12">
               <div class="single-schedule last">
                 <div class="inner">
                   <div class="icon">
                     <i class="icofont-ui-clock"></i>
                   </div>
                   <div class="single-content">
-                    <span>Donec luctus</span>
+                    <span>Visit Us</span>
                     <h4>Opening Hours</h4>
                     <ul class="time-sidual">
-                      <li class="day">
-                        Monday - Fridayp <span>8.00-20.00</span>
-                      </li>
-                      <li class="day">Saturday <span>9.00-18.30</span></li>
-                      <li class="day">
-                        Monday - Thusday <span>9.00-15.00</span>
-                      </li>
+                      <li class="day">Monday - Friday <span>8:00 AM - 8:00 PM</span></li>
+                      <li class="day">Saturday <span>9:00 AM - 6:30 PM</span></li>
+                      <li class="day">Sunday <span>Closed</span></li>
                     </ul>
-                    <a href="#"
-                      >LEARN MORE<i class="fa fa-long-arrow-right"></i
-                    ></a>
+                    <a href="contact-us.html">BOOK NOW<i class="fa fa-long-arrow-right"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+
+            <div class="col-lg-4 col-md-6 col-12">
+              <div class="single-schedule middle">
+                <div class="inner">
+                  <div class="icon">
+                    <i class="icofont-prescription"></i>
+                  </div>
+                  <div class="single-content">
+                    <span>Visit Us</span>
+                    <h4>Opening Hours</h4>
+                    <p>
+                      Monday - Friday : 8:00 AM - 8:00 PM <br> Saturday  : 9:00 AM - 6:30 PM <br> Sunday : Closed <br> We offer flexible appointment slots.</span>
+                    </p>
+                    <a href="doctors-timetable.html">BOOK NOW<i class="fa fa-long-arrow-right"></i></a>
                   </div>
                 </div>
               </div>
             </div>
+    
           </div>
         </div>
       </div>
     </section>
+    
     <!--/End Start schedule Area -->
 
     <!-- Start Feautes -->
@@ -667,78 +680,92 @@
     <!--/ End Fun-facts -->
 
     <!-- Start Why choose -->
-    <section class="why-choose section">
-      <div class="container">
-        <div class="row">
+    <section class="why-choose section" style="padding: 60px 0; background-color: #f8f9fa;">
+      <div class="container" style="max-width: 1200px; margin: 0 auto;">
+        <!-- Section Title -->
+        <div class="row" style="text-align: center; margin-bottom: 40px;">
           <div class="col-lg-12">
             <div class="section-title">
-              <h2>About The Arc and Artt Dentistry</h2>
-            
-              <img src="img/section-img.png" alt="#" />
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipiscing elit praesent
-                aliquet. pretiumts
+              <h2 style="font-size: 32px; font-weight: bold; color: #333; margin-bottom: 10px;">The Arch & Artt Dentistry</h2>
+              <img src="img/section-img.png" alt="Section decoration" style="margin: 10px 0; width: 80px;" />
+              <p style="font-size: 16px; color: #666; max-width: 700px; margin: 0 auto;">
+                Committed to providing exceptional dental care through expertise, innovation, and personalized attention, ensuring the highest standard of oral healthcare in a comfortable and welcoming environment.
               </p>
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-lg-6 col-12">
-            <!-- Start Choose Left -->
-            <div class="choose-left">
-              <h3>About [Doctor]</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Maecenas pharetra antege vel est lobortis, a commodo magna
-                rhoncus. In quis nisi non emet quam pharetra commodo.
+        
+        <!-- Mission & Vision -->
+        <div class="row" style="display: flex; flex-wrap: wrap; gap: 30px; align-items: stretch;">
+          <div class="col-lg-6 col-12" style="flex: 1 1 45%;">
+            <div style="background: #ffffff; padding: 30px; border-radius: 8px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); height: 100%;">
+              <h3 style="font-size: 26px; font-weight: bold; color: #333; margin-bottom: 15px;">Our Mission</h3>
+              <p style="font-size: 16px; color: #555;">
+                Our mission is to provide comprehensive dental care for all ages—from pediatric to geriatric—ensuring a lifetime of healthy smiles through personalized, compassionate service.
               </p>
-              <p>
-                Class aptent taciti sociosqu ad litora torquent per conubia
-                nostra, per inceptos himenaeos.
+            </div>
+          </div>
+          <div class="col-lg-6 col-12" style="flex: 1 1 45%;">
+            <div style="background: #ffffff; padding: 30px; border-radius: 8px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); height: 100%;">
+              <h3 style="font-size: 26px; font-weight: bold; color: #333; margin-bottom: 15px;">Our Vision</h3>
+              <p style="font-size: 16px; color: #555;">
+                To be the leading dental care provider by delivering excellence and compassionate care, creating healthier, happier smiles in our community.
               </p>
-              <div class="row">
-                <div class="col-lg-6">
-                  <ul class="list">
-                    <li>
-                      <i class="fa fa-caret-right"></i>Maecenas vitae luctus
-                      nibh.
-                    </li>
-                    <li><i class="fa fa-caret-right"></i>Duis massa massa.</li>
-                    <li>
-                      <i class="fa fa-caret-right"></i>Aliquam feugiat interdum.
-                    </li>
-                  </ul>
-                </div>
-                <div class="col-lg-6">
-                  <ul class="list">
-                    <li>
-                      <i class="fa fa-caret-right"></i>Maecenas vitae luctus
-                      nibh.
-                    </li>
-                    <li><i class="fa fa-caret-right"></i>Duis massa massa.</li>
-                    <li>
-                      <i class="fa fa-caret-right"></i>Aliquam feugiat interdum.
-                    </li>
-                  </ul>
-                </div>
+            </div>
+          </div>
+        </div>
+    
+        <!-- About Clinic & About Doctor -->
+        <div class="row" style="display: flex; flex-wrap: wrap; gap: 30px; align-items: stretch; margin-top: 40px;">
+          <div class="col-lg-6 col-12" style="flex: 1 1 45%;">
+            <div style="background: #ffffff; padding: 30px; border-radius: 8px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); height: 100%;">
+              <h3 style="font-size: 26px; font-weight: bold; color: #333; margin-bottom: 15px;">About Our Clinic</h3>
+              <p style="font-size: 16px; color: #555;">
+                At The Arc and Artt Dentistry, we believe that a healthy smile is the foundation of overall well-being. We offer comprehensive dental services—from preventive care to advanced restorative and cosmetic treatments—using cutting-edge technology to ensure precision and comfort.
+              </p>
+              <p style="font-size: 16px; color: #555;">
+                Our patient-centric approach focuses on providing stress-free, effective treatments tailored to individual needs, ensuring the best possible outcomes.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-6 col-12" style="flex: 1 1 45%;">
+            <div style="background: #ffffff; padding: 30px; border-radius: 8px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); height: 100%;">
+              <h3 style="font-size: 26px; font-weight: bold; color: #333; margin-bottom: 15px;">About Dr. [Doctor's Name]</h3>
+              <p style="font-size: 16px; color: #555;">
+                Dr. [Doctor's Name] is a highly experienced dental professional dedicated to providing top-tier oral healthcare. With a commitment to excellence, Dr. [Last Name] combines expertise with a compassionate approach, ensuring that patients feel at ease throughout their treatment journey.
+              </p>
+              <p style="font-size: 16px; color: #555;">
+                Utilizing the latest advancements in dental technology, Dr. [Last Name] focuses on delivering precise, effective, and minimally invasive treatments to enhance both oral health and aesthetics.
+              </p>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Why Choose Us & Image -->
+        <div class="row" style="display: flex; flex-wrap: wrap; gap: 30px; align-items: center; margin-top: 40px;">
+          <div class="col-lg-6 col-12" style="flex: 1 1 45%;">
+            <div style="background: #ffffff; padding: 30px; border-radius: 8px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); height: 100%;">
+              <h3 style="font-size: 26px; font-weight: bold; color: #333; margin-bottom: 15px;">Why Choose Us?</h3>
+              <ul style="list-style: none; padding: 0; font-size: 16px; color: #555;">
+                <li style="margin-bottom: 10px;"><i class="fa fa-check-circle" style="color: #28a745; margin-right: 8px;"></i> Comprehensive Dental Care</li>
+                <li style="margin-bottom: 10px;"><i class="fa fa-check-circle" style="color: #28a745; margin-right: 8px;"></i> Experienced and Skilled Professionals</li>
+                <li style="margin-bottom: 10px;"><i class="fa fa-check-circle" style="color: #28a745; margin-right: 8px;"></i> State-of-the-Art Equipment</li>
+                <li style="margin-bottom: 10px;"><i class="fa fa-check-circle" style="color: #28a745; margin-right: 8px;"></i> Personalized Treatment Plans</li>
+                <li><i class="fa fa-check-circle" style="color: #28a745; margin-right: 8px;"></i> Comfortable and Stress-Free Experience</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-6 col-12" style="flex: 1 1 45%;">
+            <div style="text-align: center;">
+              <div style="overflow: hidden; border-radius: 8px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);">
+                <img src="/img/team.JPG" alt="Our Dental Team" style="width: 100%; display: block;">
               </div>
             </div>
-            <!-- End Choose Left -->
           </div>
-          <div class="col-lg-6 col-12">
-            <!-- Start Choose Rights -->
-            <div class="choose-right">
-              <div class="image-container">
-                <!-- Image Section -->
-                <img src="/img/team.JPG" alt="Dental Services" style="width: 100%; border-radius: 8px;">
-              </div>
-            </div>
-            <!-- End Choose Rights -->
-          </div>
-          
         </div>
       </div>
     </section>
+    
     <!--/ End Why choose -->
 
     <!-- Start Call to action -->
@@ -1116,155 +1143,83 @@
       <div class="footer-top">
         <div class="container">
           <div class="row">
+            <!-- About Us -->
             <div class="col-lg-3 col-md-6 col-12">
               <div class="single-footer">
-                <h2>About Us</h2>
+                <h2>About The Arch & Artt Dentistry</h2>
                 <p>
-                  Lorem ipsum dolor sit am consectetur adipisicing elit do
-                  eiusmod tempor incididunt ut labore dolore magna.
+                  At The Arch & Artt Dentistry, we are dedicated to providing comprehensive dental care with compassion and precision. Our experienced team is committed to creating healthy, confident smiles.
                 </p>
                 <!-- Social -->
                 <ul class="social">
-                  <li>
-                    <a href="#"><i class="icofont-facebook"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="icofont-google-plus"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="icofont-twitter"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="icofont-vimeo"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="icofont-pinterest"></i></a>
-                  </li>
+                  <li><a href="#"><i class="icofont-facebook"></i></a></li>
+                  <li><a href="#"><i class="icofont-google-plus"></i></a></li>
+                  <li><a href="#"><i class="icofont-twitter"></i></a></li>
+                  <li><a href="#"><i class="icofont-vimeo"></i></a></li>
+                  <li><a href="#"><i class="icofont-pinterest"></i></a></li>
                 </ul>
                 <!-- End Social -->
               </div>
             </div>
+            <!-- Quick Links -->
             <div class="col-lg-3 col-md-6 col-12">
               <div class="single-footer f-link">
                 <h2>Quick Links</h2>
                 <div class="row">
                   <div class="col-lg-6 col-md-6 col-12">
                     <ul>
-                      <li>
-                        <a href="#"
-                          ><i class="fa fa-caret-right" aria-hidden="true"></i
-                          >Home</a
-                        >
-                      </li>
-                      <li>
-                        <a href="#"
-                          ><i class="fa fa-caret-right" aria-hidden="true"></i
-                          >About Us</a
-                        >
-                      </li>
-                      <li>
-                        <a href="#"
-                          ><i class="fa fa-caret-right" aria-hidden="true"></i
-                          >Services</a
-                        >
-                      </li>
-                      <li>
-                        <a href="#"
-                          ><i class="fa fa-caret-right" aria-hidden="true"></i
-                          >Our Cases</a
-                        >
-                      </li>
-                      <li>
-                        <a href="#"
-                          ><i class="fa fa-caret-right" aria-hidden="true"></i
-                          >Other Links</a
-                        >
-                      </li>
+                      <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Home</a></li>
+                      <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> About Us</a></li>
+                      <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Services</a></li>
+                      <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Our Cases</a></li>
+                      <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Blog</a></li>
                     </ul>
                   </div>
                   <div class="col-lg-6 col-md-6 col-12">
                     <ul>
-                      <li>
-                        <a href="#"
-                          ><i class="fa fa-caret-right" aria-hidden="true"></i
-                          >Consuling</a
-                        >
-                      </li>
-                      <li>
-                        <a href="#"
-                          ><i class="fa fa-caret-right" aria-hidden="true"></i
-                          >Finance</a
-                        >
-                      </li>
-                      <li>
-                        <a href="#"
-                          ><i class="fa fa-caret-right" aria-hidden="true"></i
-                          >Testimonials</a
-                        >
-                      </li>
-                      <li>
-                        <a href="#"
-                          ><i class="fa fa-caret-right" aria-hidden="true"></i
-                          >FAQ</a
-                        >
-                      </li>
-                      <li>
-                        <a href="#"
-                          ><i class="fa fa-caret-right" aria-hidden="true"></i
-                          >Contact Us</a
-                        >
-                      </li>
+                      <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Consultations</a></li>
+                      <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Financing</a></li>
+                      <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Testimonials</a></li>
+                      <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> FAQ</a></li>
+                      <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Contact Us</a></li>
                     </ul>
                   </div>
                 </div>
               </div>
             </div>
+            <!-- Open Hours -->
             <div class="col-lg-3 col-md-6 col-12">
               <div class="single-footer">
-                <h2>Open Hours</h2>
+                <h2>Clinic Hours</h2>
                 <p>
-                  Lorem ipsum dolor sit ame consectetur adipisicing elit do
-                  eiusmod tempor incididunt.
+                  We are here to help you achieve your best smile. Our clinic hours are designed to offer flexible appointment options.
                 </p>
                 <ul class="time-sidual">
-                  <li class="day">Monday - Fridayp <span>8.00-20.00</span></li>
-                  <li class="day">Saturday <span>9.00-18.30</span></li>
-                  <li class="day">Monday - Thusday <span>9.00-15.00</span></li>
+                  <li class="day">Monday - Friday <span>8:00 AM - 8:00 PM</span></li>
+                  <li class="day">Saturday <span>9:00 AM - 6:30 PM</span></li>
+                  <li class="day">Sunday <span>Closed</span></li>
                 </ul>
               </div>
             </div>
+            <!-- Newsletter -->
             <div class="col-lg-3 col-md-6 col-12">
               <div class="single-footer">
                 <h2>Newsletter</h2>
                 <p>
-                  subscribe to our newsletter to get allour news in your inbox..
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                  Subscribe to our newsletter to receive the latest dental care tips, clinic updates, and exclusive offers directly in your inbox.
                 </p>
-                <form
-                  action="mail/mail.php"
-                  method="get"
-                  target="_blank"
-                  class="newsletter-inner"
-                >
-                  <input
-                    name="email"
-                    placeholder="Email Address"
-                    class="common-input"
-                    onfocus="this.placeholder = ''"
-                    onblur="this.placeholder = 'Your email address'"
-                    required=""
-                    type="email"
-                  />
+                <form action="mail/mail.php" method="get" target="_blank" class="newsletter-inner">
+                  <input name="email" placeholder="Email Address" class="common-input" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your email address'" required type="email" />
                   <button class="button">
                     <i class="icofont icofont-paper-plane"></i>
                   </button>
                 </form>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-      <!--/ End Footer Top -->
+          </div> <!-- row -->
+        </div> <!-- container -->
+      </div> <!-- footer-top -->
+      
       <!-- Copyright -->
       <div class="copyright">
         <div class="container">
@@ -1272,17 +1227,17 @@
             <div class="col-lg-12 col-md-12 col-12">
               <div class="copyright-content">
                 <p>
-                  © Copyright 2025 | All Rights Reserved by
-                  <a href="https://www.wpthemesgrid.com" target="_blank"></a>The
-                  Arch & Artt Dentistry
+                  © Copyright 2025 | All Rights Reserved by 
+                  <a href="https://www.wpthemesgrid.com" target="_blank">The Arch &amp; Artt Dentistry</a>
                 </p>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <!--/ End Copyright -->
+      <!-- End Copyright -->
     </footer>
+    
     <!--/ End Footer Area -->
 
     <!-- jquery Min JS -->
