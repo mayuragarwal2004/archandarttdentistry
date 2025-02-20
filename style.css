@@ -49,6 +49,30 @@ Version:	1.1
 	Global CSS 
 ===============================*/
 
+.child-services-buttons{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+
+.suggested-services{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+.suggested-services .card-title{
+	max-height: 1.2em;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.suggested-services .card-text{
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;  
+}
+
 .header .nav li .dropdown .second-dropdown{
 	top: -50px;
 	left: calc(100% - 50px);
