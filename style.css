@@ -60,6 +60,22 @@ Version:	1.1
   }
 }
 
+.slider-section{
+  height: 600px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-slider{
+  z-index: 9;
+  height: 600px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+}
+
 .child-services-buttons {
   display: flex;
   flex-wrap: wrap;
