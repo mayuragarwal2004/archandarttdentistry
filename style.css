@@ -77,6 +77,7 @@ Version:	1.1
 }
 
 .child-services-buttons {
+  color: white;
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
@@ -98,6 +99,10 @@ Version:	1.1
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
+}
+
+.suggested-services .btn {
+  color: white;
 }
 
 .header .nav li .dropdown .second-dropdown {

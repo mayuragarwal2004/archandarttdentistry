@@ -15,7 +15,6 @@
     <!-- Title -->
     <title>The Arch & Artt Dentistry</title>
 
-  
     <!-- Favicon -->
     <!-- <link rel="icon" href="img/LOGO_The Arch & Artt Dentistry.png"> -->
     <link
@@ -52,6 +51,7 @@
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="css/responsive.css" />
+    <script src="./data.js"></script>
   </head>
   <body>
     <a
@@ -176,16 +176,16 @@
             <div class="row">
               <div class="col-lg-3 col-md-3 col-12">
                 <!-- Start Logo -->
-                <div class="logo" style="text-align: center;">
+                <div class="logo" style="text-align: center">
                   <a href="index.html">
-                      <img
-                          src="img/R.png"
-                          style="width: 200px; height: auto; margin-bottom: 10px"
-                          alt="#"
-                      />
+                    <img
+                      src="img/R.png"
+                      style="width: 200px; height: auto; margin-bottom: 10px"
+                      alt="#"
+                    />
                   </a>
                 </div>
-              
+
                 <!-- End Logo -->
                 <!-- Mobile Nav -->
                 <div class="mobile-nav"></div>
@@ -206,10 +206,10 @@
                       </li>
                       <li><a href="#">Reviews </a></li>
                       <!-- <li><a href="#">Services </a></li> -->
-                      <li>
-                        <a href="#"
-                          >Services <i class="icofont-rounded-down"></i
-                        ></a>
+                      <li id="services-header-dropdowns">
+                        <a href="#">
+                          Services <i class="icofont-rounded-down"></i>
+                        </a>
                         <ul
                           class="dropdown"
                           style="
@@ -218,136 +218,67 @@
                             background: #fff;
                             padding: 10px;
                           "
-                        >
-                          <li>
-                            <a href="404.html">Pain Relief</a>
-                            <ul
-                              style="
-                                display: none;
-                                position: absolute;
-                                left: 100%;
-                                background: #fff;
-                                padding: 5px;
-                                display: none;
-                              "
-                            >
-                              <li>
-                                <ul class="second-dropdown dropdown">
-                                  <li>
-                                    <a href="404.html">Root Canal Treatment</a>
-                                  </li>
-                                  <li>
-                                    <a href="404.html">Wisdom Tooth Removal</a>
-                                  </li>
-                                  <li><a href="404.html">Gum Treatment</a></li>
-                                  <li><a href="404.html">TMJ/TMD</a></li>
-                                </ul>
-                              </li>
-                            </ul>
-                          </li>
-
-                          <li>
-                            <a href="404.html">Cosmetic Treatment</a>
-                            <ul
-                              style="
-                                position: absolute;
-                                left: 100%;
-                                top: 0;
-                                background: #fff;
-                                padding: 5px;
-                                display: none;
-                                padding: 5px;
-                              "
-                            >
-                              <li>
-                                <ul class="second-dropdown dropdown">
-                                  <li>
-                                    <a href="404.html">Braces Treatment</a>
-                                  </li>
-                                  <li><a href="404.html">Invisalign</a></li>
-                                  <li>
-                                    <a href="404.html">Veneers & Laminates</a>
-                                  </li>
-                                  <li>
-                                    <a href="404.html"
-                                      >Digital Smile Designing</a
-                                    >
-                                  </li>
-                                  <li>
-                                    <a href="404.html">Teeth Whitening</a>
-                                  </li>
-                                </ul>
-                              </li>
-                            </ul>
-                          </li>
-
-                          <li>
-                            <a href="404.html">Teeth Replacement</a>
-                            <ul
-                              style="
-                                display: none;
-                                position: absolute;
-                                left: 100%;
-                                top: 0;
-                                background: #fff;
-                                padding: 5px;
-                              "
-                            >
-                              <li>
-                                <ul class="second-dropdown dropdown">
-                                  <li>
-                                    <a href="404.html">Dental Implants</a>
-                                  </li>
-                                  <li>
-                                    <a href="404.html">All on 4/6 implant</a>
-                                  </li>
-                                  <li>
-                                    <a href="404.html">Crown & Bridges</a>
-                                  </li>
-                                  <li><a href="404.html">Dentures</a></li>
-                                  <li>
-                                    <a href="404.html"
-                                      >Full Mouth Rehablitation</a
-                                    >
-                                  </li>
-                                </ul>
-                              </li>
-                            </ul>
-                          </li>
-                          <li>
-                            <a href="404.html">Preventive Dentistry</a>
-                            <ul
-                              style="
-                                display: none;
-                                position: absolute;
-                                left: 100%;
-                                top: 0;
-                                background: #fff;
-                                padding: 5px;
-                              "
-                            >
-                              <li>
-                                <ul class="second-dropdown dropdown">
-                                  <li><a href="404.html">Cavity Filling</a></li>
-                                  <li>
-                                    <a href="404.html">Scaling & polishing</a>
-                                  </li>
-                                  <li><a href="404.html">Kids Dentistry</a></li>
-                                  <li>
-                                    <a href="404.html">Bad Breath Treatment</a>
-                                  </li>
-                                  <li>
-                                    <a href="404.html"
-                                      >Fluoride Application & Sealants</a
-                                    >
-                                  </li>
-                                </ul>
-                              </li>
-                            </ul>
-                          </li>
-                        </ul>
+                        ></ul>
                       </li>
                       <script>
+                        const servicesDropdown = document.getElementById(
+                          "services-header-dropdowns"
+                        );
+
+                        if (!servicesDropdown) {
+                          throw new Error(
+                            "Could not find services dropdown element"
+                          );
+                        }
+
+                        const dropdownMenu =
+                          servicesDropdown.querySelector("ul.dropdown");
+
+                        function createDropdownItem(service) {
+                          const li = document.createElement("li");
+                          const a = document.createElement("a");
+                          a.href = `/service.html?parent-id=${service.id}`;
+                          a.textContent = service.name;
+                          li.appendChild(a);
+
+                          if (service.child && service.child.length > 0) {
+                            const subMenu = document.createElement("ul");
+                            subMenu.classList.add(
+                              "second-dropdown",
+                              "dropdown"
+                            );
+                            subMenu.style = `display: none;position: absolute;left: 80%;top: 0;background: #fff;padding: 5px;`;
+
+                            service.child.forEach((child) => {
+                              const childLi = document.createElement("li");
+                              const childA = document.createElement("a");
+                              childA.href = `/service.html?parent-id=${service.id}&child-id=${child.id}`;
+                              childA.textContent = child.name;
+                              childLi.appendChild(childA);
+                              subMenu.appendChild(childLi);
+                            });
+
+                            li.appendChild(subMenu);
+
+                            // Show sub-menu on hover
+                            // li.addEventListener(
+                            //   "mouseenter",
+                            //   () => (wrapper.style.display = "block")
+                            // );
+                            // li.addEventListener(
+                            //   "mouseleave",
+                            //   () => (wrapper.style.display = "none")
+                            // );
+                          }
+
+                          return li;
+                        }
+
+                        // Populate dropdown menu
+                        data.forEach((service) => {
+                          const menuItem = createDropdownItem(service);
+                          dropdownMenu.appendChild(menuItem);
+                        });
                         document.querySelectorAll("li").forEach((item) => {
                           item.addEventListener("mouseenter", function () {
                             let dropdown = this.querySelector("ul");
@@ -409,17 +340,33 @@
     <section class="slider slider-section">
       <div class="hero-slider" style="">
         <!-- Start Single Slider -->
-        <div class="single-slider" style="position: relative; overflow: hidden;">
-          
+        <div class="single-slider" style="position: relative; overflow: hidden">
           <!-- Overlay -->
-          <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 2;"></div>
+          <div
+            style="
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background-color: rgba(0, 0, 0, 0.5);
+              z-index: 2;
+            "
+          ></div>
           <!-- Content -->
-          <div class="container" style="position: relative; z-index: 3;">
+          <div class="container" style="position: relative; z-index: 3">
             <div class="row">
               <div class="col-lg-7">
                 <div class="text">
-                  <h1 style="color: #fff;">Transforming <span>Smiles</span>, Enhancing <span>Confidence!</span></h1>
-                  <p style="color: #fff;">From teeth alignment to smile makeovers, our expert care helps you achieve a confident, radiant smile. Let us bring out the best in your smile!</p>
+                  <h1 style="color: #fff">
+                    Transforming <span>Smiles</span>, Enhancing
+                    <span>Confidence!</span>
+                  </h1>
+                  <p style="color: #fff">
+                    From teeth alignment to smile makeovers, our expert care
+                    helps you achieve a confident, radiant smile. Let us bring
+                    out the best in your smile!
+                  </p>
 
                   <div class="button">
                     <a href="#" class="btn">Get Appointment</a>
@@ -431,23 +378,40 @@
           </div>
         </div>
         <!-- End Single Slider -->
-    
+
         <!-- Start Second Slider -->
-        <div class="single-slider" style="position: relative; overflow: hidden;">
+        <div class="single-slider" style="position: relative; overflow: hidden">
           <!-- Background Video -->
           <!-- <video autoplay loop muted playsinline style="position: absolute; top: 50%; left: 50%; min-width: 100%; min-height: 100%; width: auto; height: auto; z-index: 1; transform: translate(-50%, -50%);">
             <source src="/img/CLINIC VIDEO.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video> -->
           <!-- Overlay -->
-          <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 2;"></div>
+          <div
+            style="
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background-color: rgba(0, 0, 0, 0.5);
+              z-index: 2;
+            "
+          ></div>
           <!-- Content -->
-          <div class="container" style="position: relative; z-index: 3;">
+          <div class="container" style="position: relative; z-index: 3">
             <div class="row">
               <div class="col-lg-7">
                 <div class="text">
-                  <h1 style="color: #fff;">We Create <span>Healthy</span> Smiles You Can <span>Trust!</span></h1>
-                  <p style="color: #fff;">Experience expert dental care in a warm, comfortable environment. From routine check-ups to advanced treatments, we ensure your smile stays bright and healthy.</p>
+                  <h1 style="color: #fff">
+                    We Create <span>Healthy</span> Smiles You Can
+                    <span>Trust!</span>
+                  </h1>
+                  <p style="color: #fff">
+                    Experience expert dental care in a warm, comfortable
+                    environment. From routine check-ups to advanced treatments,
+                    we ensure your smile stays bright and healthy.
+                  </p>
 
                   <div class="button">
                     <a href="#" class="btn">Get Appointment</a>
@@ -461,12 +425,28 @@
         <!-- End Second Slider -->
       </div>
       <!-- Background Video -->
-      <video autoplay loop muted playsinline style="position: absolute; top: 50%; left: 50%; min-width: 100%; min-height: 100%; width: auto; height: auto; z-index: 1; transform: translate(-50%, -50%);">
-        <source src="img/CLINIC VIDEO.mp4" type="video/mp4">
+      <video
+        autoplay
+        loop
+        muted
+        playsinline
+        style="
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          min-width: 100%;
+          min-height: 100%;
+          width: auto;
+          height: auto;
+          z-index: 1;
+          transform: translate(-50%, -50%);
+        "
+      >
+        <source src="img/CLINIC VIDEO.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
     </section>
-    
+
     <!--/ End Slider Area -->
 
     <!-- Start Schedule Area -->
@@ -485,46 +465,76 @@
                     <span>Need Immediate Care?</span>
                     <h4>Emergency Cases</h4>
                     <p>
-                      Dental emergencies? We provide immediate care for severe toothaches, broken teeth, and urgent dental procedures. 
+                      Dental emergencies? We provide immediate care for severe
+                      toothaches, broken teeth, and urgent dental procedures.
                       Contact us right away!
                     </p>
-                    <a href="tel:+yournumber">CALL NOW<i class="fa fa-long-arrow-right"></i></a>
+                    <a href="tel:+yournumber"
+                      >CALL NOW<i class="fa fa-long-arrow-right"></i
+                    ></a>
                   </div>
                 </div>
               </div>
             </div>
-    
+
             <!-- Doctors Timetable -->
             <div class="col-lg-4 col-md-6 col-12">
-              <div class="single-schedule middle" style="background: #1a76d1; border-radius: 8px; padding: 20px;">
-                <div class="inner" style="text-align: center;">
+              <div
+                class="single-schedule middle"
+                style="background: #1a76d1; border-radius: 8px; padding: 20px"
+              >
+                <div class="inner" style="text-align: center">
                   <!-- Quote display area -->
-                  <div id="quoteContainer" style="min-height: 150px; display: flex; flex-direction: column; justify-content: center;">
-                    <blockquote style="font-size: 1rem; font-style: italic; margin: 0; padding: 10px; color: #fff;">
+                  <div
+                    id="quoteContainer"
+                    style="
+                      min-height: 150px;
+                      display: flex;
+                      flex-direction: column;
+                      justify-content: center;
+                    "
+                  >
+                    <blockquote
+                      style="
+                        font-size: 1rem;
+                        font-style: italic;
+                        margin: 0;
+                        padding: 10px;
+                        color: #fff;
+                      "
+                    >
                       "Oral Health is an Investment not a expense."
                     </blockquote>
                     <!-- <cite style="display: block; margin-top: 10px; font-size: 0.9rem; color: #fff;">- Peter Drucker</cite> -->
                   </div>
                   <!-- Original link -->
-                  <a href="doctors-timetable.html" style="display: inline-block; margin-top: 20px; color: #fff;">The Arch and Artt Dentistry</a>
+                  <a
+                    href="doctors-timetable.html"
+                    style="display: inline-block; margin-top: 20px; color: #fff"
+                    >The Arch and Artt Dentistry</a
+                  >
                 </div>
               </div>
             </div>
-            
+
             <script>
               // Array of quotes with text and author
               const quotes = [
                 { text: "Floss Brush Rinse" },
-                { text: "The Prettiest thing you can wear is a healthy smile." },
+                {
+                  text: "The Prettiest thing you can wear is a healthy smile.",
+                },
                 { text: "Oral Health is an Investment not a expense" },
                 { text: "It's a Beautiful Day Save Smile" },
                 { text: "We Love to see you Smile" },
-                { text: "Let your Smile change the world.but don't let the world change your Smile" },
+                {
+                  text: "Let your Smile change the world.but don't let the world change your Smile",
+                },
               ];
-            
+
               let currentQuote = 0;
               const quoteContainer = document.getElementById("quoteContainer");
-            
+
               function updateQuote() {
                 currentQuote = (currentQuote + 1) % quotes.length;
                 const { text, author } = quotes[currentQuote];
@@ -535,12 +545,11 @@
                   <cite style="display: block; margin-top: 10px; font-size: 0.9rem; color: #fff;">- ${author}</cite>
                 `;
               }
-            
+
               // Update quote every 10 seconds (10,000 milliseconds)
               setInterval(updateQuote, 10000);
             </script>
-            
-    
+
             <!-- Opening Hours -->
             <!-- <div class="col-lg-4 col-md-12 col-12">
               <div class="single-schedule last">
@@ -572,19 +581,23 @@
                     <span>Visit Us</span>
                     <h4>Opening Hours</h4>
                     <p>
-                      Monday - Saturday : 10:00 AM - 2:00 PM <br> Monday - Saturday : 5:00 PM - 8:30 PM <br> Sunday : Closed <br> By Appointments Only.
+                      Monday - Saturday : 10:00 AM - 2:00 PM <br />
+                      Monday - Saturday : 5:00 PM - 8:30 PM <br />
+                      Sunday : Closed <br />
+                      By Appointments Only.
                     </p>
-                    <a href="doctors-timetable.html">BOOK NOW<i class="fa fa-long-arrow-right"></i></a>
+                    <a href="doctors-timetable.html"
+                      >BOOK NOW<i class="fa fa-long-arrow-right"></i
+                    ></a>
                   </div>
                 </div>
               </div>
             </div>
-    
           </div>
         </div>
       </div>
     </section>
-    
+
     <!--/End Start schedule Area -->
 
     <!-- Start Feautes -->
@@ -600,57 +613,130 @@
           </div>
         </div>
         <div class="row">
-			<div class="col-lg-3 col-12">
-			  <div class="single-features">
-				<div class="single-icon">
-				  <div class="icon-img" style="width: 100px; height: 100px; border-radius: 50%; overflow: hidden; display: flex; justify-content: center; align-items: center; background-color: #f3f3f3; margin: 0 auto 10px;">
-					<img src="/img/tooth (1).png" alt="Toothache Relief" style="width: 80%; height: 80%; object-fit: contain;">
-				  </div>
-				  <h3>Toothache Relief</h3>
-				  <p>Fast and effective relief for toothaches and dental discomfort.</p>
-				</div>
-				
-			  </div>
-			</div>
-		  
-			<div class="col-lg-3 col-12">
-			  <div class="single-features">
-				<div class="single-icon">
-				  <div class="icon-img" style="width: 100px; height: 100px; border-radius: 50%; overflow: hidden; display: flex; justify-content: center; align-items: center; background-color: #f3f3f3; margin: 0 auto 10px;">
-					<img src="/img/braces.png" alt="Restore My Smile" style="width: 80%; height: 80%; object-fit: contain;">
-				  </div>
-				</div>
-				<h3>Restore My Smile</h3>
-				<p>Restore damaged or missing teeth for a confident smile.</p>
-			  </div>
-			</div>
-		  
-			<div class="col-lg-3 col-12">
-			  <div class="single-features">
-				<div class="single-icon">
-				  <div class="icon-img" style="width: 100px; height: 100px;border-radius: 50%; overflow: hidden; display: flex; justify-content: center; align-items: center; background-color: #f3f3f3; margin: 0 auto 10px;">
-					<img src="/img/tooth-extraction.png" alt="Fix My Bite" style="width: 80%; height: 80%; object-fit: contain;">
-				  </div>
-				</div>
-				<h3>Fix My Bite</h3>
-				<p>Straighten your teeth and improve your bite with expert care.</p>
-			  </div>
-			</div>
-		  
-			<div class="col-lg-3 col-12">
-			  <div class="single-features last">
-				<div class="single-icon">
-				  <div class="icon-img" style="width: 100px; height: 100px; border-radius: 50%; overflow: hidden; display: flex; justify-content: center; align-items: center; background-color: #f3f3f3; margin: 0 auto 10px;">
-					<img src="/img/cavity.png" alt="Keep My Teeth Healthy" style="width: 80%; height: 80%; object-fit: contain;">
-				  </div>
-				</div>
-				<h3>Keep My Teeth Healthy</h3>
-				<p>Regular exams and cleanings to keep your smile healthy and bright.</p>
-			  </div>
-			</div>
-		  </div>
-		  
-		  
+          <div class="col-lg-3 col-12">
+            <div class="single-features">
+              <div class="single-icon">
+                <div
+                  class="icon-img"
+                  style="
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: #f3f3f3;
+                    margin: 0 auto 10px;
+                  "
+                >
+                  <img
+                    src="/img/tooth (1).png"
+                    alt="Toothache Relief"
+                    style="width: 80%; height: 80%; object-fit: contain"
+                  />
+                </div>
+                <h3>Toothache Relief</h3>
+                <p>
+                  Fast and effective relief for toothaches and dental
+                  discomfort.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-12">
+            <div class="single-features">
+              <div class="single-icon">
+                <div
+                  class="icon-img"
+                  style="
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: #f3f3f3;
+                    margin: 0 auto 10px;
+                  "
+                >
+                  <img
+                    src="/img/braces.png"
+                    alt="Restore My Smile"
+                    style="width: 80%; height: 80%; object-fit: contain"
+                  />
+                </div>
+              </div>
+              <h3>Restore My Smile</h3>
+              <p>Restore damaged or missing teeth for a confident smile.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-12">
+            <div class="single-features">
+              <div class="single-icon">
+                <div
+                  class="icon-img"
+                  style="
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: #f3f3f3;
+                    margin: 0 auto 10px;
+                  "
+                >
+                  <img
+                    src="/img/tooth-extraction.png"
+                    alt="Fix My Bite"
+                    style="width: 80%; height: 80%; object-fit: contain"
+                  />
+                </div>
+              </div>
+              <h3>Fix My Bite</h3>
+              <p>
+                Straighten your teeth and improve your bite with expert care.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-12">
+            <div class="single-features last">
+              <div class="single-icon">
+                <div
+                  class="icon-img"
+                  style="
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: #f3f3f3;
+                    margin: 0 auto 10px;
+                  "
+                >
+                  <img
+                    src="/img/cavity.png"
+                    alt="Keep My Teeth Healthy"
+                    style="width: 80%; height: 80%; object-fit: contain"
+                  />
+                </div>
+              </div>
+              <h3>Keep My Teeth Healthy</h3>
+              <p>
+                Regular exams and cleanings to keep your smile healthy and
+                bright.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     <!--/ End Feautes -->
@@ -658,7 +744,7 @@
     <!-- Start Fun-facts -->
     <div id="fun-facts" class="fun-facts section overlay">
       <div class="container">
-        <div class="row" style="justify-content: center;">
+        <div class="row" style="justify-content: center">
           <!-- <div class="col-lg-3 col-md-6 col-12">
             Start Single Fun 
             <div class="single-fun">
@@ -686,7 +772,7 @@
             <div class="single-fun">
               <i class="icofont-simple-smile"></i>
               <div class="content">
-                <span style="display: flex;" class="counter-row-manage">
+                <span style="display: flex" class="counter-row-manage">
                   <span class="counter">2800</span>
                   <span>+</span>
                 </span>
@@ -712,92 +798,292 @@
     <!--/ End Fun-facts -->
 
     <!-- Start Why choose -->
-    <section class="why-choose section" style="padding: 60px 0; background-color: #f8f9fa;">
-      <div class="container" style="max-width: 1200px; margin: 0 auto;">
+    <section
+      class="why-choose section"
+      style="padding: 60px 0; background-color: #f8f9fa"
+    >
+      <div class="container" style="max-width: 1200px; margin: 0 auto">
         <!-- Section Title -->
-        <div class="row" style="text-align: center; margin-bottom: 40px;">
+        <div class="row" style="text-align: center; margin-bottom: 40px">
           <div class="col-lg-12">
             <div class="section-title">
-              <h2 style="font-size: 32px; font-weight: bold; color: #333; margin-bottom: 10px;">The Arch & Artt Dentistry</h2>
-              <img src="img/section-img.png" alt="Section decoration" style="margin: 10px 0; width: 80px;" />
-              <p style="font-size: 16px; color: #666; max-width: 700px; margin: 0 auto;">
-                Committed to providing exceptional dental care through expertise, innovation, and personalized attention, ensuring the highest standard of oral healthcare in a comfortable and welcoming environment.
+              <h2
+                style="
+                  font-size: 32px;
+                  font-weight: bold;
+                  color: #333;
+                  margin-bottom: 10px;
+                "
+              >
+                The Arch & Artt Dentistry
+              </h2>
+              <img
+                src="img/section-img.png"
+                alt="Section decoration"
+                style="margin: 10px 0; width: 80px"
+              />
+              <p
+                style="
+                  font-size: 16px;
+                  color: #666;
+                  max-width: 700px;
+                  margin: 0 auto;
+                "
+              >
+                Committed to providing exceptional dental care through
+                expertise, innovation, and personalized attention, ensuring the
+                highest standard of oral healthcare in a comfortable and
+                welcoming environment.
               </p>
             </div>
           </div>
         </div>
-        
+
         <!-- Mission & Vision -->
-        <div class="row" style="display: flex; flex-wrap: wrap; gap: 30px; align-items: stretch;">
-          <div class="col-lg-6 col-12" style="flex: 1 1 45%;">
-            <div style="background: #ffffff; padding: 30px; border-radius: 8px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); height: 100%;">
-              <h3 style="font-size: 26px; font-weight: bold; color: #333; margin-bottom: 15px;">Our Mission</h3>
-              <p style="font-size: 16px; color: #555;">
-                Our mission is to provide comprehensive dental care for all ages—from pediatric to geriatric—ensuring a lifetime of healthy smiles through personalized, compassionate service.
+        <div
+          class="row"
+          style="
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            align-items: stretch;
+          "
+        >
+          <div class="col-lg-6 col-12" style="flex: 1 1 45%">
+            <div
+              style="
+                background: #ffffff;
+                padding: 30px;
+                border-radius: 8px;
+                box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+                height: 100%;
+              "
+            >
+              <h3
+                style="
+                  font-size: 26px;
+                  font-weight: bold;
+                  color: #333;
+                  margin-bottom: 15px;
+                "
+              >
+                Our Mission
+              </h3>
+              <p style="font-size: 16px; color: #555">
+                Our mission is to provide comprehensive dental care for all
+                ages—from pediatric to geriatric—ensuring a lifetime of healthy
+                smiles through personalized, compassionate service.
               </p>
             </div>
           </div>
-          <div class="col-lg-6 col-12" style="flex: 1 1 45%;">
-            <div style="background: #ffffff; padding: 30px; border-radius: 8px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); height: 100%;">
-              <h3 style="font-size: 26px; font-weight: bold; color: #333; margin-bottom: 15px;">Our Vision</h3>
-              <p style="font-size: 16px; color: #555;">
-                To be the leading dental care provider by delivering excellence and compassionate care, creating healthier, happier smiles in our community.
+          <div class="col-lg-6 col-12" style="flex: 1 1 45%">
+            <div
+              style="
+                background: #ffffff;
+                padding: 30px;
+                border-radius: 8px;
+                box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+                height: 100%;
+              "
+            >
+              <h3
+                style="
+                  font-size: 26px;
+                  font-weight: bold;
+                  color: #333;
+                  margin-bottom: 15px;
+                "
+              >
+                Our Vision
+              </h3>
+              <p style="font-size: 16px; color: #555">
+                To be the leading dental care provider by delivering excellence
+                and compassionate care, creating healthier, happier smiles in
+                our community.
               </p>
             </div>
           </div>
         </div>
-    
+
         <!-- About Clinic & About Doctor -->
-        <div class="row" style="display: flex; flex-wrap: wrap; gap: 30px; align-items: stretch; margin-top: 40px;">
-          <div class="col-lg-6 col-12" style="flex: 1 1 45%;">
-            <div style="background: #ffffff; padding: 30px; border-radius: 8px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); height: 100%;">
-              <h3 style="font-size: 26px; font-weight: bold; color: #333; margin-bottom: 15px;">About Our Clinic</h3>
-              <p style="font-size: 16px; color: #555;">
-                At The Arc and Artt Dentistry, we believe that a healthy smile is the foundation of overall well-being. We offer comprehensive dental services—from preventive care to advanced restorative and cosmetic treatments—using cutting-edge technology to ensure precision and comfort.
+        <div
+          class="row"
+          style="
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            align-items: stretch;
+            margin-top: 40px;
+          "
+        >
+          <div class="col-lg-6 col-12" style="flex: 1 1 45%">
+            <div
+              style="
+                background: #ffffff;
+                padding: 30px;
+                border-radius: 8px;
+                box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+                height: 100%;
+              "
+            >
+              <h3
+                style="
+                  font-size: 26px;
+                  font-weight: bold;
+                  color: #333;
+                  margin-bottom: 15px;
+                "
+              >
+                About Our Clinic
+              </h3>
+              <p style="font-size: 16px; color: #555">
+                At The Arc and Artt Dentistry, we believe that a healthy smile
+                is the foundation of overall well-being. We offer comprehensive
+                dental services—from preventive care to advanced restorative and
+                cosmetic treatments—using cutting-edge technology to ensure
+                precision and comfort.
               </p>
-              <p style="font-size: 16px; color: #555;">
-                Our patient-centric approach focuses on providing stress-free, effective treatments tailored to individual needs, ensuring the best possible outcomes.
+              <p style="font-size: 16px; color: #555">
+                Our patient-centric approach focuses on providing stress-free,
+                effective treatments tailored to individual needs, ensuring the
+                best possible outcomes.
               </p>
             </div>
           </div>
-          <div class="col-lg-6 col-12" style="flex: 1 1 45%;">
-            <div style="background: #ffffff; padding: 30px; border-radius: 8px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); height: 100%;">
-              <h3 style="font-size: 26px; font-weight: bold; color: #333; margin-bottom: 15px;">About Dr. Archana Gandhi</h3>
-              <p style="font-size: 16px; color: #555;">
-                Dr. Archana Gandhi is a highly experienced dental professional dedicated to providing top-tier oral healthcare. With a commitment to excellence, Dr. Gandhi combines expertise with a compassionate approach, ensuring that patients feel at ease throughout their treatment journey.
+          <div class="col-lg-6 col-12" style="flex: 1 1 45%">
+            <div
+              style="
+                background: #ffffff;
+                padding: 30px;
+                border-radius: 8px;
+                box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+                height: 100%;
+              "
+            >
+              <h3
+                style="
+                  font-size: 26px;
+                  font-weight: bold;
+                  color: #333;
+                  margin-bottom: 15px;
+                "
+              >
+                About Dr. Archana Gandhi
+              </h3>
+              <p style="font-size: 16px; color: #555">
+                Dr. Archana Gandhi is a highly experienced dental professional
+                dedicated to providing top-tier oral healthcare. With a
+                commitment to excellence, Dr. Gandhi combines expertise with a
+                compassionate approach, ensuring that patients feel at ease
+                throughout their treatment journey.
               </p>
-              <p style="font-size: 16px; color: #555;">
-                Utilizing the latest advancements in dental technology, Dr. Gandhi focuses on delivering precise, effective, and minimally invasive treatments to enhance both oral health and aesthetics.
+              <p style="font-size: 16px; color: #555">
+                Utilizing the latest advancements in dental technology, Dr.
+                Gandhi focuses on delivering precise, effective, and minimally
+                invasive treatments to enhance both oral health and aesthetics.
               </p>
             </div>
           </div>
         </div>
-    
+
         <!-- Why Choose Us & Image -->
-        <div class="row" style="display: flex; flex-wrap: wrap; gap: 30px; align-items: center; margin-top: 40px;">
-          <div class="col-lg-6 col-12" style="flex: 1 1 45%;">
-            <div style="background: #ffffff; padding: 30px; border-radius: 8px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); height: 100%;">
-              <h3 style="font-size: 26px; font-weight: bold; color: #333; margin-bottom: 15px;">Why Choose Us?</h3>
-              <ul style="list-style: none; padding: 0; font-size: 16px; color: #555;">
-                <li style="margin-bottom: 10px;"><i class="fa fa-check-circle" style="color: #28a745; margin-right: 8px;"></i> Comprehensive Dental Care</li>
-                <li style="margin-bottom: 10px;"><i class="fa fa-check-circle" style="color: #28a745; margin-right: 8px;"></i> Experienced and Skilled Professionals</li>
-                <li style="margin-bottom: 10px;"><i class="fa fa-check-circle" style="color: #28a745; margin-right: 8px;"></i> State-of-the-Art Equipment</li>
-                <li style="margin-bottom: 10px;"><i class="fa fa-check-circle" style="color: #28a745; margin-right: 8px;"></i> Personalized Treatment Plans</li>
-                <li><i class="fa fa-check-circle" style="color: #28a745; margin-right: 8px;"></i> Comfortable and Stress-Free Experience</li>
+        <div
+          class="row"
+          style="
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            align-items: center;
+            margin-top: 40px;
+          "
+        >
+          <div class="col-lg-6 col-12" style="flex: 1 1 45%">
+            <div
+              style="
+                background: #ffffff;
+                padding: 30px;
+                border-radius: 8px;
+                box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+                height: 100%;
+              "
+            >
+              <h3
+                style="
+                  font-size: 26px;
+                  font-weight: bold;
+                  color: #333;
+                  margin-bottom: 15px;
+                "
+              >
+                Why Choose Us?
+              </h3>
+              <ul
+                style="
+                  list-style: none;
+                  padding: 0;
+                  font-size: 16px;
+                  color: #555;
+                "
+              >
+                <li style="margin-bottom: 10px">
+                  <i
+                    class="fa fa-check-circle"
+                    style="color: #28a745; margin-right: 8px"
+                  ></i>
+                  Comprehensive Dental Care
+                </li>
+                <li style="margin-bottom: 10px">
+                  <i
+                    class="fa fa-check-circle"
+                    style="color: #28a745; margin-right: 8px"
+                  ></i>
+                  Experienced and Skilled Professionals
+                </li>
+                <li style="margin-bottom: 10px">
+                  <i
+                    class="fa fa-check-circle"
+                    style="color: #28a745; margin-right: 8px"
+                  ></i>
+                  State-of-the-Art Equipment
+                </li>
+                <li style="margin-bottom: 10px">
+                  <i
+                    class="fa fa-check-circle"
+                    style="color: #28a745; margin-right: 8px"
+                  ></i>
+                  Personalized Treatment Plans
+                </li>
+                <li>
+                  <i
+                    class="fa fa-check-circle"
+                    style="color: #28a745; margin-right: 8px"
+                  ></i>
+                  Comfortable and Stress-Free Experience
+                </li>
               </ul>
             </div>
           </div>
-          <div class="col-lg-6 col-12" style="flex: 1 1 45%;">
-            <div style="text-align: center;">
-              <div style="overflow: hidden; border-radius: 8px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);">
-                <img src="/img/team.JPG" alt="Our Dental Team" style="width: 100%; display: block;">
+          <div class="col-lg-6 col-12" style="flex: 1 1 45%">
+            <div style="text-align: center">
+              <div
+                style="
+                  overflow: hidden;
+                  border-radius: 8px;
+                  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+                "
+              >
+                <img
+                  src="/img/team.JPG"
+                  alt="Our Dental Team"
+                  style="width: 100%; display: block"
+                />
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    
+
     <!--/ End Why choose -->
 
     <!-- Start Call to action -->
@@ -808,9 +1094,11 @@
             <div class="content">
               <h2>Need Urgent Dental Care? Call Us Now at +91 9158500021</h2>
               <p>
-                Experiencing tooth pain or a dental emergency? Our team is here to provide fast and effective care when you need it most. Contact us now for immediate assistance!
+                Experiencing tooth pain or a dental emergency? Our team is here
+                to provide fast and effective care when you need it most.
+                Contact us now for immediate assistance!
               </p>
-              
+
               <div class="button">
                 <a href="#" class="btn">Contact Now</a>
                 <a href="#" class="btn second"
@@ -831,10 +1119,14 @@
           <div class="col-lg-12">
             <div class="section-title">
               <h2>We Maintain Cleanliness Rules Inside Our Clinic</h2>
-                <img src="img/section-img.png" alt="#" />
-                <p>
-                  At our clinic, we prioritize hygiene and cleanliness to ensure a safe and comfortable environment for all our patients. Our team follows strict protocols to maintain sanitized equipment, spotless treatment areas, and a germ-free environment for your peace of mind.
-                </p>
+              <img src="img/section-img.png" alt="#" />
+              <p>
+                At our clinic, we prioritize hygiene and cleanliness to ensure a
+                safe and comfortable environment for all our patients. Our team
+                follows strict protocols to maintain sanitized equipment,
+                spotless treatment areas, and a germ-free environment for your
+                peace of mind.
+              </p>
             </div>
           </div>
         </div>
@@ -891,136 +1183,384 @@
               <h2>We Offer Different Services To Improve Your Teeths</h2>
               <img src="img/section-img.png" alt="#" />
               <p>
-                Enhancing your oral health with advanced treatments.
-                Because every smile deserves the best care!
+                Enhancing your oral health with advanced treatments. Because
+                every smile deserves the best care!
               </p>
             </div>
           </div>
         </div>
         <div class="row">
           <!-- General Treatment -->
-          <div class="row" style="margin: 0 -15px;">
+          <div class="row" style="margin: 0 -15px">
             <!-- Cosmetic Dentistry -->
-            <div class="col-lg-4 col-md-6 col-12" style="padding: 15px;">
-              <div style="background: #fff; border-radius: 8px; overflow: hidden; text-align: center; transition: box-shadow 0.3s ease;" onmouseover="this.style.boxShadow='0 8px 16px rgba(0,0,0,0.2)'" onmouseout="this.style.boxShadow='0 4px 8px rgba(0,0,0,0.1)'">
-                <img src="/img/cosmetic-whitening.jpg" alt="Cosmetic Dentistry" style="width: 100%; height: 200px; object-fit: cover;">
-                <div style="padding: 20px;">
-                  <h4 style="margin: 0 0 10px; font-size: 1.25rem;"><a href="general-treatment.html" style="text-decoration: none; color: #333;">Cosmetic Dentistry</a></h4>
-                  <p style="font-size: 0.9rem; color: #555; line-height: 1.5; margin: 0;">
-                    Achieve the smile you've always wanted with veneers, Invisalign, and professional whitening treatments.
+            <div class="col-lg-4 col-md-6 col-12" style="padding: 15px">
+              <div
+                style="
+                  background: #fff;
+                  border-radius: 8px;
+                  overflow: hidden;
+                  text-align: center;
+                  transition: box-shadow 0.3s ease;
+                "
+                onmouseover="this.style.boxShadow='0 8px 16px rgba(0,0,0,0.2)'"
+                onmouseout="this.style.boxShadow='0 4px 8px rgba(0,0,0,0.1)'"
+              >
+                <img
+                  src="/img/cosmetic-whitening.jpg"
+                  alt="Cosmetic Dentistry"
+                  style="width: 100%; height: 200px; object-fit: cover"
+                />
+                <div style="padding: 20px">
+                  <h4 style="margin: 0 0 10px; font-size: 1.25rem">
+                    <a
+                      href="general-treatment.html"
+                      style="text-decoration: none; color: #333"
+                      >Cosmetic Dentistry</a
+                    >
+                  </h4>
+                  <p
+                    style="
+                      font-size: 0.9rem;
+                      color: #555;
+                      line-height: 1.5;
+                      margin: 0;
+                    "
+                  >
+                    Achieve the smile you've always wanted with veneers,
+                    Invisalign, and professional whitening treatments.
                   </p>
                 </div>
               </div>
             </div>
-          
+
             <!-- Teeth Whitening -->
-            <div class="col-lg-4 col-md-6 col-12" style="padding: 15px;">
-              <div style="background: #fff; border-radius: 8px; overflow: hidden; text-align: center; transition: box-shadow 0.3s ease;" onmouseover="this.style.boxShadow='0 8px 16px rgba(0,0,0,0.2)'" onmouseout="this.style.boxShadow='0 4px 8px rgba(0,0,0,0.1)'">
-                <img src="/img/tooth-whitening.jpg" alt="Teeth Whitening" style="width: 100%; height: 200px; object-fit: cover;">
-                <div style="padding: 20px;">
-                  <h4 style="margin: 0 0 10px; font-size: 1.25rem;"><a href="teeth-whitening.html" style="text-decoration: none; color: #333;">Teeth Whitening</a></h4>
-                  <p style="font-size: 0.9rem; color: #555; line-height: 1.5; margin: 0;">
-                    Professional whitening and polishing to remove stains and brighten your smile.
+            <div class="col-lg-4 col-md-6 col-12" style="padding: 15px">
+              <div
+                style="
+                  background: #fff;
+                  border-radius: 8px;
+                  overflow: hidden;
+                  text-align: center;
+                  transition: box-shadow 0.3s ease;
+                "
+                onmouseover="this.style.boxShadow='0 8px 16px rgba(0,0,0,0.2)'"
+                onmouseout="this.style.boxShadow='0 4px 8px rgba(0,0,0,0.1)'"
+              >
+                <img
+                  src="/img/tooth-whitening.jpg"
+                  alt="Teeth Whitening"
+                  style="width: 100%; height: 200px; object-fit: cover"
+                />
+                <div style="padding: 20px">
+                  <h4 style="margin: 0 0 10px; font-size: 1.25rem">
+                    <a
+                      href="teeth-whitening.html"
+                      style="text-decoration: none; color: #333"
+                      >Teeth Whitening</a
+                    >
+                  </h4>
+                  <p
+                    style="
+                      font-size: 0.9rem;
+                      color: #555;
+                      line-height: 1.5;
+                      margin: 0;
+                    "
+                  >
+                    Professional whitening and polishing to remove stains and
+                    brighten your smile.
                   </p>
                 </div>
               </div>
             </div>
-          
+
             <!-- Gum Treatment -->
-            <div class="col-lg-4 col-md-6 col-12" style="padding: 15px;">
-              <div style="background: #fff; border-radius: 8px; overflow: hidden; text-align: center; transition: box-shadow 0.3s ease;" onmouseover="this.style.boxShadow='0 8px 16px rgba(0,0,0,0.2)'" onmouseout="this.style.boxShadow='0 4px 8px rgba(0,0,0,0.1)'">
-                <img src="/img/gum-treatment.jpg" alt="Gum Treatment" style="width: 100%; height: 200px; object-fit: cover;">
-                <div style="padding: 20px;">
-                  <h4 style="margin: 0 0 10px; font-size: 1.25rem;"><a href="gum-treatment.html" style="text-decoration: none; color: #333;">Gum Treatment</a></h4>
-                  <p style="font-size: 0.9rem; color: #555; line-height: 1.5; margin: 0;">
-                    Specialized care for healthy gums addressing gum disease, recession, and inflammation.
+            <div class="col-lg-4 col-md-6 col-12" style="padding: 15px">
+              <div
+                style="
+                  background: #fff;
+                  border-radius: 8px;
+                  overflow: hidden;
+                  text-align: center;
+                  transition: box-shadow 0.3s ease;
+                "
+                onmouseover="this.style.boxShadow='0 8px 16px rgba(0,0,0,0.2)'"
+                onmouseout="this.style.boxShadow='0 4px 8px rgba(0,0,0,0.1)'"
+              >
+                <img
+                  src="/img/gum-treatment.jpg"
+                  alt="Gum Treatment"
+                  style="width: 100%; height: 200px; object-fit: cover"
+                />
+                <div style="padding: 20px">
+                  <h4 style="margin: 0 0 10px; font-size: 1.25rem">
+                    <a
+                      href="gum-treatment.html"
+                      style="text-decoration: none; color: #333"
+                      >Gum Treatment</a
+                    >
+                  </h4>
+                  <p
+                    style="
+                      font-size: 0.9rem;
+                      color: #555;
+                      line-height: 1.5;
+                      margin: 0;
+                    "
+                  >
+                    Specialized care for healthy gums addressing gum disease,
+                    recession, and inflammation.
                   </p>
                 </div>
               </div>
             </div>
-          
+
             <!-- Full Mouth Rehabilitation -->
-            <div class="col-lg-4 col-md-6 col-12" style="padding: 15px;">
-              <div style="background: #fff; border-radius: 8px; overflow: hidden; text-align: center; transition: box-shadow 0.3s ease;" onmouseover="this.style.boxShadow='0 8px 16px rgba(0,0,0,0.2)'" onmouseout="this.style.boxShadow='0 4px 8px rgba(0,0,0,0.1)'">
-                <img src="/img/full-mout-rehab.jpg" alt="Full Mouth Rehabilitation" style="width: 100%; height: 200px; object-fit: cover;">
-                <div style="padding: 20px;">
-                  <h4 style="margin: 0 0 10px; font-size: 1.25rem;"><a href="full-mouth-rehabilitation.html" style="text-decoration: none; color: #333;">Full Mouth Rehabilitation</a></h4>
-                  <p style="font-size: 0.9rem; color: #555; line-height: 1.5; margin: 0;">
-                    Restoration services to improve function and aesthetics, including crowns and implants.
+            <div class="col-lg-4 col-md-6 col-12" style="padding: 15px">
+              <div
+                style="
+                  background: #fff;
+                  border-radius: 8px;
+                  overflow: hidden;
+                  text-align: center;
+                  transition: box-shadow 0.3s ease;
+                "
+                onmouseover="this.style.boxShadow='0 8px 16px rgba(0,0,0,0.2)'"
+                onmouseout="this.style.boxShadow='0 4px 8px rgba(0,0,0,0.1)'"
+              >
+                <img
+                  src="/img/full-mout-rehab.jpg"
+                  alt="Full Mouth Rehabilitation"
+                  style="width: 100%; height: 200px; object-fit: cover"
+                />
+                <div style="padding: 20px">
+                  <h4 style="margin: 0 0 10px; font-size: 1.25rem">
+                    <a
+                      href="full-mouth-rehabilitation.html"
+                      style="text-decoration: none; color: #333"
+                      >Full Mouth Rehabilitation</a
+                    >
+                  </h4>
+                  <p
+                    style="
+                      font-size: 0.9rem;
+                      color: #555;
+                      line-height: 1.5;
+                      margin: 0;
+                    "
+                  >
+                    Restoration services to improve function and aesthetics,
+                    including crowns and implants.
                   </p>
                 </div>
               </div>
             </div>
-          
+
             <!-- Crown & Bridges -->
-            <div class="col-lg-4 col-md-6 col-12" style="padding: 15px;">
-              <div style="background: #fff; border-radius: 8px; overflow: hidden; text-align: center; transition: box-shadow 0.3s ease;" onmouseover="this.style.boxShadow='0 8px 16px rgba(0,0,0,0.2)'" onmouseout="this.style.boxShadow='0 4px 8px rgba(0,0,0,0.1)'">
-                <img src="/img/crowns-and-bridegs.jpg" alt="Crown & Bridges" style="width: 100%; height: 200px; object-fit: cover;">
-                <div style="padding: 20px;">
-                  <h4 style="margin: 0 0 10px; font-size: 1.25rem;"><a href="crown-bridges.html" style="text-decoration: none; color: #333;">Crown & Bridges</a></h4>
-                  <p style="font-size: 0.9rem; color: #555; line-height: 1.5; margin: 0;">
-                    Custom-made crowns and bridges that blend with your natural smile for durability and function.
+            <div class="col-lg-4 col-md-6 col-12" style="padding: 15px">
+              <div
+                style="
+                  background: #fff;
+                  border-radius: 8px;
+                  overflow: hidden;
+                  text-align: center;
+                  transition: box-shadow 0.3s ease;
+                "
+                onmouseover="this.style.boxShadow='0 8px 16px rgba(0,0,0,0.2)'"
+                onmouseout="this.style.boxShadow='0 4px 8px rgba(0,0,0,0.1)'"
+              >
+                <img
+                  src="/img/crowns-and-bridegs.jpg"
+                  alt="Crown & Bridges"
+                  style="width: 100%; height: 200px; object-fit: cover"
+                />
+                <div style="padding: 20px">
+                  <h4 style="margin: 0 0 10px; font-size: 1.25rem">
+                    <a
+                      href="crown-bridges.html"
+                      style="text-decoration: none; color: #333"
+                      >Crown & Bridges</a
+                    >
+                  </h4>
+                  <p
+                    style="
+                      font-size: 0.9rem;
+                      color: #555;
+                      line-height: 1.5;
+                      margin: 0;
+                    "
+                  >
+                    Custom-made crowns and bridges that blend with your natural
+                    smile for durability and function.
                   </p>
                 </div>
               </div>
             </div>
-          
+
             <!-- Invisalign -->
-            <div class="col-lg-4 col-md-6 col-12" style="padding: 15px;">
-              <div style="background: #fff; border-radius: 8px; overflow: hidden; text-align: center; transition: box-shadow 0.3s ease;" onmouseover="this.style.boxShadow='0 8px 16px rgba(0,0,0,0.2)'" onmouseout="this.style.boxShadow='0 4px 8px rgba(0,0,0,0.1)'">
-                <img src="/img/invisalign.jpg" alt="Invisalign" style="width: 100%; height: 200px; object-fit: cover;">
-                <div style="padding: 20px;">
-                  <h4 style="margin: 0 0 10px; font-size: 1.25rem;"><a href="invisalign.html" style="text-decoration: none; color: #333;">Invisalign</a></h4>
-                  <p style="font-size: 0.9rem; color: #555; line-height: 1.5; margin: 0;">
-                    Clear aligners to gradually straighten your teeth without traditional braces.
+            <div class="col-lg-4 col-md-6 col-12" style="padding: 15px">
+              <div
+                style="
+                  background: #fff;
+                  border-radius: 8px;
+                  overflow: hidden;
+                  text-align: center;
+                  transition: box-shadow 0.3s ease;
+                "
+                onmouseover="this.style.boxShadow='0 8px 16px rgba(0,0,0,0.2)'"
+                onmouseout="this.style.boxShadow='0 4px 8px rgba(0,0,0,0.1)'"
+              >
+                <img
+                  src="/img/invisalign.jpg"
+                  alt="Invisalign"
+                  style="width: 100%; height: 200px; object-fit: cover"
+                />
+                <div style="padding: 20px">
+                  <h4 style="margin: 0 0 10px; font-size: 1.25rem">
+                    <a
+                      href="invisalign.html"
+                      style="text-decoration: none; color: #333"
+                      >Invisalign</a
+                    >
+                  </h4>
+                  <p
+                    style="
+                      font-size: 0.9rem;
+                      color: #555;
+                      line-height: 1.5;
+                      margin: 0;
+                    "
+                  >
+                    Clear aligners to gradually straighten your teeth without
+                    traditional braces.
                   </p>
                 </div>
               </div>
             </div>
-          
+
             <!-- Implant -->
-            <div class="col-lg-4 col-md-6 col-12" style="padding: 15px;">
-              <div style="background: #fff; border-radius: 8px; overflow: hidden; text-align: center; transition: box-shadow 0.3s ease;" onmouseover="this.style.boxShadow='0 8px 16px rgba(0,0,0,0.2)'" onmouseout="this.style.boxShadow='0 4px 8px rgba(0,0,0,0.1)'">
-                <img src="/img/implant.webp" alt="Implant" style="width: 100%; height: 200px; object-fit: cover;">
-                <div style="padding: 20px;">
-                  <h4 style="margin: 0 0 10px; font-size: 1.25rem;"><a href="implant.html" style="text-decoration: none; color: #333;">Implant</a></h4>
-                  <p style="font-size: 0.9rem; color: #555; line-height: 1.5; margin: 0;">
-                    Restoration services that improve both the function and appearance of your smile with implants.
+            <div class="col-lg-4 col-md-6 col-12" style="padding: 15px">
+              <div
+                style="
+                  background: #fff;
+                  border-radius: 8px;
+                  overflow: hidden;
+                  text-align: center;
+                  transition: box-shadow 0.3s ease;
+                "
+                onmouseover="this.style.boxShadow='0 8px 16px rgba(0,0,0,0.2)'"
+                onmouseout="this.style.boxShadow='0 4px 8px rgba(0,0,0,0.1)'"
+              >
+                <img
+                  src="/img/implant.webp"
+                  alt="Implant"
+                  style="width: 100%; height: 200px; object-fit: cover"
+                />
+                <div style="padding: 20px">
+                  <h4 style="margin: 0 0 10px; font-size: 1.25rem">
+                    <a
+                      href="implant.html"
+                      style="text-decoration: none; color: #333"
+                      >Implant</a
+                    >
+                  </h4>
+                  <p
+                    style="
+                      font-size: 0.9rem;
+                      color: #555;
+                      line-height: 1.5;
+                      margin: 0;
+                    "
+                  >
+                    Restoration services that improve both the function and
+                    appearance of your smile with implants.
                   </p>
                 </div>
               </div>
             </div>
-          
+
             <!-- Denture -->
-            <div class="col-lg-4 col-md-6 col-12" style="padding: 15px;">
-              <div style="background: #fff; border-radius: 8px; overflow: hidden; text-align: center; transition: box-shadow 0.3s ease;" onmouseover="this.style.boxShadow='0 8px 16px rgba(0,0,0,0.2)'" onmouseout="this.style.boxShadow='0 4px 8px rgba(0,0,0,0.1)'">
-                <img src="/img/dentures.jpg" alt="Denture" style="width: 100%; height: 200px; object-fit: cover;">
-                <div style="padding: 20px;">
-                  <h4 style="margin: 0 0 10px; font-size: 1.25rem;"><a href="denture.html" style="text-decoration: none; color: #333;">Denture</a></h4>
-                  <p style="font-size: 0.9rem; color: #555; line-height: 1.5; margin: 0;">
-                    Custom solutions to restore damaged or missing teeth with durability and function.
+            <div class="col-lg-4 col-md-6 col-12" style="padding: 15px">
+              <div
+                style="
+                  background: #fff;
+                  border-radius: 8px;
+                  overflow: hidden;
+                  text-align: center;
+                  transition: box-shadow 0.3s ease;
+                "
+                onmouseover="this.style.boxShadow='0 8px 16px rgba(0,0,0,0.2)'"
+                onmouseout="this.style.boxShadow='0 4px 8px rgba(0,0,0,0.1)'"
+              >
+                <img
+                  src="/img/dentures.jpg"
+                  alt="Denture"
+                  style="width: 100%; height: 200px; object-fit: cover"
+                />
+                <div style="padding: 20px">
+                  <h4 style="margin: 0 0 10px; font-size: 1.25rem">
+                    <a
+                      href="denture.html"
+                      style="text-decoration: none; color: #333"
+                      >Denture</a
+                    >
+                  </h4>
+                  <p
+                    style="
+                      font-size: 0.9rem;
+                      color: #555;
+                      line-height: 1.5;
+                      margin: 0;
+                    "
+                  >
+                    Custom solutions to restore damaged or missing teeth with
+                    durability and function.
                   </p>
                 </div>
               </div>
             </div>
-          
+
             <!-- Pediatric Care -->
-            <div class="col-lg-4 col-md-6 col-12" style="padding: 15px;">
-              <div style="background: #fff; border-radius: 8px; overflow: hidden; text-align: center; transition: box-shadow 0.3s ease;" onmouseover="this.style.boxShadow='0 8px 16px rgba(0,0,0,0.2)'" onmouseout="this.style.boxShadow='0 4px 8px rgba(0,0,0,0.1)'">
-                <img src="/img/kid-teeth.jpg" alt="Pediatric Care" style="width: 100%; height: 200px; object-fit: cover;">
-                <div style="padding: 20px;">
-                  <h4 style="margin: 0 0 10px; font-size: 1.25rem;"><a href="pediatric-care.html" style="text-decoration: none; color: #333;">Pediatric Care</a></h4>
-                  <p style="font-size: 0.9rem; color: #555; line-height: 1.5; margin: 0;">
-                    Tailored treatments ensuring comfort and healthy dental development for children.
+            <div class="col-lg-4 col-md-6 col-12" style="padding: 15px">
+              <div
+                style="
+                  background: #fff;
+                  border-radius: 8px;
+                  overflow: hidden;
+                  text-align: center;
+                  transition: box-shadow 0.3s ease;
+                "
+                onmouseover="this.style.boxShadow='0 8px 16px rgba(0,0,0,0.2)'"
+                onmouseout="this.style.boxShadow='0 4px 8px rgba(0,0,0,0.1)'"
+              >
+                <img
+                  src="/img/kid-teeth.jpg"
+                  alt="Pediatric Care"
+                  style="width: 100%; height: 200px; object-fit: cover"
+                />
+                <div style="padding: 20px">
+                  <h4 style="margin: 0 0 10px; font-size: 1.25rem">
+                    <a
+                      href="pediatric-care.html"
+                      style="text-decoration: none; color: #333"
+                      >Pediatric Care</a
+                    >
+                  </h4>
+                  <p
+                    style="
+                      font-size: 0.9rem;
+                      color: #555;
+                      line-height: 1.5;
+                      margin: 0;
+                    "
+                  >
+                    Tailored treatments ensuring comfort and healthy dental
+                    development for children.
                   </p>
                 </div>
               </div>
             </div>
           </div>
-          
-          
-            
-        
         </div>
       </div>
     </section>
@@ -1072,41 +1612,87 @@
     <!--/Ens clients -->
 
     <!-- Start Appointment -->
-    <section class="appointment" style="padding: 70px 0; background: #f9f9f9; text-align: center;">
-      <div class="container" style="max-width: 1200px; margin: 0 auto;">
-        <div class="row" style="margin-bottom: 40px;">
+    <section
+      class="appointment"
+      style="padding: 70px 0; background: #f9f9f9; text-align: center"
+    >
+      <div class="container" style="max-width: 1200px; margin: 0 auto">
+        <div class="row" style="margin-bottom: 40px">
           <div class="col-lg-12">
             <div class="section-title">
-              <h2 style="font-size: 36px; font-weight: 700; margin-bottom: 20px; color: #333;">
+              <h2
+                style="
+                  font-size: 36px;
+                  font-weight: 700;
+                  margin-bottom: 20px;
+                  color: #333;
+                "
+              >
                 We Are Always Ready to Help You. Contact Us Now!
               </h2>
-              <img src="img/section-img.png" alt="#" style="max-width: 150px; margin-bottom: 20px;" />
-              <p style="font-size: 18px; color: #555; line-height: 1.6;">
-                Get in touch with us instantly via a phone call or WhatsApp. Our dedicated team is here to provide you with immediate assistance and answer all your queries.
+              <img
+                src="img/section-img.png"
+                alt="#"
+                style="max-width: 150px; margin-bottom: 20px"
+              />
+              <p style="font-size: 18px; color: #555; line-height: 1.6">
+                Get in touch with us instantly via a phone call or WhatsApp. Our
+                dedicated team is here to provide you with immediate assistance
+                and answer all your queries.
               </p>
             </div>
           </div>
         </div>
-        <div class="row" style="display: flex; justify-content: center; align-items: center; gap: 40px;">
-          <a href="tel:+91 9158500021" 
-             style="display: inline-block; background: linear-gradient(45deg, #007bff, #0056b3); 
-                    color: #fff; padding: 20px 40px; font-size: 24px; border-radius: 10px; text-decoration: none; 
-                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); transition: transform 0.2s;">
+        <div
+          class="row"
+          style="
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+          "
+        >
+          <a
+            href="tel:+91 9158500021"
+            style="
+              display: inline-block;
+              background: linear-gradient(45deg, #007bff, #0056b3);
+              color: #fff;
+              padding: 20px 40px;
+              font-size: 24px;
+              border-radius: 10px;
+              text-decoration: none;
+              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+              transition: transform 0.2s;
+            "
+          >
             ☎ Call Us
           </a>
-          <a href="https://wa.me/1234567890" 
-             style="display: inline-block; background: linear-gradient(45deg, #25d366, #128c7e); 
-                    color: #fff; padding: 20px 40px; font-size: 24px; border-radius: 10px; text-decoration: none; 
-                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); transition: transform 0.2s;">
+          <a
+            href="https://wa.me/1234567890"
+            style="
+              display: inline-block;
+              background: linear-gradient(45deg, #25d366, #128c7e);
+              color: #fff;
+              padding: 20px 40px;
+              font-size: 24px;
+              border-radius: 10px;
+              text-decoration: none;
+              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+              transition: transform 0.2s;
+            "
+          >
             💬 WhatsApp
           </a>
         </div>
-        <div style="margin-top: 40px;">
-          <p style="font-size: 16px; color: #777;">(We will confirm via a text message)</p>
+        <div style="margin-top: 40px">
+          <p style="font-size: 16px; color: #777">
+            (We will confirm via a text message)
+          </p>
         </div>
       </div>
     </section>
-    
+
     <!-- End Appointment -->
 
     <!-- Start Newsletter Area -->
@@ -1163,15 +1749,28 @@
               <div class="single-footer">
                 <h2>About The Arch & Artt Dentistry</h2>
                 <p>
-                  At The Arch & Artt Dentistry, we are dedicated to providing comprehensive dental care with compassion and precision. Our experienced team is committed to creating healthy, confident smiles.
+                  At The Arch & Artt Dentistry, we are dedicated to providing
+                  comprehensive dental care with compassion and precision. Our
+                  experienced team is committed to creating healthy, confident
+                  smiles.
                 </p>
                 <!-- Social -->
                 <ul class="social">
-                  <li><a href="#"><i class="icofont-facebook"></i></a></li>
-                  <li><a href="#"><i class="icofont-google-plus"></i></a></li>
-                  <li><a href="#"><i class="icofont-twitter"></i></a></li>
-                  <li><a href="#"><i class="icofont-vimeo"></i></a></li>
-                  <li><a href="#"><i class="icofont-pinterest"></i></a></li>
+                  <li>
+                    <a href="#"><i class="icofont-facebook"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="icofont-google-plus"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="icofont-twitter"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="icofont-vimeo"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="icofont-pinterest"></i></a>
+                  </li>
                 </ul>
                 <!-- End Social -->
               </div>
@@ -1183,20 +1782,70 @@
                 <div class="row">
                   <div class="col-lg-6 col-md-6 col-12">
                     <ul>
-                      <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Home</a></li>
-                      <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> About Us</a></li>
-                      <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Services</a></li>
-                      <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Our Cases</a></li>
-                      <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Blog</a></li>
+                      <li>
+                        <a href="#"
+                          ><i class="fa fa-caret-right" aria-hidden="true"></i>
+                          Home</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#"
+                          ><i class="fa fa-caret-right" aria-hidden="true"></i>
+                          About Us</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#"
+                          ><i class="fa fa-caret-right" aria-hidden="true"></i>
+                          Services</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#"
+                          ><i class="fa fa-caret-right" aria-hidden="true"></i>
+                          Our Cases</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#"
+                          ><i class="fa fa-caret-right" aria-hidden="true"></i>
+                          Blog</a
+                        >
+                      </li>
                     </ul>
                   </div>
                   <div class="col-lg-6 col-md-6 col-12">
                     <ul>
-                      <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Consultations</a></li>
-                      <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Financing</a></li>
-                      <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Testimonials</a></li>
-                      <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> FAQ</a></li>
-                      <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Contact Us</a></li>
+                      <li>
+                        <a href="#"
+                          ><i class="fa fa-caret-right" aria-hidden="true"></i>
+                          Consultations</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#"
+                          ><i class="fa fa-caret-right" aria-hidden="true"></i>
+                          Financing</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#"
+                          ><i class="fa fa-caret-right" aria-hidden="true"></i>
+                          Testimonials</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#"
+                          ><i class="fa fa-caret-right" aria-hidden="true"></i>
+                          FAQ</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#"
+                          ><i class="fa fa-caret-right" aria-hidden="true"></i>
+                          Contact Us</a
+                        >
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -1207,19 +1856,25 @@
               <div class="single-footer">
                 <h2>Clinic Hours</h2>
                 <p>
-                  We are here to help you achieve your best smile. Our clinic hours are designed to offer flexible appointment options.
+                  We are here to help you achieve your best smile. Our clinic
+                  hours are designed to offer flexible appointment options.
                 </p>
                 <ul class="time-sidual">
-                  <li class="day">Monday - Friday <span>8:00 AM - 8:00 PM</span></li>
+                  <li class="day">
+                    Monday - Friday <span>8:00 AM - 8:00 PM</span>
+                  </li>
                   <li class="day">Saturday <span>9:00 AM - 6:30 PM</span></li>
                   <li class="day">Sunday <span>Closed</span></li>
                 </ul>
               </div>
             </div>
-          </div> <!-- row -->
-        </div> <!-- container -->
-      </div> <!-- footer-top -->
-      
+          </div>
+          <!-- row -->
+        </div>
+        <!-- container -->
+      </div>
+      <!-- footer-top -->
+
       <!-- Copyright -->
       <div class="copyright">
         <div class="container">
@@ -1227,8 +1882,10 @@
             <div class="col-lg-12 col-md-12 col-12">
               <div class="copyright-content">
                 <p>
-                  © Copyright 2025 | All Rights Reserved by 
-                  <a href="https://www.wpthemesgrid.com" target="_blank">The Arch &amp; Artt Dentistry</a>
+                  © Copyright 2025 | All Rights Reserved by
+                  <a href="https://www.wpthemesgrid.com" target="_blank"
+                    >The Arch &amp; Artt Dentistry</a
+                  >
                 </p>
               </div>
             </div>
@@ -1237,11 +1894,12 @@
       </div>
       <!-- End Copyright -->
     </footer>
-    
+
     <!--/ End Footer Area -->
 
     <script>
-      document.getElementById("year-of-experience").innerHTML = new Date().getFullYear() - 2000;
+      document.getElementById("year-of-experience").innerHTML =
+        new Date().getFullYear() - 2000;
     </script>
     <!-- jquery Min JS -->
     <script src="js/jquery.min.js"></script>
@@ -1284,5 +1942,16 @@
     <!-- Main JS -->
     <script src="js/main.js"></script>
 
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Toggle dropdown visibility on hover
+        // servicesDropdown.addEventListener("mouseenter", () => {
+        //   dropdownMenu.style.display = "block";
+        // });
+        // servicesDropdown.addEventListener("mouseleave", () => {
+        //   dropdownMenu.style.display = "none";
+        // });
+      });
+    </script>
   </body>
 </html>
