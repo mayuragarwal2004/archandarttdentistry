@@ -496,22 +496,50 @@
     
             <!-- Doctors Timetable -->
             <div class="col-lg-4 col-md-6 col-12">
-              <div class="single-schedule middle">
-                <div class="inner">
-                  <div class="icon">
-                    <i class="icofont-prescription"></i>
+              <div class="single-schedule middle" style="background: #1a76d1; border-radius: 8px; padding: 20px;">
+                <div class="inner" style="text-align: center;">
+                  <!-- Quote display area -->
+                  <div id="quoteContainer" style="min-height: 150px; display: flex; flex-direction: column; justify-content: center;">
+                    <blockquote style="font-size: 1rem; font-style: italic; margin: 0; padding: 10px; color: #fff;">
+                      "Oral Health is an Investment not a expense."
+                    </blockquote>
+                    <!-- <cite style="display: block; margin-top: 10px; font-size: 0.9rem; color: #fff;">- Peter Drucker</cite> -->
                   </div>
-                  <div class="single-content">
-                    <span>Check Availability</span>
-                    <h4>Doctors Timetable</h4>
-                    <p>
-                      Our expert team is available at convenient hours. Plan your visit by checking our doctor's availability in advance.
-                    </p>
-                    <a href="doctors-timetable.html">VIEW TIMETABLE<i class="fa fa-long-arrow-right"></i></a>
-                  </div>
+                  <!-- Original link -->
+                  <a href="doctors-timetable.html" style="display: inline-block; margin-top: 20px; color: #fff;">The Arch and Artt Dentistry</a>
                 </div>
               </div>
             </div>
+            
+            <script>
+              // Array of quotes with text and author
+              const quotes = [
+                { text: "Floss Brush Rinse" },
+                { text: "The Prettiest thing you can wear is a healthy smile." },
+                { text: "Oral Health is an Investment not a expense" },
+                { text: "It's a Beautiful Day Save Smile" },
+                { text: "We Love to see you Smile" },
+                { text: "Let your Smile change the world.but don't let the world change your Smile" },
+              ];
+            
+              let currentQuote = 0;
+              const quoteContainer = document.getElementById("quoteContainer");
+            
+              function updateQuote() {
+                currentQuote = (currentQuote + 1) % quotes.length;
+                const { text, author } = quotes[currentQuote];
+                quoteContainer.innerHTML = `
+                  <blockquote style="font-size: 1rem; font-style: italic; margin: 0; padding: 10px; color: #fff;">
+                    "${text}"
+                  </blockquote>
+                  <cite style="display: block; margin-top: 10px; font-size: 0.9rem; color: #fff;">- ${author}</cite>
+                `;
+              }
+            
+              // Update quote every 10 seconds (10,000 milliseconds)
+              setInterval(updateQuote, 10000);
+            </script>
+            
     
             <!-- Opening Hours -->
             <!-- <div class="col-lg-4 col-md-12 col-12">
