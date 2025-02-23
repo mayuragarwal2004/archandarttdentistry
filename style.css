@@ -48,6 +48,9 @@ Version:	1.1
 /*=============================
 	Global CSS 
 ===============================*/
+.nav{
+  justify-content: space-evenly;
+}
 
 .counter-row-manage {
   display: flex;

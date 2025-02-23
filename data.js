@@ -4,19 +4,20 @@ const data = [
     id: "pain-relief",
     description:
       "Pain relief is the method of reducing or relieving pain. Pain relief methods include medication, physical therapy, and other treatments.",
+    img: "/img/services/pain-relief.jpg",
     child: [
       {
         name: "Root Canal Treatment",
         description:
           "Root canal treatment is a dental procedure used to treat infection at the centre of a tooth (the root canal system). It's also known as 'endodontics'.",
-        img: "/img/services/root-canal-treatment.png",
+        img: "/img/services/root-canal-treatment.jpg",
         id: "root-canal-treatment",
       },
       {
         name: "Wisdom Tooth Removal",
         description:
-          "Wisdom tooth removal is a surgical procedure to remove one or more wisdom teeth — the four permanent adult teeth located at the back corners of your mouth on the top and bottom.",
-        img: "/img/services/wisdom-tooth-removal.png",
+          "Wisdom Tooth Removal is a specialized dental procedure aimed at extracting one or more third molars, commonly known as wisdom teeth. These teeth, located at the back of the mouth, often cause issues such as pain, swelling, infections, and misalignment due to lack of space. Our expert dental team provides safe and comfortable wisdom tooth extractions using advanced techniques and local anesthesia to minimize discomfort. Whether your wisdom teeth are impacted, partially erupted, or causing complications, we ensure a smooth and stress-free experience with precise diagnosis, gentle removal, and comprehensive post-procedure care. Schedule a consultation today to prevent future dental complications and maintain optimal oral health!",
+        img: "/img/services/wisdom-tooth-removal.jpg",
         id: "wisdom-tooth-removal",
       },
       {
@@ -59,14 +60,14 @@ const data = [
         name: "Veneers & Laminates",
         description:
           "Veneers are thin pieces of porcelain used to recreate the natural look of teeth, while also providing strength and resilience comparable to natural tooth enamel.",
-        img: "/img/services/veneers-laminates.png",
+        img: "/img/services/veneers-laminates.jpg",
         id: "veneers-laminates",
       },
       {
         name: "Digital Smile Design",
         description:
           "Digital Smile Design is a concept that allows dental professionals to design a patient's smile in a digital environment.",
-        img: "/img/services/digital-smile-design.png",
+        img: "/img/services/digital-smile-design.webp",
         id: "digital-smile-design",
       },
       {
@@ -95,7 +96,7 @@ const data = [
         name: "All on 4/6 Implants",
         description:
           "All-on-4/6 dental implants are a full set of teeth that are fixed in place using four or six dental implants.",
-        img: "/img/services/all-on-4-6-implants.png",
+        img: "/img/services/all-on-4-6-implants.jpeg",
         id: "all-on-4-6-implants",
       },
       {
@@ -131,7 +132,7 @@ const data = [
         name: "Cavity Fillings",
         description:
           "A dental filling is a type of restorative dentistry treatment used to repair minimal tooth fractures, tooth decay or otherwise damaged surfaces of the teeth.",
-        img: "/img/services/cavity-fillings.png",
+        img: "/img/services/cavity-fillings.jpg",
         id: "cavity-fillings",
       },
       {
@@ -159,7 +160,7 @@ const data = [
         name: "Fluoride Application & Sealants",
         description:
           "Fluoride is a mineral that occurs naturally in many foods and water. Fluoride helps to prevent tooth decay by making your teeth more resistant to acid attacks from plaque bacteria and sugars in the mouth. Sealants are thin, protective coatings that are painted on the chewing surfaces of teeth — usually the back teeth (the premolars and molars) — to prevent tooth decay.",
-        img: "/img/services/fluoride-application-sealants.png",
+        img: "/img/services/fluoride-application-sealants.jpg",
         id: "fluoride-application-sealants",
       },
     ],

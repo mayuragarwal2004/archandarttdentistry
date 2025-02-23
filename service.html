@@ -168,21 +168,21 @@
 		<section class="services section">
 			<div class="container">
 				<div class="row"> 
-					<div class="col-lg-6">
+					<!-- <div class="col-lg-6">
 						<div class="service-image" style="display: flex;">
 							<img src="img/services/tooth-alignment.png" style="max-height: 200px; margin: auto;" alt="Tooth Alignment">
 						</div>
-					</div>
+					</div> -->
 					<div class="col-lg-6">
 						<div class="service-content">
-							<h2>Tooth Alignment</h2>
-							<p>Tooth alignment is a process of straightening or moving teeth to improve their appearance and functionality. It can also help to improve the long-term health of your teeth, gums, and jaw joints by spreading the biting pressure across all your teeth.</p>
+							<h2>Loading...</h2>
+							<!-- <p>Tooth alignment is a process of straightening or moving teeth to improve their appearance and functionality. It can also help to improve the long-term health of your teeth, gums, and jaw joints by spreading the biting pressure across all your teeth.</p>
 							<div class="child-services-buttons">
 								<a href="#pain-relief" class="btn">Pain Relief <i class="icofont-rounded-right"></i></a>
 								<a href="#cosmetic-dentistry" class="btn">Cosmetic Dentistry <i class="icofont-rounded-right"></i></a>
 								<a href="#teeth-replacement" class="btn">Teeth Replacement <i class="icofont-rounded-right"></i></a>
 								<a href="#preventive-dentistry" class="btn">Preventive Dentistry <i class="icofont-rounded-right"></i></a>
-							</div>
+							</div> -->
 						</div>
 					</div>
 				</div>
@@ -339,7 +339,7 @@
 				  contentHTML = `
 					<div class="col-lg-6">
 					  <div class="service-image" style="display: flex;">
-						<img src="img/services/${child.id}.png" style="max-height: 200px; margin: auto;" alt="${child.name}">
+						<img src="${child.img}" style="max-height: 200px; margin: auto;" alt="${child.name}">
 					  </div>
 					</div>
 					<div class="col-lg-6">
@@ -353,7 +353,7 @@
 				  contentHTML = `
 					<div class="col-lg-6">
 					  <div class="service-image" style="display: flex;">
-						<img src="img/services/${parent.id}.png" style="max-height: 200px; margin: auto;" alt="${parent.name}">
+						<img src="${parent.img}" style="max-height: 200px; margin: auto;" alt="${parent.name}">
 					  </div>
 					</div>
 					<div class="col-lg-6">
