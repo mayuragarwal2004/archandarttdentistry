@@ -34,6 +34,13 @@ const data = [
         img: "/img/services/tmj-tmd.png",
         id: "tmj-tmd",
       },
+      {
+        name: "Sensitivity",
+        description:
+          "Tooth sensitivity is a common dental problem that involves discomfort or pain in teeth when encountering certain substances and temperatures. It can result from exposed dentin, cavities, worn enamel, gum recession, or other dental issues. Our experienced team provides personalized treatment plans to address tooth sensitivity and protect your oral health. We offer a range of solutions, including desensitizing toothpaste, fluoride treatments, dental bonding, crowns, and other restorative procedures to alleviate discomfort and enhance your smile. Schedule a consultation today to receive expert care and enjoy a healthy, pain-free smile!",
+        img: "/img/services/sensitivity.jpg",
+        id: "sensitivity",
+      },
     ],
   },
   {
