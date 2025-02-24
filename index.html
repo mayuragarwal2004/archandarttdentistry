@@ -445,37 +445,43 @@
     <section class="schedule">
       <div class="container">
         <div class="schedule-inner">
-          <div class="row">
-            <!-- Emergency Cases -->
-            <div class="col-lg-4 col-md-6 col-12">
-              <div class="single-schedule first">
-                <div class="inner">
-                  <div class="icon">
-                    <i class="fa fa-ambulance"></i>
-                  </div>
-                  <div class="single-content">
-                    <span>Need Immediate Care?</span>
-                    <h4>Emergency Cases</h4>
-                    <p>
-                      Dental emergencies? We provide immediate care for severe
-                      toothaches, broken teeth, and urgent dental procedures.
-                      Contact us right away!
-                    </p>
-                    <a href="tel:+919158500021"
-                      >CALL NOW<i class="fa fa-long-arrow-right"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
+          <div class="row" style="justify-content: center">
             <!-- Doctors Timetable -->
-            <div class="col-lg-4 col-md-6 col-12">
+            <div class="col-lg-6 col-md-6 col-12">
               <div
-                class="single-schedule middle"
-                style="background: #1a76d1; border-radius: 8px; padding: 20px"
+                class="single-schedule middle relative"
+                style="
+                  background: #1a365c;
+                  border: #d4b46c 7px solid;
+                  border-radius: 30px;
+                  padding: 20px;
+                "
               >
-                <div class="inner" style="text-align: center">
+                <div
+                  class="overlay-image"
+                  style="
+                    position: absolute;
+                    z-index: 90;
+                    opacity: 0.1;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    justify-content: center;
+                  "
+                >
+                  <img
+                    src="img/logo-tooth.png"
+                    alt="Doctor"
+                    style="width: 50%; height: auto"
+                  />
+                </div>
+                <div
+                  class="inner"
+                  style="text-align: center; position: relative; z-index: 99"
+                >
                   <!-- Quote display area -->
                   <div
                     id="quoteContainer"
@@ -512,15 +518,25 @@
             <script>
               // Array of quotes with text and author
               const quotes = [
-                { text: "Floss Brush Rinse" },
                 {
-                  text: "The Prettiest thing you can wear is a healthy smile.",
+                  text: "To love and care for everyone",
+                  desc: "True dental care is built on compassion, patience, and understanding, ensuring every patient feels valued.",
                 },
-                { text: "Oral Health is an Investment not a expense" },
-                { text: "It's a Beautiful Day Save Smile" },
-                { text: "We Love to see you Smile" },
                 {
-                  text: "Let your Smile change the world.but don't let the world change your Smile",
+                  text: "Never give up",
+                  desc: "We help you overcome dental fears with kindness and expertise, making your journey stress-free.",
+                },
+                {
+                  text: "To use yourself effectively for society",
+                  desc: "We strive to make dental care accessible, promoting overall well-being for a healthier community.",
+                },
+                {
+                  text: "To be healthy in body and mind",
+                  desc: "A healthy smile leads to a healthier you, boosting confidence and well-being.",
+                },
+                {
+                  text: "To have your best bright smile",
+                  desc: "Experience gentle, personalized care for a radiant, confident smile!",
                 },
               ];
 
@@ -528,62 +544,22 @@
               const quoteContainer = document.getElementById("quoteContainer");
 
               function updateQuote() {
-                currentQuote = (currentQuote + 1) % quotes.length;
-                const { text, author } = quotes[currentQuote];
+                const { text, desc } = quotes[currentQuote];
                 quoteContainer.innerHTML = `
-                  <blockquote style="font-size: 1rem; font-style: italic; margin: 0; padding: 10px; color: #fff;">
-                    "${text}"
+                <blockquote style="font-size: 1rem; font-style: italic; margin: 0; padding: 10px; color: #fff;">
+                  "${text}"
                   </blockquote>
-                `;
+                <blockquote style="font-size: 1rem; font-style: italic; margin: 0; padding: 10px; color: #fff;">
+                  ${desc}
+                  </blockquote>
+                  `;
+                currentQuote = (currentQuote + 1) % quotes.length;
               }
+              updateQuote();
 
               // Update quote every 10 seconds (10,000 milliseconds)
               setInterval(updateQuote, 10000);
             </script>
-
-            <!-- Opening Hours -->
-            <!-- <div class="col-lg-4 col-md-12 col-12">
-              <div class="single-schedule last">
-                <div class="inner">
-                  <div class="icon">
-                    <i class="icofont-ui-clock"></i>
-                  </div>
-                  <div class="single-content">
-                    <span>Visit Us</span>
-                    <h4>Opening Hours</h4>
-                    <ul class="time-sidual">
-                      <li class="day">Monday - Friday <span>8:00 AM - 8:00 PM</span></li>
-                      <li class="day">Saturday <span>9:00 AM - 6:30 PM</span></li>
-                      <li class="day">Sunday <span>Closed</span></li>
-                    </ul>
-                    <a href="contact-us.html">BOOK NOW<i class="fa fa-long-arrow-right"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div> -->
-
-            <div class="col-lg-4 col-md-6 col-12">
-              <div class="single-schedule middle">
-                <div class="inner">
-                  <div class="icon">
-                    <i class="icofont-prescription"></i>
-                  </div>
-                  <div class="single-content">
-                    <span>Visit Us</span>
-                    <h4>Opening Hours</h4>
-                    <p>
-                      Monday - Saturday : 10:00 AM - 2:00 PM <br />
-                      Monday - Saturday : 5:00 PM - 8:30 PM <br />
-                      Sunday : Closed <br />
-                      By Appointments Only.
-                    </p>
-                    <a href="https://wa.me/919158500021"
-                      >BOOK NOW<i class="fa fa-long-arrow-right"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -1504,7 +1480,7 @@
                       margin: 0;
                     "
                   >
-                  <!-- To do, change -->
+                    <!-- To do, change -->
                     Custom-made dentures to restore function and aesthetics for
                     missing teeth.
                   </p>
@@ -1876,9 +1852,7 @@
               <div class="copyright-content">
                 <p>
                   © Copyright 2025 | All Rights Reserved by
-                  <a href="" target="_blank"
-                    >The Arch &amp; Artt Dentistry</a
-                  >
+                  <a href="" target="_blank">The Arch &amp; Artt Dentistry</a>
                 </p>
               </div>
             </div>

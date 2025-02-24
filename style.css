@@ -783,7 +783,7 @@ body {
   z-index: 2;
 }
 .schedule .single-schedule:before {
-  position: absolute;
+  /* position: absolute;
   z-index: -1;
   content: "";
   bottom: -10px;
@@ -799,7 +799,7 @@ body {
   -moz-transition: all 0.3s ease-out 0s;
   -ms-transition: all 0.3s ease-out 0s;
   -o-transition: all 0.3s ease-out 0s;
-  transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s; */
 }
 .schedule .single-schedule:hover:before {
   opacity: 0.8;
