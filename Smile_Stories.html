@@ -175,16 +175,16 @@
             <div class="row">
               <div class="col-lg-3 col-md-3 col-12">
                 <!-- Start Logo -->
-                <div class="logo" style="text-align: center;">
+                <div class="logo" style="text-align: center">
                   <a href="index.html">
-                      <img
-                          src="img/R.png"
-                          style="width: 200px; height: auto; margin-bottom: 10px"
-                          alt="#"
-                      />
+                    <img
+                      src="img/R.png"
+                      style="width: 200px; height: auto; margin-bottom: 10px"
+                      alt="#"
+                    />
                   </a>
                 </div>
-              
+
                 <!-- End Logo -->
                 <!-- Mobile Nav -->
                 <div class="mobile-nav"></div>
@@ -196,19 +196,14 @@
                   <nav class="navigation">
                     <ul class="nav menu">
                       <li class="active">
-                        <a href="index.html"
-                          >Home <i class="icofont-rounded-down"></i
-                        ></a>
-                        <ul class="dropdown">
-                          <li><a href="index.html">Home Page 1</a></li>
-                        </ul>
+                        <a href="index.html">Home</a>
                       </li>
-                      <li><a href="#">Reviews </a></li>
+                      <li><a href="gallery.html">Gallery</a></li>
                       <!-- <li><a href="#">Services </a></li> -->
-                      <li>
-                        <a href="#"
-                          >Services <i class="icofont-rounded-down"></i
-                        ></a>
+                      <li id="services-header-dropdowns">
+                        <a href="#">
+                          Services <i class="icofont-rounded-down"></i>
+                        </a>
                         <ul
                           class="dropdown"
                           style="
@@ -217,136 +212,67 @@
                             background: #fff;
                             padding: 10px;
                           "
-                        >
-                          <li>
-                            <a href="404.html">Pain Relief</a>
-                            <ul
-                              style="
-                                display: none;
-                                position: absolute;
-                                left: 100%;
-                                background: #fff;
-                                padding: 5px;
-                                display: none;
-                              "
-                            >
-                              <li>
-                                <ul class="second-dropdown dropdown">
-                                  <li>
-                                    <a href="404.html">Root Canal Treatment</a>
-                                  </li>
-                                  <li>
-                                    <a href="404.html">Wisdom Tooth Removal</a>
-                                  </li>
-                                  <li><a href="404.html">Gum Treatment</a></li>
-                                  <li><a href="404.html">TMJ/TMD</a></li>
-                                </ul>
-                              </li>
-                            </ul>
-                          </li>
-
-                          <li>
-                            <a href="404.html">Cosmetic Treatment</a>
-                            <ul
-                              style="
-                                position: absolute;
-                                left: 100%;
-                                top: 0;
-                                background: #fff;
-                                padding: 5px;
-                                display: none;
-                                padding: 5px;
-                              "
-                            >
-                              <li>
-                                <ul class="second-dropdown dropdown">
-                                  <li>
-                                    <a href="404.html">Braces Treatment</a>
-                                  </li>
-                                  <li><a href="404.html">Invisalign</a></li>
-                                  <li>
-                                    <a href="404.html">Veneers & Laminates</a>
-                                  </li>
-                                  <li>
-                                    <a href="404.html"
-                                      >Digital Smile Designing</a
-                                    >
-                                  </li>
-                                  <li>
-                                    <a href="404.html">Teeth Whitening</a>
-                                  </li>
-                                </ul>
-                              </li>
-                            </ul>
-                          </li>
-
-                          <li>
-                            <a href="404.html">Teeth Replacement</a>
-                            <ul
-                              style="
-                                display: none;
-                                position: absolute;
-                                left: 100%;
-                                top: 0;
-                                background: #fff;
-                                padding: 5px;
-                              "
-                            >
-                              <li>
-                                <ul class="second-dropdown dropdown">
-                                  <li>
-                                    <a href="404.html">Dental Implants</a>
-                                  </li>
-                                  <li>
-                                    <a href="404.html">All on 4/6 implant</a>
-                                  </li>
-                                  <li>
-                                    <a href="404.html">Crown & Bridges</a>
-                                  </li>
-                                  <li><a href="404.html">Dentures</a></li>
-                                  <li>
-                                    <a href="404.html"
-                                      >Full Mouth Rehablitation</a
-                                    >
-                                  </li>
-                                </ul>
-                              </li>
-                            </ul>
-                          </li>
-                          <li>
-                            <a href="404.html">Preventive Dentistry</a>
-                            <ul
-                              style="
-                                display: none;
-                                position: absolute;
-                                left: 100%;
-                                top: 0;
-                                background: #fff;
-                                padding: 5px;
-                              "
-                            >
-                              <li>
-                                <ul class="second-dropdown dropdown">
-                                  <li><a href="404.html">Cavity Filling</a></li>
-                                  <li>
-                                    <a href="404.html">Scaling & polishing</a>
-                                  </li>
-                                  <li><a href="404.html">Kids Dentistry</a></li>
-                                  <li>
-                                    <a href="404.html">Bad Breath Treatment</a>
-                                  </li>
-                                  <li>
-                                    <a href="404.html"
-                                      >Fluoride Application & Sealants</a
-                                    >
-                                  </li>
-                                </ul>
-                              </li>
-                            </ul>
-                          </li>
-                        </ul>
+                        ></ul>
                       </li>
                       <script>
+                        const servicesDropdown = document.getElementById(
+                          "services-header-dropdowns"
+                        );
+
+                        if (!servicesDropdown) {
+                          throw new Error(
+                            "Could not find services dropdown element"
+                          );
+                        }
+
+                        const dropdownMenu =
+                          servicesDropdown.querySelector("ul.dropdown");
+
+                        function createDropdownItem(service) {
+                          const li = document.createElement("li");
+                          const a = document.createElement("a");
+                          a.href = `/service.html?parent-id=${service.id}`;
+                          a.textContent = service.name;
+                          li.appendChild(a);
+
+                          if (service.child && service.child.length > 0) {
+                            const subMenu = document.createElement("ul");
+                            subMenu.classList.add(
+                              "second-dropdown",
+                              "dropdown"
+                            );
+                            subMenu.style = `display: none;position: absolute;left: 80%;top: 0;background: #fff;padding: 5px;`;
+
+                            service.child.forEach((child) => {
+                              const childLi = document.createElement("li");
+                              const childA = document.createElement("a");
+                              childA.href = `/service.html?parent-id=${service.id}&child-id=${child.id}`;
+                              childA.textContent = child.name;
+                              childLi.appendChild(childA);
+                              subMenu.appendChild(childLi);
+                            });
+
+                            li.appendChild(subMenu);
+
+                            // Show sub-menu on hover
+                            // li.addEventListener(
+                            //   "mouseenter",
+                            //   () => (wrapper.style.display = "block")
+                            // );
+                            // li.addEventListener(
+                            //   "mouseleave",
+                            //   () => (wrapper.style.display = "none")
+                            // );
+                          }
+
+                          return li;
+                        }
+
+                        // Populate dropdown menu
+                        data.forEach((service) => {
+                          const menuItem = createDropdownItem(service);
+                          dropdownMenu.appendChild(menuItem);
+                        });
                         document.querySelectorAll("li").forEach((item) => {
                           item.addEventListener("mouseenter", function () {
                             let dropdown = this.querySelector("ul");
@@ -364,22 +290,22 @@
                         });
                       </script>
 
-                      <li>
+                      <!-- <li>
                         <a href="#"
                           >Pages <i class="icofont-rounded-down"></i
                         ></a>
                         <ul class="dropdown">
                           <li><a href="404.html">404 Error</a></li>
                         </ul>
-                      </li>
-                      <li>
+                      </li> -->
+                      <!-- <li>
                         <a href="#"
                           >Blogs <i class="icofont-rounded-down"></i
                         ></a>
                         <ul class="dropdown">
-                          <li><a href="blog-single.html">Smile Stories</a></li>
+                          <li><a href="blog-single.html">Blog Details</a></li>
                         </ul>
-                      </li>
+                      </li> -->
                       <li><a href="contact.html">Contact Us</a></li>
                     </ul>
                   </nav>
@@ -388,12 +314,9 @@
               </div>
               <div class="col-lg-2 col-12">
                 <div class="get-quote">
-                  <a
-                    style="margin-top: 14px"
-                    href="appointment.html"
-                    class="btn"
-                    >Smile Stories</a
-                  >
+                  <a style="margin-top: 14px" href="Smile_Stories.html" class="btn">
+                    Smile Stories >
+                  </a>
                 </div>
               </div>
             </div>
@@ -402,6 +325,7 @@
       </div>
       <!--/ End Header Inner -->
     </header>
+    <!-- End Header Area -->
 
     <div class="breadcrumbs overlay">
         <div class="container">
@@ -603,7 +527,7 @@
                 <div class="single-footer f-link">
                 <h2>Quick Links</h2>
                 <div class="row">
-                    <div class="col-lg-6 col-md-6 col-12">
+                    <div class="col-lg-6 col-md-6s col-12">
                     <ul>
                         <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Home</a></li>
                         <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> About Us</a></li>
@@ -612,7 +536,7 @@
                         <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Blog</a></li>
                     </ul>
                     </div>
-                    <div class="col-lg-6 col-md-6 col-12">
+                    <!-- <div class="col-lg-6 col-md-6 col-12">
                     <ul>
                         <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Consultations</a></li>
                         <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Financing</a></li>
@@ -620,7 +544,7 @@
                         <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> FAQ</a></li>
                         <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Contact Us</a></li>
                     </ul>
-                    </div>
+                    </div> -->
                 </div>
                 </div>
             </div>

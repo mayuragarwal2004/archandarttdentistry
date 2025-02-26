@@ -31,6 +31,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css" />
+
     <!-- Nice Select CSS -->
     <link rel="stylesheet" href="css/nice-select.css" />
     <!-- Font Awesome CSS -->
@@ -176,16 +177,16 @@
             <div class="row">
               <div class="col-lg-3 col-md-3 col-12">
                 <!-- Start Logo -->
-                <div class="logo" style="text-align: center;">
+                <div class="logo" style="text-align: center">
                   <a href="index.html">
-                      <img
-                          src="img/R.png"
-                          style="width: 200px; height: auto; margin-bottom: 10px"
-                          alt="#"
-                      />
+                    <img
+                      src="img/R.png"
+                      style="width: 200px; height: auto; margin-bottom: 10px"
+                      alt="#"
+                    />
                   </a>
                 </div>
-              
+
                 <!-- End Logo -->
                 <!-- Mobile Nav -->
                 <div class="mobile-nav"></div>
@@ -197,19 +198,14 @@
                   <nav class="navigation">
                     <ul class="nav menu">
                       <li class="active">
-                        <a href="index.html"
-                          >Home <i class="icofont-rounded-down"></i
-                        ></a>
-                        <ul class="dropdown">
-                          <li><a href="index.html">Home Page 1</a></li>
-                        </ul>
+                        <a href="index.html">Home</a>
                       </li>
-                      <li><a href="#">Reviews </a></li>
+                      <li><a href="gallery.html">Gallery</a></li>
                       <!-- <li><a href="#">Services </a></li> -->
-                      <li>
-                        <a href="#"
-                          >Services <i class="icofont-rounded-down"></i
-                        ></a>
+                      <li id="services-header-dropdowns">
+                        <a href="#">
+                          Services <i class="icofont-rounded-down"></i>
+                        </a>
                         <ul
                           class="dropdown"
                           style="
@@ -218,136 +214,67 @@
                             background: #fff;
                             padding: 10px;
                           "
-                        >
-                          <li>
-                            <a href="404.html">Pain Relief</a>
-                            <ul
-                              style="
-                                display: none;
-                                position: absolute;
-                                left: 100%;
-                                background: #fff;
-                                padding: 5px;
-                                display: none;
-                              "
-                            >
-                              <li>
-                                <ul class="second-dropdown dropdown">
-                                  <li>
-                                    <a href="404.html">Root Canal Treatment</a>
-                                  </li>
-                                  <li>
-                                    <a href="404.html">Wisdom Tooth Removal</a>
-                                  </li>
-                                  <li><a href="404.html">Gum Treatment</a></li>
-                                  <li><a href="404.html">TMJ/TMD</a></li>
-                                </ul>
-                              </li>
-                            </ul>
-                          </li>
-
-                          <li>
-                            <a href="404.html">Cosmetic Treatment</a>
-                            <ul
-                              style="
-                                position: absolute;
-                                left: 100%;
-                                top: 0;
-                                background: #fff;
-                                padding: 5px;
-                                display: none;
-                                padding: 5px;
-                              "
-                            >
-                              <li>
-                                <ul class="second-dropdown dropdown">
-                                  <li>
-                                    <a href="404.html">Braces Treatment</a>
-                                  </li>
-                                  <li><a href="404.html">Invisalign</a></li>
-                                  <li>
-                                    <a href="404.html">Veneers & Laminates</a>
-                                  </li>
-                                  <li>
-                                    <a href="404.html"
-                                      >Digital Smile Designing</a
-                                    >
-                                  </li>
-                                  <li>
-                                    <a href="404.html">Teeth Whitening</a>
-                                  </li>
-                                </ul>
-                              </li>
-                            </ul>
-                          </li>
-
-                          <li>
-                            <a href="404.html">Teeth Replacement</a>
-                            <ul
-                              style="
-                                display: none;
-                                position: absolute;
-                                left: 100%;
-                                top: 0;
-                                background: #fff;
-                                padding: 5px;
-                              "
-                            >
-                              <li>
-                                <ul class="second-dropdown dropdown">
-                                  <li>
-                                    <a href="404.html">Dental Implants</a>
-                                  </li>
-                                  <li>
-                                    <a href="404.html">All on 4/6 implant</a>
-                                  </li>
-                                  <li>
-                                    <a href="404.html">Crown & Bridges</a>
-                                  </li>
-                                  <li><a href="404.html">Dentures</a></li>
-                                  <li>
-                                    <a href="404.html"
-                                      >Full Mouth Rehablitation</a
-                                    >
-                                  </li>
-                                </ul>
-                              </li>
-                            </ul>
-                          </li>
-                          <li>
-                            <a href="404.html">Preventive Dentistry</a>
-                            <ul
-                              style="
-                                display: none;
-                                position: absolute;
-                                left: 100%;
-                                top: 0;
-                                background: #fff;
-                                padding: 5px;
-                              "
-                            >
-                              <li>
-                                <ul class="second-dropdown dropdown">
-                                  <li><a href="404.html">Cavity Filling</a></li>
-                                  <li>
-                                    <a href="404.html">Scaling & polishing</a>
-                                  </li>
-                                  <li><a href="404.html">Kids Dentistry</a></li>
-                                  <li>
-                                    <a href="404.html">Bad Breath Treatment</a>
-                                  </li>
-                                  <li>
-                                    <a href="404.html"
-                                      >Fluoride Application & Sealants</a
-                                    >
-                                  </li>
-                                </ul>
-                              </li>
-                            </ul>
-                          </li>
-                        </ul>
+                        ></ul>
                       </li>
                       <script>
+                        const servicesDropdown = document.getElementById(
+                          "services-header-dropdowns"
+                        );
+
+                        if (!servicesDropdown) {
+                          throw new Error(
+                            "Could not find services dropdown element"
+                          );
+                        }
+
+                        const dropdownMenu =
+                          servicesDropdown.querySelector("ul.dropdown");
+
+                        function createDropdownItem(service) {
+                          const li = document.createElement("li");
+                          const a = document.createElement("a");
+                          a.href = `/service.html?parent-id=${service.id}`;
+                          a.textContent = service.name;
+                          li.appendChild(a);
+
+                          if (service.child && service.child.length > 0) {
+                            const subMenu = document.createElement("ul");
+                            subMenu.classList.add(
+                              "second-dropdown",
+                              "dropdown"
+                            );
+                            subMenu.style = `display: none;position: absolute;left: 80%;top: 0;background: #fff;padding: 5px;`;
+
+                            service.child.forEach((child) => {
+                              const childLi = document.createElement("li");
+                              const childA = document.createElement("a");
+                              childA.href = `/service.html?parent-id=${service.id}&child-id=${child.id}`;
+                              childA.textContent = child.name;
+                              childLi.appendChild(childA);
+                              subMenu.appendChild(childLi);
+                            });
+
+                            li.appendChild(subMenu);
+
+                            // Show sub-menu on hover
+                            // li.addEventListener(
+                            //   "mouseenter",
+                            //   () => (wrapper.style.display = "block")
+                            // );
+                            // li.addEventListener(
+                            //   "mouseleave",
+                            //   () => (wrapper.style.display = "none")
+                            // );
+                          }
+
+                          return li;
+                        }
+
+                        // Populate dropdown menu
+                        data.forEach((service) => {
+                          const menuItem = createDropdownItem(service);
+                          dropdownMenu.appendChild(menuItem);
+                        });
                         document.querySelectorAll("li").forEach((item) => {
                           item.addEventListener("mouseenter", function () {
                             let dropdown = this.querySelector("ul");
@@ -365,22 +292,22 @@
                         });
                       </script>
 
-                      <li>
+                      <!-- <li>
                         <a href="#"
                           >Pages <i class="icofont-rounded-down"></i
                         ></a>
                         <ul class="dropdown">
                           <li><a href="404.html">404 Error</a></li>
                         </ul>
-                      </li>
-                      <li>
+                      </li> -->
+                      <!-- <li>
                         <a href="#"
                           >Blogs <i class="icofont-rounded-down"></i
                         ></a>
                         <ul class="dropdown">
                           <li><a href="blog-single.html">Blog Details</a></li>
                         </ul>
-                      </li>
+                      </li> -->
                       <li><a href="contact.html">Contact Us</a></li>
                     </ul>
                   </nav>
@@ -389,12 +316,9 @@
               </div>
               <div class="col-lg-2 col-12">
                 <div class="get-quote">
-                  <a
-                    style="margin-top: 14px"
-                    href="appointment.html"
-                    class="btn"
-                    >Gallary</a
-                  >
+                  <a style="margin-top: 14px" href="Smile_Stories.html" class="btn">
+                    Smile Stories >
+                  </a>
                 </div>
               </div>
             </div>
@@ -403,6 +327,7 @@
       </div>
       <!--/ End Header Inner -->
     </header>
+    <!-- End Header Area -->
 
     <div class="breadcrumbs overlay">
         <div class="container">
@@ -421,39 +346,334 @@
         </div>
     </div>
     <!-- End Breadcrumbs -->
-    
-    <body style="font-family: Arial, sans-serif; margin: 0; padding: 0; text-align: center;">
-    
-    <!-- <h1 class="news-title" style="color: #333; margin-top: 20px;">Welcome to The Arc and Art Dentistry Gallery</h1>
-    <p style="color: #666;">Showcasing our clinic, treatments, and patient-friendly environment</p> -->
-    
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; padding: 20px; max-width: 1000px; margin: auto;">
-        <div style="border: 2px solid #ddd; padding: 10px; border-radius: 10px;">
-            <img src="/img/Set01.jpg" alt="Dental Clinic" style="width: 100%; border-radius: 8px;">
-            <p style="color: #444;">State-of-the-art Dental Equipment</p>
-        </div>
-        <div style="border: 2px solid #ddd; padding: 10px; border-radius: 10px;">
-            <img src="/img/Set19.jpg" alt="Treatment Room" style="width: 100%; border-radius: 8px;">
-            <p style="color: #444;">Modern & Comfortable Treatment Rooms</p>
-        </div>
-        <div style="border: 2px solid #ddd; padding: 10px; border-radius: 10px;">
-            <img src="/img/Set22.jpg" alt="Waiting Area" style="width: 100%; border-radius: 8px;">
-            <p style="color: #444;">Relaxing & Spacious Waiting Area</p>
-        </div>
-        <div style="border: 2px solid #ddd; padding: 10px; border-radius: 10px;">
-            <img src="/img/Set26.jpg" alt="Dental Procedures" style="width: 100%; border-radius: 8px;">
-            <p style="color: #444;">Advanced Dental Procedures</p>
-        </div>
-        <!-- <div style="border: 2px solid #ddd; padding: 10px; border-radius: 10px;">
-            <img src="/img/set" alt="Dental Hygiene" style="width: 100%; border-radius: 8px;">
-            <p style="color: #444;">Emphasis on Dental Hygiene</p>
-        </div>
-        <div style="border: 2px solid #ddd; padding: 10px; border-radius: 10px;">
-            <img src="/img/" alt="Smile Transformation" style="width: 100%; border-radius: 8px;">
-            <p style="color: #444;">Transforming Smiles with Care</p>
-        </div> -->
-    </div>
-    
+    <link rel="stylesheet" href="css/gallery.css" />
+
+<!-- <section class="bg-grey">
+	<div id="return-one" class="section section-one">
+		<div class="box1">
+			<h1>Sterilization & Hygiene
+      </h1>
+			<p>
+				Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea nobis, sunt obcaecati tempora voluptatum esse itaque eius, pariatur ipsam sit rerum
+				possimus facilis? Laboriosam necessitatibus ea recusandae qui, dicta ipsam? Quas odio ad non molestiae perferendis cum itaque autem vel asperiores,
+				rerum numquam eligendi eos laudantium consequatur libero sapiente delectus omnis quisquam necessitatibus temporibus fugiat suscipit. Numquam odit minus
+				odio.
+			</p>
+		</div>
+		<div class="box2 thumbnail-component">
+			<a href="#img1">
+				<img class="thumbnail-image" src="https://placehold.co/600x400" alt="Image description" />
+				<div class="icon-container">
+					<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
+						<path fill="#30303090" d="M16 0H9.5L12 2.5l-3 3L10.5 7l3-3L16 6.5zm0 16V9.5L13.5 12l-3-3L9 10.5l3 3L9.5 16zM0 16h6.5L4 13.5l3-3L5.5 9l-3 3L0 9.5zM0 0v6.5L2.5 4l3 3L7 5.5l-3-3L6.5 0z"></path>
+					</svg>
+				</div>
+			</a>
+			<div id="img1" class="overlay">
+				<a href="#img1" class="overlay-background"></a>
+				<div class="overlay-content">
+					<img class="overlay-image" src="https://placehold.co/1920x1080" alt="image description" />
+					<a href="#return-one" class="close-button">✖</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="bg-white">
+	<div id="return-two" class="section section-two">
+		<div class="box1">
+			<h1>Lorem Ipsum Dolar Sit Amet</h1>
+			<p>
+				Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea nobis, sunt obcaecati tempora voluptatum esse itaque eius, pariatur ipsam sit rerum
+				possimus facilis? Laboriosam necessitatibus ea recusandae qui, dicta ipsam? Quas odio ad non molestiae perferendis cum itaque autem vel asperiores,
+				rerum numquam eligendi eos laudantium consequatur libero sapiente delectus omnis quisquam necessitatibus temporibus fugiat suscipit. Numquam odit minus
+				odio.
+			</p>
+			<a class="btn" href="#">Find Out More</a>
+		</div>
+		<div class="box2 thumbnail-component">
+			<a href="#img2">
+				<img class="thumbnail-image" src="https://placehold.co/600x400" alt="Image description" />
+				<div class="icon-container">
+					<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
+						<path fill="#30303090" d="M16 0H9.5L12 2.5l-3 3L10.5 7l3-3L16 6.5zm0 16V9.5L13.5 12l-3-3L9 10.5l3 3L9.5 16zM0 16h6.5L4 13.5l3-3L5.5 9l-3 3L0 9.5zM0 0v6.5L2.5 4l3 3L7 5.5l-3-3L6.5 0z"></path>
+					</svg>
+				</div>
+			</a>
+			<div id="img2" class="overlay">
+				<a href="#img2" class="overlay-background"></a>
+				<div class="overlay-content">
+					<img class="overlay-image" src="https://placehold.co/1920x1080" alt="image description" />
+					<a href="#return-two" class="close-button">✖</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section> -->
+
+<!-- SECTION THREE -->
+<section style="position: relative; background: linear-gradient(135deg, #dadada 50%, #f8f9fa 50%); padding: 100px 20px; font-family: 'Poppins', sans-serif; color: #ffffff;">
+  <div style="max-width: 1100px; margin: auto; display: flex; flex-wrap: wrap; align-items: center; gap: 40px;">
+      
+      <!-- Left: Content Section -->
+      <div style="flex: 1; padding: 40px; text-align: left;">
+          <h2 style="font-size: 32px; font-weight: 700; margin-bottom: 15px; color: #1c345c;">
+              Meet Our Experts
+          </h2>
+          <p style="font-size: 18px; line-height: 1.6; margin-bottom: 15px;color: #000000;">
+              At <strong>The Arch and Artt Dentistry</strong>, our team combines skill, compassion, and advanced techniques to ensure exceptional care for every patient.
+          </p>
+          <p style="font-size: 18px; line-height: 1.6; margin-bottom: 20px;color: #555;">
+              Our specialists in orthodontics, cosmetic dentistry, and hygiene work together to create healthier, brighter smiles.
+          </p>
+          <p style="font-size: 18px; font-weight: 600;color: #1c345c;">
+              💙 <strong>Your smile deserves the best care!</strong>
+          </p>
+      </div>
+
+      <!-- Right: Image Section -->
+      <div style="flex: 1; text-align: center;">
+          <img src="/img/team.JPG" alt="Expert Dental Team"
+              style="width: 200%; max-width: 600px; border-radius: 12px; box-shadow: 0px 10px 30px rgba(0,0,0,0.3); transform: rotate(-5deg); transition: transform 0.4s ease-in-out;" 
+              onmouseover="this.style.transform='rotate(0deg) scale(1.05)'" 
+              onmouseout="this.style.transform='rotate(-5deg)'">
+      </div>
+
+  </div>
+</section>
+
+
+
+
+<!-- SECTION FOUR -->
+<section style="background-color: #ffffff; padding: 50px 0;">
+  <div style="max-width: 1000px; margin: auto; padding: 20px; display: flex; flex-wrap: wrap; align-items: center; gap: 30px;">
+      <!-- Images Section -->
+      <div style="flex: 1; text-align: center; min-width: 300px;">
+          <img src="/img/gallery/Set14.jpg" alt="Sterilization Process" style="width: 100%; max-width: 450px; border-radius: 10px; margin-bottom: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+          <img src="/img/gallery/Set25.jpg" alt="Hygiene Protocols" style="width: 100%; max-width: 450px; border-radius: 10px; margin-bottom: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+      </div>
+
+      <!-- Content Section -->
+      <div style="flex: 1; min-width: 300px;">
+          <h1 style="font-size: 32px; color: #1c345c; font-family: 'Poppins', sans-serif; margin-bottom: 15px; text-align: center;">
+              <strong>Sterilization & Hygiene</strong>
+          </h1>
+          <p style="font-size: 16px; color: #555; font-family: 'Poppins', sans-serif; line-height: 1.6; margin-bottom: 20px; text-align: center;">
+              At <strong>The Arch and Artt Dentistry</strong>, we uphold the highest standards of 
+              <strong>sterilization and infection control</strong> to ensure a <strong>safe and hygienic environment</strong> 
+              for our patients. Our advanced protocols guarantee a germ-free and worry-free experience.
+          </p>
+          <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+              <ul style="list-style-type: none; padding: 0; font-size: 16px; color: #555; font-family: 'Poppins', sans-serif; line-height: 1.8;">
+                  <li>✔️ <strong>Autoclave Sterilization:</strong> High-pressure steam sterilization of all dental instruments.</li>
+                  <li>✔️ <strong>Single-Use Disposable Equipment:</strong> Gloves, masks, and syringes for each patient.</li>
+                  <li>✔️ <strong>Medical-Grade Surface Disinfection:</strong> Regular cleaning of treatment areas.</li>
+                  <li>✔️ <strong>Strict Hand Hygiene:</strong> Mandatory handwashing and sanitization for staff.</li>
+                  <li>✔️ <strong>HEPA-Filtered Air Purification:</strong> Clean, fresh, and germ-free air inside the clinic.</li>
+              </ul>
+          </div>
+          <p style="font-size: 16px; color: #555; font-family: 'Poppins', sans-serif; margin-top: 20px; text-align: center;">
+              Your health and comfort are our top priorities. Experience <strong>safe, high-quality dental care</strong> in a worry-free environment.
+          </p>
+          <p style="font-size: 18px; color: #1c345c; font-family: 'Poppins', sans-serif; font-weight: bold; margin-top: 15px; text-align: center;">
+              💙 Because your smile deserves the best care!
+          </p>
+      </div>
+  </div>
+</section>
+
+<!-- Mobile Responsive Styles -->
+<style>
+  @media screen and (max-width: 768px) {
+      section div {
+          flex-direction: column;
+          text-align: center;
+      }
+  }
+</style>
+
+
+
+
+<!-- SECTION FIVE -->
+<section style="background-color: #f8f9fa; padding: 60px 20px; color: #000000; font-family: 'Poppins', sans-serif;">
+  <div style="max-width: 1100px; margin: auto; text-align: center;">
+
+      <!-- Section Title -->
+      <h2 style="font-size: 32px; font-weight: bold; margin-bottom: 20px; color: #1c345c;">
+          State-of-the-Art Equipment
+      </h2>
+      <p style="font-size: 16px; color: #555; line-height: 1.6; max-width: 800px; margin: auto; margin-bottom: 40px;">
+          Experience world-class dental care with our cutting-edge technology and precision instruments.  
+          Designed for <strong>comfort, safety, and accuracy</strong>, our equipment ensures a seamless and pain-free experience.
+      </p>
+
+      <!-- Operatory 1 -->
+      <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 30px; margin-bottom: 50px;">
+          <div style="flex: 1; text-align: center;">
+              <img src="/img/gallery/Set14.jpg" alt="Operatory 1" 
+                   style="width: 100%; max-width: 500px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease-in-out;" 
+                   onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+          </div>
+          <div style="flex: 1; text-align: left; min-width: 300px;">
+              <h3 style="font-size: 26px; font-weight: bold; margin-bottom: 15px; color: #1c345c;">Operatory 1</h3>
+              <p style="font-size: 16px; line-height: 1.6; color: #555;">
+                  Our <strong>Operatory 1</strong> is equipped with the latest in dental technology, including 
+                  <strong>advanced imaging systems</strong>, <strong>ergonomic patient chairs</strong>, and 
+                  <strong>precision instruments</strong> to ensure maximum comfort and accuracy.
+              </p>
+              <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                <ul style="margin-top: 15px; font-size: 16px; color: #555; list-style: none; padding: 0;">
+                    <li>✔️ Digital X-rays for precise diagnosis</li>
+                    <li>✔️ Ergonomic dental chairs for patient comfort</li>
+                    <li>✔️ LED surgical lighting for enhanced visibility</li>
+                </ul>
+              </div>
+          </div>
+      </div>
+
+      <!-- Operatory 2 -->
+      <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 30px; flex-direction: row-reverse;">
+          <div style="flex: 1; text-align: center;">
+              <img src="/img/gallery/Set25.jpg" alt="Operatory 2" 
+                   style="width: 100%; max-width: 500px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease-in-out;" 
+                   onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+          </div>
+          <div style="flex: 1; text-align: left; min-width: 300px;">
+              <h3 style="font-size: 26px; font-weight: bold; margin-bottom: 15px; color: #1c345c;">Operatory 2</h3>
+              <p style="font-size: 16px; line-height: 1.6; color: #555;">
+                  Our <strong>Operatory 2</strong> is designed for specialized dental procedures, featuring 
+                  <strong>state-of-the-art sterilization equipment</strong>, <strong>real-time patient monitoring</strong>, 
+                  and <strong>minimally invasive tools</strong> for precision and safety.
+              </p>
+              <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                <ul style="margin-top: 15px; font-size: 16px; color: #555; list-style: none; padding: 0;">
+                    <li>✔️ HEPA air filtration for a sterile environment</li>
+                    <li>✔️ Laser technology for painless treatments</li>
+                    <li>✔️ Digital treatment planning for accuracy</li>
+                </ul>
+              </div>
+          </div>
+      </div>
+
+  </div>
+</section>
+
+
+<!-- Mobile Responsive Styles -->
+<style>
+  @media screen and (max-width: 768px) {
+      section div {
+          flex-direction: column !important;
+          text-align: center;
+      }
+      img {
+          max-width: 100%;
+      }
+  }
+</style>
+
+
+<!-- <section class="bg-white">
+	<div id="return-six" class="section section-six">
+		<div class="box1">
+			<h1>Lorem Ipsum Dolar Sit Amet</h1>
+			<p>
+				Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea nobis, sunt obcaecati tempora voluptatum esse itaque eius, pariatur ipsam sit rerum
+				possimus facilis? Laboriosam necessitatibus ea recusandae qui, dicta ipsam? Quas odio ad non molestiae perferendis cum itaque autem vel asperiores,
+				rerum numquam eligendi eos laudantium consequatur libero sapiente delectus omnis quisquam necessitatibus temporibus fugiat suscipit. Numquam odit minus
+				odio.
+			</p>
+			<a class="btn" href="#">Find Out More</a>
+		</div>
+		<div class="image-row">
+			<div class="box2 thumbnail-component">
+				<a href="#img8">
+					<img class="thumbnail-image" src="https://placehold.co/600x400" alt="Image description" />
+					<div class="icon-container">
+						<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
+							<path fill="#30303090" d="M16 0H9.5L12 2.5l-3 3L10.5 7l3-3L16 6.5zm0 16V9.5L13.5 12l-3-3L9 10.5l3 3L9.5 16zM0 16h6.5L4 13.5l3-3L5.5 9l-3 3L0 9.5zM0 0v6.5L2.5 4l3 3L7 5.5l-3-3L6.5 0z"></path>
+						</svg>
+					</div>
+				</a>
+				<div id="img8" class="overlay">
+					<a href="#img8" class="overlay-background"></a>
+					<div class="overlay-content">
+						<img class="overlay-image" src="https://placehold.co/1920x1080" alt="image description" />
+						<a href="#return-six" class="close-button">✖</a>
+					</div>
+				</div>
+			</div>
+			<div class="box2 thumbnail-component">
+				<a href="#img9">
+					<img class="thumbnail-image" src="https://placehold.co/600x400" alt="Image description" />
+					<div class="icon-container">
+						<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
+							<path fill="#30303090" d="M16 0H9.5L12 2.5l-3 3L10.5 7l3-3L16 6.5zm0 16V9.5L13.5 12l-3-3L9 10.5l3 3L9.5 16zM0 16h6.5L4 13.5l3-3L5.5 9l-3 3L0 9.5zM0 0v6.5L2.5 4l3 3L7 5.5l-3-3L6.5 0z"></path>
+						</svg>
+					</div>
+				</a>
+				<div id="img9" class="overlay">
+					<a href="#img9" class="overlay-background"></a>
+					<div class="overlay-content">
+						<img class="overlay-image" src="https://placehold.co/1920x1080" alt="image description" />
+						<a href="#return-six" class="close-button">✖</a>
+					</div>
+				</div>
+			</div>
+			<div class="box2 thumbnail-component">
+				<a href="#img10">
+					<img class="thumbnail-image" src="https://placehold.co/600x400" alt="Image description" />
+					<div class="icon-container">
+						<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
+							<path fill="#30303090" d="M16 0H9.5L12 2.5l-3 3L10.5 7l3-3L16 6.5zm0 16V9.5L13.5 12l-3-3L9 10.5l3 3L9.5 16zM0 16h6.5L4 13.5l3-3L5.5 9l-3 3L0 9.5zM0 0v6.5L2.5 4l3 3L7 5.5l-3-3L6.5 0z"></path>
+						</svg>
+					</div>
+				</a>
+				<div id="img10" class="overlay">
+					<a href="#img10" class="overlay-background"></a>
+					<div class="overlay-content">
+						<img class="overlay-image" src="https://placehold.co/1920x1080" alt="image description" />
+						<a href="#return-six" class="close-button">✖</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="bg-grey">
+	<div class="section section-seven">
+		<div class="box1">
+			<h1>Lorem Ipsum Dolar Sit Amet</h1>
+			<p>
+				Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea nobis, sunt obcaecati tempora voluptatum esse itaque eius, pariatur ipsam sit rerum
+				possimus facilis? Laboriosam necessitatibus ea recusandae qui, dicta ipsam? Quas odio ad non molestiae perferendis cum itaque autem vel asperiores,
+				rerum numquam eligendi eos laudantium consequatur libero sapiente delectus omnis quisquam necessitatibus temporibus fugiat suscipit. Numquam odit minus
+				odio.
+			</p>
+			<a data-popover="demo-content-popover">CONTACT US &gt;</a>
+		</div>
+	</div>
+</section>
+
+<section class="bg-white">
+	<div class="section section-eight">
+		<div class="box1">
+			<h1>Lorem Ipsum Dolar Sit Amet</h1>
+			<p>
+				Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea nobis, sunt obcaecati tempora voluptatum esse itaque eius, pariatur ipsam sit rerum
+				possimus facilis? Laboriosam necessitatibus ea recusandae qui, dicta ipsam? Quas odio ad non molestiae perferendis cum itaque autem vel asperiores,
+				rerum numquam eligendi eos laudantium consequatur libero sapiente delectus omnis quisquam necessitatibus temporibus fugiat suscipit. Numquam odit minus
+				odio.
+			</p>
+			<a data-popover="demo-content-popover">CONTACT US &gt;</a>
+		</div>
+	</div>
+</section>
+     -->
 <!-- Footer Area -->
     <footer id="footer" class="footer">
         <!-- Footer Top -->
