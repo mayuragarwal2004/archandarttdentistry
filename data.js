@@ -24,7 +24,7 @@ const data = [
         name: "Gum Treatment",
         description:
           "Gum disease is an inflammation of the gum line that can progress to affect the bone that surrounds and supports your teeth. The three stages of gum disease — from least to most severe — are gingivitis, periodontitis and advanced periodontitis.",
-        img: "/img/services/gum-treatment.png",
+        img: "/img/services/gum-treatment.jpg",
         id: "gum-treatment",
       },
       {
@@ -52,15 +52,15 @@ const data = [
       {
         name: "Braces Treatment",
         description:
-          "Braces are used to correct teeth alignment and bite-related issues. They are used to straighten teeth and correct misaligned bites.",
-        img: "/img/services/braces-treatment.png",
+          "<h3 id=\"-braces-treatment-at-arch-artt-dentistry-\"><strong>Braces Treatment at Arch &amp; Artt Dentistry</strong></h3>\r<p>At <strong>Arch &amp; Artt Dentistry</strong>, we specialize in providing high-quality <strong>orthodontic treatment</strong> to help you achieve a straighter, healthier, and more confident smile. Our <strong>braces treatment</strong> is designed to correct misaligned teeth, bite issues, and jaw irregularities, ensuring long-term oral health and a beautiful aesthetic.  </p>\r<h3 id=\"-why-choose-braces-\"><strong>Why Choose Braces?</strong></h3>\r<p>Braces are an effective solution for:<br>✅ Crooked or misaligned teeth<br>✅ Overbite, underbite, or crossbite correction<br>✅ Gaps between teeth<br>✅ Crowded teeth<br>✅ Jaw alignment issues  </p>\r<p>By using braces, we gradually move teeth into their correct positions, improving both function and appearance.  </p>\r<h3 id=\"-types-of-braces-we-offer-\"><strong>Types of Braces We Offer</strong></h3>\r<p>🔹 <strong>Metal Braces</strong> – Traditional and highly effective, made of stainless steel brackets and wires.<br>🔹 <strong>Ceramic Braces</strong> – Tooth-colored or clear brackets for a more discreet look.<br>🔹 <strong>Self-Ligating Braces</strong> – Advanced braces that require fewer adjustments and reduce discomfort.<br>🔹 <strong>Lingual Braces</strong> – Placed behind the teeth, making them invisible from the front.<br>🔹 <strong>Clear Aligners (Invisalign)</strong> – A removable, nearly invisible alternative to traditional braces.  </p>\r<h3 id=\"-our-treatment-process-\"><strong>Our Treatment Process</strong></h3>\r<p>1️⃣ <strong>Initial Consultation</strong> – A comprehensive examination, including X-rays and digital scans, to assess your orthodontic needs.<br>2️⃣ <strong>Customized Treatment Plan</strong> – We discuss your options and recommend the best type of braces for your condition.<br>3️⃣ <strong>Braces Placement</strong> – Painlessly attaching the brackets and wires or providing aligners tailored to your teeth.<br>4️⃣ <strong>Regular Adjustments</strong> – Monthly visits to ensure steady progress and adjustments for optimal results.<br>5️⃣ <strong>Retention Phase</strong> – After treatment, we provide retainers to maintain your new smile.  </p>\r<h3 id=\"-how-long-does-treatment-take-\"><strong>How Long Does Treatment Take?</strong></h3>\r<p>The duration of treatment varies depending on the severity of misalignment but typically ranges from <strong>6 months to 3 years</strong>. Our orthodontists will provide a detailed timeline based on your specific needs.  </p>\r<h3 id=\"-why-choose-arch-artt-dentistry-\"><strong>Why Choose Arch &amp; Artt Dentistry?</strong></h3>\r<p>✔ Experienced orthodontists with a patient-first approach<br>✔ Advanced technology for precise diagnosis and treatment<br>✔ Personalized treatment plans for all age groups<br>✔ Comfortable and modern dental clinic environment<br>✔ Affordable payment plans and financing options available  </p>\r<h3 id=\"-book-your-consultation-today-\"><strong>Book Your Consultation Today!</strong></h3>\r<p>Start your journey to a perfect smile with <strong>Arch &amp; Artt Dentistry</strong>. Schedule an appointment today and let us help you achieve a confident, healthy smile!  </p>\r",
+        img: "/img/services/braces-treatment.jpg",
         id: "braces-treatment",
       },
       {
         name: "Invisalign",
         description:
           "Invisalign is a type of orthodontic treatment that helps to straighten teeth without the use of the typical metal braces.",
-        img: "/img/services/invisalign.png",
+        img: "/img/services/invisalign.jpg",
         id: "invisalign",
       },
       {
@@ -81,7 +81,7 @@ const data = [
         name: "Teeth Whitening",
         description:
           "Teeth whitening is a cosmetic dental procedure that lightens teeth and helps to remove stains and discoloration.",
-        img: "/img/services/teeth-whitening.png",
+        img: "/img/services/teeth-whitening.jpg",
         id: "teeth-whitening",
       },
     ],
@@ -96,7 +96,7 @@ const data = [
         name: "Dental Implants",
         description:
           "Dental implants are metal posts or frames that are surgically positioned into the jawbone beneath your gums. Once in place, they allow your dentist to mount replacement teeth onto them.",
-        img: "/img/services/dental-implants.png",
+        img: "/img/services/dental-implants.webp",
         id: "dental-implants",
       },
       {
@@ -110,21 +110,21 @@ const data = [
         name: "Crown & Bridges",
         description:
           "A crown is a type of dental restoration which completely caps or encircles a tooth or dental implant. A bridge is a fixed dental restoration used to replace one or more missing teeth by joining an artificial tooth definitively to adjacent teeth or dental implants.",
-        img: "/img/services/crown-bridges.png",
+        img: "/img/services/crowns-and-bridegs.jpg",
         id: "crown-bridges",
       },
       {
         name: "Dentures",
         description:
           "Dentures are removable appliances that can replace missing teeth and help restore your smile.",
-        img: "/img/services/dentures.png",
+        img: "/img/services/dentures.jpg",
         id: "dentures",
       },
       {
         name: "Full Mouth Rehabilitation",
         description:
           "Full mouth rehabilitation is a highly individualized treatment. The point of a full mouth reconstruction plan is to optimize the health of the entire mouth, including the teeth, the gums, and the bite.",
-        img: "/img/services/full-mouth-rehabilitation.png",
+        img: "/img/services/full-mouth-rehabilitation.jpg",
         id: "full-mouth-rehabilitation",
       },
     ],
@@ -153,7 +153,7 @@ const data = [
         name: "Kids Dentistry",
         description:
           "Pediatric dentistry is an age-defined specialty that provides both primary and comprehensive preventive and therapeutic oral health care for infants and children through adolescence, including those with special health care needs.",
-        img: "/img/services/kids-dentistry.png",
+        img: "/img/services/kids-dentistry.jpg",
         id: "kids-dentistry",
       },
       {
