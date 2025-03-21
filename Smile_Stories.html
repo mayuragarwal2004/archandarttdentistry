@@ -52,6 +52,7 @@
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="css/responsive.css" />
+    <!-- <script src="./data.js"></script> -->
   </head>
   <body>
     <a
@@ -117,6 +118,7 @@
 			</div>
 		</ul> -->
 
+    
     <!-- Header Area -->
     <header class="header">
       <!-- Topbar -->
@@ -195,7 +197,7 @@
                 <div class="main-menu">
                   <nav class="navigation">
                     <ul class="nav menu">
-                      <li class="active">
+                      <li>
                         <a href="index.html">Home</a>
                       </li>
                       <li><a href="gallery.html">Gallery</a></li>
@@ -369,17 +371,14 @@
       
       <script>
         // Sample JSON data
+        // 10 cases with images and videos
         const data = [
           {
             "id": 1,
             "images": [
-              "/img/patient stories/case (1)/IMG_20180418_181524.jpg",
-              "/img/patient stories/case (1)/IMG_20180418_181531.jpg",
-              "https://www.w3schools.com/w3images/mountains.jpg"
+              "/img/patient stories/case (1)/final.png",
             ],
             "videos": [
-            //   "https://www.w3schools.com/html/mov_bbb.mp4",
-            //   "https://www.w3schools.com/html/movie.mp4"
             ],
             "title": "Case 1",
             "description": "A slideshow of my favourite photos."
@@ -387,16 +386,92 @@
           {
             "id": 2,
             "images": [
-              "https://www.w3schools.com/w3images/lights.jpg",
-              "https://www.w3schools.com/w3images/nature.jpg",
-              "https://www.w3schools.com/w3images/mountains.jpg"
+            "/img/patient stories/case (2)/final.png",
             ],
             "videos": [
-              "https://www.w3schools.com/html/mov_bbb.mp4",
-              "https://www.w3schools.com/html/movie.mp4"
             ],
             "title": "Case 2",
             "description": "A slideshow of my favourite photos."
+          },
+          {
+            "id": 3,
+            "images": [
+            "/img/patient stories/case (3)/final.png",
+            ],
+            "videos": [
+            ],
+            "title": "Case 3",
+            "description": "Another inspiring story."
+          },
+          {
+            "id": 4,
+            "images": [
+            "/img/patient stories/case (4)/final.png",
+            ],
+            "videos": [
+            ],
+            "title": "Case 4",
+            "description": "A new inspiring story."
+          },
+          {
+            "id": 5,
+            "images": [
+            "/img/patient stories/case (5)/final.png",
+            ],
+            "videos": [
+            ],
+            "title": "Case 5",
+            "description": "A new inspiring story."
+          },
+          {
+            "id": 6,
+            "images": [
+            "/img/patient stories/case (6)/final.png",
+            ],
+            "videos": [
+            ],
+            "title": "Case 6",
+            "description": "A new inspiring story."
+          },
+          {
+            "id": 7,
+            "images": [
+            "/img/patient stories/case (7)/final.png",
+            ],
+            "videos": [
+            ],
+            "title": "Case 7",
+            "description": "A new inspiring story."
+          },
+          {
+            "id": 8,
+            "images": [
+            "/img/patient stories/case (8)/final.png",
+            ],
+            "videos": [
+            ],
+            "title": "Case 8",
+            "description": "A new inspiring story."
+          },
+          {
+            "id": 9,
+            "images": [
+            "/img/patient stories/case (9)/final.png",
+            ],
+            "videos": [
+            ],
+            "title": "Case 9",
+            "description": "A new inspiring story."
+          },
+          {
+            "id": 10,
+            "images": [
+            "/img/patient stories/case (10)/final.png",
+            ],
+            "videos": [
+            ],
+            "title": "Case 10",
+            "description": "A new inspiring story."
           }
           
         ];
@@ -498,92 +573,167 @@
     
 
 
-<!-- Footer Area -->
+    <!-- Footer Area -->
     <footer id="footer" class="footer">
-        <!-- Footer Top -->
-        <div class="footer-top">
+      <!-- Footer Top -->
+      <div class="footer-top">
         <div class="container">
-            <div class="row">
+          <div class="row">
             <!-- About Us -->
             <div class="col-lg-4 col-md-6 col-12">
-                <div class="single-footer">
+              <div class="single-footer">
                 <h2>About The Arch & Artt Dentistry</h2>
                 <p>
-                    At The Arch & Artt Dentistry, we are dedicated to providing comprehensive dental care with compassion and precision. Our experienced team is committed to creating healthy, confident smiles.
+                  At The Arch & Artt Dentistry, we are dedicated to providing
+                  comprehensive dental care with compassion and precision. Our
+                  experienced team is committed to creating healthy, confident
+                  smiles.
                 </p>
                 <!-- Social -->
                 <ul class="social">
-                    <li><a href="#"><i class="icofont-facebook"></i></a></li>
-                    <li><a href="#"><i class="icofont-google-plus"></i></a></li>
-                    <li><a href="#"><i class="icofont-twitter"></i></a></li>
-                    <li><a href="#"><i class="icofont-vimeo"></i></a></li>
-                    <li><a href="#"><i class="icofont-pinterest"></i></a></li>
+                  <li>
+                    <a href="#"><i class="icofont-facebook"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="icofont-twitter"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="icofont-instagram"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="icofont-linkedin"></i></a>
+                  </li>
                 </ul>
                 <!-- End Social -->
-                </div>
+              </div>
             </div>
             <!-- Quick Links -->
             <div class="col-lg-4 col-md-6 col-12">
-                <div class="single-footer f-link">
+              <div class="single-footer f-link">
                 <h2>Quick Links</h2>
                 <div class="row">
-                    <div class="col-lg-6 col-md-6s col-12">
+                  <div class="col-lg-6 col-md-6 col-12">
                     <ul>
-                        <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Home</a></li>
-                        <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> About Us</a></li>
-                        <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Services</a></li>
-                        <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Our Cases</a></li>
-                        <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Blog</a></li>
+                      <li>
+                        <a href="/">
+                          <i class="fa fa-caret-right" aria-hidden="true"></i>
+                          Home</a
+                        >
+                      </li>
+                      <li>
+                        <a href="gallery.html"
+                          ><i class="fa fa-caret-right" aria-hidden="true"></i>
+                          Gallery</a
+                        >
+                      </li>
+                      <li>
+                        <a href="service.html"
+                          ><i class="fa fa-caret-right" aria-hidden="true"></i>
+                          Services</a
+                        >
+                      </li>
+                      <li>
+                        <a href="Smile_Stories.html"
+                          ><i class="fa fa-caret-right" aria-hidden="true"></i>
+                          Smile Stories</a
+                        >
+                      </li>
+                      <li>
+                        <a href="contact.html"
+                          ><i class="fa fa-caret-right" aria-hidden="true"></i>
+                          Contact Us</a
+                        >
+                      </li>
                     </ul>
-                    </div>
-                    <!-- <div class="col-lg-6 col-md-6 col-12">
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-12">
                     <ul>
-                        <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Consultations</a></li>
-                        <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Financing</a></li>
-                        <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Testimonials</a></li>
-                        <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> FAQ</a></li>
-                        <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Contact Us</a></li>
+                      <li>
+                        <a
+                          href="service.html?parent-id=cosmetic-dentistry&child-id=braces-treatment"
+                          ><i class="fa fa-caret-right" aria-hidden="true"></i>
+                          Braces</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="service.html?parent-id=cosmetic-dentistry&child-id=dental-implants"
+                          ><i class="fa fa-caret-right" aria-hidden="true"></i>
+                          Implants</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="service.html?parent-id=teeth-replacement&child-id=dental-implants"
+                          ><i class="fa fa-caret-right" aria-hidden="true"></i>
+                          Aligner</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="service.html?parent-id=pain-relief&child-id=root-canal-treatment"
+                          ><i class="fa fa-caret-right" aria-hidden="true"></i>
+                          Root Canal</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="service.html?parent-id=pain-relief&child-id=tmj-tmd"
+                          ><i class="fa fa-caret-right" aria-hidden="true"></i>
+                          Third Molar</a
+                        >
+                      </li>
                     </ul>
-                    </div> -->
+                  </div>
                 </div>
-                </div>
+              </div>
             </div>
             <!-- Open Hours -->
             <div class="col-lg-4 col-md-6 col-12">
-                <div class="single-footer">
+              <div class="single-footer">
                 <h2>Clinic Hours</h2>
                 <p>
-                    We are here to help you achieve your best smile. Our clinic hours are designed to offer flexible appointment options.
+                  We are here to help you achieve your best smile. Our clinic
+                  hours are designed to offer flexible appointment options.
                 </p>
                 <ul class="time-sidual">
-                    <li class="day">Monday - Friday <span>8:00 AM - 8:00 PM</span></li>
-                    <li class="day">Saturday <span>9:00 AM - 6:30 PM</span></li>
-                    <li class="day">Sunday <span>Closed</span></li>
+                  <li class="day">
+                    Monday - Saturday <span>10:00 AM - 2:00 PM</span>
+                  </li>
+                  <li class="day">
+                    Monday - Saturday <span>5:00 PM - 8:30 PM</span>
+                  </li>
                 </ul>
-                </div>
+              </div>
             </div>
-            </div> <!-- row -->
-        </div> <!-- container -->
-        </div> <!-- footer-top -->
-        
-        <!-- Copyright -->
-        <div class="copyright">
+          </div>
+          <!-- row -->
+        </div>
+        <!-- container -->
+      </div>
+      <!-- footer-top -->
+
+      <!-- Copyright -->
+      <div class="copyright">
         <div class="container">
-            <div class="row">
+          <div class="row">
             <div class="col-lg-12 col-md-12 col-12">
-                <div class="copyright-content">
+              <div class="copyright-content">
                 <p>
-                    © Copyright 2025 | All Rights Reserved by 
-                    <a href="https://www.wpthemesgrid.com" target="_blank">The Arch &amp; Artt Dentistry</a>
+                  © Copyright
+                  <script>
+                    document.write(new Date().getFullYear());
+                  </script>
+                  | All Rights Reserved by
+                  <a href="" target="_blank">The Arch &amp; Artt Dentistry</a>
                 </p>
-                </div>
+              </div>
             </div>
-            </div>
+          </div>
         </div>
-        </div>
-        <!-- End Copyright -->
+      </div>
+      <!-- End Copyright -->
     </footer>
-    
     <!--/ End Footer Area -->
 
     <script>

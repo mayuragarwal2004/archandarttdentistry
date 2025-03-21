@@ -15,7 +15,6 @@
     <!-- Title -->
     <title>The Arch & Artt Dentistry</title>
 
-  
     <!-- Favicon -->
     <!-- <link rel="icon" href="img/LOGO_The Arch & Artt Dentistry.png"> -->
     <link
@@ -53,6 +52,7 @@
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="css/responsive.css" />
+    <script src="./data.js"></script>
   </head>
   <body>
     <a
@@ -197,10 +197,10 @@
                 <div class="main-menu">
                   <nav class="navigation">
                     <ul class="nav menu">
-                      <li class="active">
+                      <li>
                         <a href="index.html">Home</a>
                       </li>
-                      <li><a href="gallery.html">Gallery</a></li>
+                      <li class="active"><a href="gallery.html">Gallery</a></li>
                       <!-- <li><a href="#">Services </a></li> -->
                       <li id="services-header-dropdowns">
                         <a href="#">
@@ -316,7 +316,11 @@
               </div>
               <div class="col-lg-2 col-12">
                 <div class="get-quote">
-                  <a style="margin-top: 14px" href="Smile_Stories.html" class="btn">
+                  <a
+                    style="margin-top: 14px"
+                    href="Smile_Stories.html"
+                    class="btn"
+                  >
                     Smile Stories >
                   </a>
                 </div>
@@ -330,25 +334,25 @@
     <!-- End Header Area -->
 
     <div class="breadcrumbs overlay">
-        <div class="container">
-            <div class="bread-inner">
-                <div class="row">
-                    <div class="col-12">
-                        <h2 >Gallary</h2>
-                        <ul class="bread-list">
-                            <li><a href="index.html">Home</a></li>
-                            <li><i class="icofont-simple-right"></i></li>
-                            <li class="active">Blog Single</li>
-                        </ul>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="bread-inner">
+          <div class="row">
+            <div class="col-12">
+              <h2>Gallary</h2>
+              <ul class="bread-list">
+                <li><a href="index.html">Home</a></li>
+                <li><i class="icofont-simple-right"></i></li>
+                <li class="active">Blog Single</li>
+              </ul>
             </div>
+          </div>
         </div>
+      </div>
     </div>
     <!-- End Breadcrumbs -->
     <link rel="stylesheet" href="css/gallery.css" />
 
-<!-- <section class="bg-grey">
+    <!-- <section class="bg-grey">
 	<div id="return-one" class="section section-one">
 		<div class="box1">
 			<h1>Sterilization & Hygiene
@@ -412,171 +416,425 @@
 	</div>
 </section> -->
 
-<!-- SECTION THREE -->
-<section style="position: relative; background: linear-gradient(135deg, #dadada 50%, #f8f9fa 50%); padding: 100px 20px; font-family: 'Poppins', sans-serif; color: #ffffff;">
-  <div style="max-width: 1100px; margin: auto; display: flex; flex-wrap: wrap; align-items: center; gap: 40px;">
-      
-      <!-- Left: Content Section -->
-      <div style="flex: 1; padding: 40px; text-align: left;">
-          <h2 style="font-size: 32px; font-weight: 700; margin-bottom: 15px; color: #1c345c;">
-              Meet Our Experts
+    <!-- SECTION THREE -->
+    <section
+      style="
+        position: relative;
+        background: linear-gradient(135deg, #dadada 50%, #f8f9fa 50%);
+        padding: 100px 20px;
+        font-family: 'Poppins', sans-serif;
+        color: #ffffff;
+      "
+    >
+      <div
+        style="
+          max-width: 1100px;
+          margin: auto;
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          gap: 40px;
+        "
+      >
+        <!-- Left: Content Section -->
+        <div style="flex: 1; padding: 40px; text-align: left">
+          <h2
+            style="
+              font-size: 32px;
+              font-weight: 700;
+              margin-bottom: 15px;
+              color: #1c345c;
+            "
+          >
+            Meet Our Experts
           </h2>
-          <p style="font-size: 18px; line-height: 1.6; margin-bottom: 15px;color: #000000;">
-              At <strong>The Arch and Artt Dentistry</strong>, our team combines skill, compassion, and advanced techniques to ensure exceptional care for every patient.
+          <p
+            style="
+              font-size: 18px;
+              line-height: 1.6;
+              margin-bottom: 15px;
+              color: #000000;
+            "
+          >
+            At <strong>The Arch and Artt Dentistry</strong>, our team combines
+            skill, compassion, and advanced techniques to ensure exceptional
+            care for every patient.
           </p>
-          <p style="font-size: 18px; line-height: 1.6; margin-bottom: 20px;color: #555;">
-              Our specialists in orthodontics, cosmetic dentistry, and hygiene work together to create healthier, brighter smiles.
+          <p
+            style="
+              font-size: 18px;
+              line-height: 1.6;
+              margin-bottom: 20px;
+              color: #555;
+            "
+          >
+            Our specialists in orthodontics, cosmetic dentistry, and hygiene
+            work together to create healthier, brighter smiles.
           </p>
-          <p style="font-size: 18px; font-weight: 600;color: #1c345c;">
-              💙 <strong>Your smile deserves the best care!</strong>
+          <p style="font-size: 18px; font-weight: 600; color: #1c345c">
+            💙 <strong>Your smile deserves the best care!</strong>
           </p>
+        </div>
+
+        <!-- Right: Image Section -->
+        <div style="flex: 1; text-align: center">
+          <img
+            src="/img/team.JPG"
+            alt="Expert Dental Team"
+            style="
+              width: 200%;
+              max-width: 600px;
+              border-radius: 12px;
+              box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+              transform: rotate(-5deg);
+              transition: transform 0.4s ease-in-out;
+            "
+            onmouseover="this.style.transform='rotate(0deg) scale(1.05)'"
+            onmouseout="this.style.transform='rotate(-5deg)'"
+          />
+        </div>
       </div>
+    </section>
 
-      <!-- Right: Image Section -->
-      <div style="flex: 1; text-align: center;">
-          <img src="/img/team.JPG" alt="Expert Dental Team"
-              style="width: 200%; max-width: 600px; border-radius: 12px; box-shadow: 0px 10px 30px rgba(0,0,0,0.3); transform: rotate(-5deg); transition: transform 0.4s ease-in-out;" 
-              onmouseover="this.style.transform='rotate(0deg) scale(1.05)'" 
-              onmouseout="this.style.transform='rotate(-5deg)'">
-      </div>
+    <!-- SECTION FOUR -->
+    <section style="background-color: #ffffff; padding: 50px 0">
+      <div
+        style="
+          max-width: 1000px;
+          margin: auto;
+          padding: 20px;
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          gap: 30px;
+        "
+      >
+        <!-- Images Section -->
+        <div style="flex: 1; text-align: center; min-width: 300px">
+          <img
+            src="/img/gallery/Set14.jpg"
+            alt="Sterilization Process"
+            style="
+              width: 100%;
+              max-width: 450px;
+              border-radius: 10px;
+              margin-bottom: 20px;
+              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            "
+          />
+          <img
+            src="/img/gallery/Set25.jpg"
+            alt="Hygiene Protocols"
+            style="
+              width: 100%;
+              max-width: 450px;
+              border-radius: 10px;
+              margin-bottom: 20px;
+              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            "
+          />
+        </div>
 
-  </div>
-</section>
-
-
-
-
-<!-- SECTION FOUR -->
-<section style="background-color: #ffffff; padding: 50px 0;">
-  <div style="max-width: 1000px; margin: auto; padding: 20px; display: flex; flex-wrap: wrap; align-items: center; gap: 30px;">
-      <!-- Images Section -->
-      <div style="flex: 1; text-align: center; min-width: 300px;">
-          <img src="/img/gallery/Set14.jpg" alt="Sterilization Process" style="width: 100%; max-width: 450px; border-radius: 10px; margin-bottom: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-          <img src="/img/gallery/Set25.jpg" alt="Hygiene Protocols" style="width: 100%; max-width: 450px; border-radius: 10px; margin-bottom: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-      </div>
-
-      <!-- Content Section -->
-      <div style="flex: 1; min-width: 300px;">
-          <h1 style="font-size: 32px; color: #1c345c; font-family: 'Poppins', sans-serif; margin-bottom: 15px; text-align: center;">
-              <strong>Sterilization & Hygiene</strong>
+        <!-- Content Section -->
+        <div style="flex: 1; min-width: 300px">
+          <h1
+            style="
+              font-size: 32px;
+              color: #1c345c;
+              font-family: 'Poppins', sans-serif;
+              margin-bottom: 15px;
+              text-align: center;
+            "
+          >
+            <strong>Sterilization & Hygiene</strong>
           </h1>
-          <p style="font-size: 16px; color: #555; font-family: 'Poppins', sans-serif; line-height: 1.6; margin-bottom: 20px; text-align: center;">
-              At <strong>The Arch and Artt Dentistry</strong>, we uphold the highest standards of 
-              <strong>sterilization and infection control</strong> to ensure a <strong>safe and hygienic environment</strong> 
-              for our patients. Our advanced protocols guarantee a germ-free and worry-free experience.
+          <p
+            style="
+              font-size: 16px;
+              color: #555;
+              font-family: 'Poppins', sans-serif;
+              line-height: 1.6;
+              margin-bottom: 20px;
+              text-align: center;
+            "
+          >
+            At <strong>The Arch and Artt Dentistry</strong>, we uphold the
+            highest standards of
+            <strong>sterilization and infection control</strong> to ensure a
+            <strong>safe and hygienic environment</strong>
+            for our patients. Our advanced protocols guarantee a germ-free and
+            worry-free experience.
           </p>
-          <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-              <ul style="list-style-type: none; padding: 0; font-size: 16px; color: #555; font-family: 'Poppins', sans-serif; line-height: 1.8;">
-                  <li>✔️ <strong>Autoclave Sterilization:</strong> High-pressure steam sterilization of all dental instruments.</li>
-                  <li>✔️ <strong>Single-Use Disposable Equipment:</strong> Gloves, masks, and syringes for each patient.</li>
-                  <li>✔️ <strong>Medical-Grade Surface Disinfection:</strong> Regular cleaning of treatment areas.</li>
-                  <li>✔️ <strong>Strict Hand Hygiene:</strong> Mandatory handwashing and sanitization for staff.</li>
-                  <li>✔️ <strong>HEPA-Filtered Air Purification:</strong> Clean, fresh, and germ-free air inside the clinic.</li>
-              </ul>
+          <div
+            style="
+              background: white;
+              padding: 20px;
+              border-radius: 10px;
+              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            "
+          >
+            <ul
+              style="
+                list-style-type: none;
+                padding: 0;
+                font-size: 16px;
+                color: #555;
+                font-family: 'Poppins', sans-serif;
+                line-height: 1.8;
+              "
+            >
+              <li>
+                ✔️ <strong>Autoclave Sterilization:</strong> High-pressure steam
+                sterilization of all dental instruments.
+              </li>
+              <li>
+                ✔️ <strong>Single-Use Disposable Equipment:</strong> Gloves,
+                masks, and syringes for each patient.
+              </li>
+              <li>
+                ✔️ <strong>Medical-Grade Surface Disinfection:</strong> Regular
+                cleaning of treatment areas.
+              </li>
+              <li>
+                ✔️ <strong>Strict Hand Hygiene:</strong> Mandatory handwashing
+                and sanitization for staff.
+              </li>
+              <li>
+                ✔️ <strong>HEPA-Filtered Air Purification:</strong> Clean,
+                fresh, and germ-free air inside the clinic.
+              </li>
+            </ul>
           </div>
-          <p style="font-size: 16px; color: #555; font-family: 'Poppins', sans-serif; margin-top: 20px; text-align: center;">
-              Your health and comfort are our top priorities. Experience <strong>safe, high-quality dental care</strong> in a worry-free environment.
+          <p
+            style="
+              font-size: 16px;
+              color: #555;
+              font-family: 'Poppins', sans-serif;
+              margin-top: 20px;
+              text-align: center;
+            "
+          >
+            Your health and comfort are our top priorities. Experience
+            <strong>safe, high-quality dental care</strong> in a worry-free
+            environment.
           </p>
-          <p style="font-size: 18px; color: #1c345c; font-family: 'Poppins', sans-serif; font-weight: bold; margin-top: 15px; text-align: center;">
-              💙 Because your smile deserves the best care!
+          <p
+            style="
+              font-size: 18px;
+              color: #1c345c;
+              font-family: 'Poppins', sans-serif;
+              font-weight: bold;
+              margin-top: 15px;
+              text-align: center;
+            "
+          >
+            💙 Because your smile deserves the best care!
           </p>
+        </div>
       </div>
-  </div>
-</section>
+    </section>
 
-<!-- Mobile Responsive Styles -->
-<style>
-  @media screen and (max-width: 768px) {
-      section div {
+    <!-- Mobile Responsive Styles -->
+    <style>
+      @media screen and (max-width: 768px) {
+        section div {
           flex-direction: column;
           text-align: center;
+        }
       }
-  }
-</style>
+    </style>
 
-
-
-
-<!-- SECTION FIVE -->
-<section style="background-color: #f8f9fa; padding: 60px 20px; color: #000000; font-family: 'Poppins', sans-serif;">
-  <div style="max-width: 1100px; margin: auto; text-align: center;">
-
-      <!-- Section Title -->
-      <h2 style="font-size: 32px; font-weight: bold; margin-bottom: 20px; color: #1c345c;">
+    <!-- SECTION FIVE -->
+    <section
+      style="
+        background-color: #f8f9fa;
+        padding: 60px 20px;
+        color: #000000;
+        font-family: 'Poppins', sans-serif;
+      "
+    >
+      <div style="max-width: 1100px; margin: auto; text-align: center">
+        <!-- Section Title -->
+        <h2
+          style="
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #1c345c;
+          "
+        >
           State-of-the-Art Equipment
-      </h2>
-      <p style="font-size: 16px; color: #555; line-height: 1.6; max-width: 800px; margin: auto; margin-bottom: 40px;">
-          Experience world-class dental care with our cutting-edge technology and precision instruments.  
-          Designed for <strong>comfort, safety, and accuracy</strong>, our equipment ensures a seamless and pain-free experience.
-      </p>
+        </h2>
+        <p
+          style="
+            font-size: 16px;
+            color: #555;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: auto;
+            margin-bottom: 40px;
+          "
+        >
+          Experience world-class dental care with our cutting-edge technology
+          and precision instruments. Designed for
+          <strong>comfort, safety, and accuracy</strong>, our equipment ensures
+          a seamless and pain-free experience.
+        </p>
 
-      <!-- Operatory 1 -->
-      <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 30px; margin-bottom: 50px;">
-          <div style="flex: 1; text-align: center;">
-              <img src="/img/gallery/Set14.jpg" alt="Operatory 1" 
-                   style="width: 100%; max-width: 500px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease-in-out;" 
-                   onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+        <!-- Operatory 1 -->
+        <div
+          style="
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 50px;
+          "
+        >
+          <div style="flex: 1; text-align: center">
+            <img
+              src="/img/gallery/Set14.jpg"
+              alt="Operatory 1"
+              style="
+                width: 100%;
+                max-width: 500px;
+                border-radius: 10px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s ease-in-out;
+              "
+              onmouseover="this.style.transform='scale(1.05)'"
+              onmouseout="this.style.transform='scale(1)'"
+            />
           </div>
-          <div style="flex: 1; text-align: left; min-width: 300px;">
-              <h3 style="font-size: 26px; font-weight: bold; margin-bottom: 15px; color: #1c345c;">Operatory 1</h3>
-              <p style="font-size: 16px; line-height: 1.6; color: #555;">
-                  Our <strong>Operatory 1</strong> is equipped with the latest in dental technology, including 
-                  <strong>advanced imaging systems</strong>, <strong>ergonomic patient chairs</strong>, and 
-                  <strong>precision instruments</strong> to ensure maximum comfort and accuracy.
-              </p>
-              <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-                <ul style="margin-top: 15px; font-size: 16px; color: #555; list-style: none; padding: 0;">
-                    <li>✔️ Digital X-rays for precise diagnosis</li>
-                    <li>✔️ Ergonomic dental chairs for patient comfort</li>
-                    <li>✔️ LED surgical lighting for enhanced visibility</li>
-                </ul>
-              </div>
+          <div style="flex: 1; text-align: left; min-width: 300px">
+            <h3
+              style="
+                font-size: 26px;
+                font-weight: bold;
+                margin-bottom: 15px;
+                color: #1c345c;
+              "
+            >
+              Operatory 1
+            </h3>
+            <p style="font-size: 16px; line-height: 1.6; color: #555">
+              Our <strong>Operatory 1</strong> is equipped with the latest in
+              dental technology, including
+              <strong>advanced imaging systems</strong>,
+              <strong>ergonomic patient chairs</strong>, and
+              <strong>precision instruments</strong> to ensure maximum comfort
+              and accuracy.
+            </p>
+            <div
+              style="
+                background: white;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+              "
+            >
+              <ul
+                style="
+                  margin-top: 15px;
+                  font-size: 16px;
+                  color: #555;
+                  list-style: none;
+                  padding: 0;
+                "
+              >
+                <li>✔️ Digital X-rays for precise diagnosis</li>
+                <li>✔️ Ergonomic dental chairs for patient comfort</li>
+                <li>✔️ LED surgical lighting for enhanced visibility</li>
+              </ul>
+            </div>
           </div>
+        </div>
+
+        <!-- Operatory 2 -->
+        <div
+          style="
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 30px;
+            flex-direction: row-reverse;
+          "
+        >
+          <div style="flex: 1; text-align: center">
+            <img
+              src="/img/gallery/Set25.jpg"
+              alt="Operatory 2"
+              style="
+                width: 100%;
+                max-width: 500px;
+                border-radius: 10px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s ease-in-out;
+              "
+              onmouseover="this.style.transform='scale(1.05)'"
+              onmouseout="this.style.transform='scale(1)'"
+            />
+          </div>
+          <div style="flex: 1; text-align: left; min-width: 300px">
+            <h3
+              style="
+                font-size: 26px;
+                font-weight: bold;
+                margin-bottom: 15px;
+                color: #1c345c;
+              "
+            >
+              Operatory 2
+            </h3>
+            <p style="font-size: 16px; line-height: 1.6; color: #555">
+              Our <strong>Operatory 2</strong> is designed for specialized
+              dental procedures, featuring
+              <strong>state-of-the-art sterilization equipment</strong>,
+              <strong>real-time patient monitoring</strong>, and
+              <strong>minimally invasive tools</strong> for precision and
+              safety.
+            </p>
+            <div
+              style="
+                background: white;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+              "
+            >
+              <ul
+                style="
+                  margin-top: 15px;
+                  font-size: 16px;
+                  color: #555;
+                  list-style: none;
+                  padding: 0;
+                "
+              >
+                <li>✔️ HEPA air filtration for a sterile environment</li>
+                <li>✔️ Laser technology for painless treatments</li>
+                <li>✔️ Digital treatment planning for accuracy</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <!-- Operatory 2 -->
-      <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 30px; flex-direction: row-reverse;">
-          <div style="flex: 1; text-align: center;">
-              <img src="/img/gallery/Set25.jpg" alt="Operatory 2" 
-                   style="width: 100%; max-width: 500px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease-in-out;" 
-                   onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-          </div>
-          <div style="flex: 1; text-align: left; min-width: 300px;">
-              <h3 style="font-size: 26px; font-weight: bold; margin-bottom: 15px; color: #1c345c;">Operatory 2</h3>
-              <p style="font-size: 16px; line-height: 1.6; color: #555;">
-                  Our <strong>Operatory 2</strong> is designed for specialized dental procedures, featuring 
-                  <strong>state-of-the-art sterilization equipment</strong>, <strong>real-time patient monitoring</strong>, 
-                  and <strong>minimally invasive tools</strong> for precision and safety.
-              </p>
-              <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-                <ul style="margin-top: 15px; font-size: 16px; color: #555; list-style: none; padding: 0;">
-                    <li>✔️ HEPA air filtration for a sterile environment</li>
-                    <li>✔️ Laser technology for painless treatments</li>
-                    <li>✔️ Digital treatment planning for accuracy</li>
-                </ul>
-              </div>
-          </div>
-      </div>
-
-  </div>
-</section>
-
-
-<!-- Mobile Responsive Styles -->
-<style>
-  @media screen and (max-width: 768px) {
-      section div {
+    <!-- Mobile Responsive Styles -->
+    <style>
+      @media screen and (max-width: 768px) {
+        section div {
           flex-direction: column !important;
           text-align: center;
-      }
-      img {
+        }
+        img {
           max-width: 100%;
+        }
       }
-  }
-</style>
+    </style>
 
-
-<!-- <section class="bg-white">
+    <!-- <section class="bg-white">
 	<div id="return-six" class="section section-six">
 		<div class="box1">
 			<h1>Lorem Ipsum Dolar Sit Amet</h1>
@@ -674,96 +932,173 @@
 	</div>
 </section>
      -->
-<!-- Footer Area -->
+
+    <!-- Footer Area -->
     <footer id="footer" class="footer">
-        <!-- Footer Top -->
-        <div class="footer-top">
+      <!-- Footer Top -->
+      <div class="footer-top">
         <div class="container">
-            <div class="row">
+          <div class="row">
             <!-- About Us -->
             <div class="col-lg-4 col-md-6 col-12">
-                <div class="single-footer">
+              <div class="single-footer">
                 <h2>About The Arch & Artt Dentistry</h2>
                 <p>
-                    At The Arch & Artt Dentistry, we are dedicated to providing comprehensive dental care with compassion and precision. Our experienced team is committed to creating healthy, confident smiles.
+                  At The Arch & Artt Dentistry, we are dedicated to providing
+                  comprehensive dental care with compassion and precision. Our
+                  experienced team is committed to creating healthy, confident
+                  smiles.
                 </p>
                 <!-- Social -->
                 <ul class="social">
-                    <li><a href="#"><i class="icofont-facebook"></i></a></li>
-                    <li><a href="#"><i class="icofont-google-plus"></i></a></li>
-                    <li><a href="#"><i class="icofont-twitter"></i></a></li>
-                    <li><a href="#"><i class="icofont-vimeo"></i></a></li>
-                    <li><a href="#"><i class="icofont-pinterest"></i></a></li>
+                  <li>
+                    <a href="#"><i class="icofont-facebook"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="icofont-twitter"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="icofont-instagram"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="icofont-linkedin"></i></a>
+                  </li>
                 </ul>
                 <!-- End Social -->
-                </div>
+              </div>
             </div>
             <!-- Quick Links -->
             <div class="col-lg-4 col-md-6 col-12">
-                <div class="single-footer f-link">
+              <div class="single-footer f-link">
                 <h2>Quick Links</h2>
                 <div class="row">
-                    <div class="col-lg-6 col-md-6 col-12">
+                  <div class="col-lg-6 col-md-6 col-12">
                     <ul>
-                        <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Home</a></li>
-                        <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> About Us</a></li>
-                        <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Services</a></li>
-                        <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Our Cases</a></li>
-                        <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Blog</a></li>
+                      <li>
+                        <a href="/">
+                          <i class="fa fa-caret-right" aria-hidden="true"></i>
+                          Home</a
+                        >
+                      </li>
+                      <li>
+                        <a href="gallery.html"
+                          ><i class="fa fa-caret-right" aria-hidden="true"></i>
+                          Gallery</a
+                        >
+                      </li>
+                      <li>
+                        <a href="service.html"
+                          ><i class="fa fa-caret-right" aria-hidden="true"></i>
+                          Services</a
+                        >
+                      </li>
+                      <li>
+                        <a href="Smile_Stories.html"
+                          ><i class="fa fa-caret-right" aria-hidden="true"></i>
+                          Smile Stories</a
+                        >
+                      </li>
+                      <li>
+                        <a href="contact.html"
+                          ><i class="fa fa-caret-right" aria-hidden="true"></i>
+                          Contact Us</a
+                        >
+                      </li>
                     </ul>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-12">
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-12">
                     <ul>
-                        <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Consultations</a></li>
-                        <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Financing</a></li>
-                        <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Testimonials</a></li>
-                        <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> FAQ</a></li>
-                        <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Contact Us</a></li>
+                      <li>
+                        <a
+                          href="service.html?parent-id=cosmetic-dentistry&child-id=braces-treatment"
+                          ><i class="fa fa-caret-right" aria-hidden="true"></i>
+                          Braces</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="service.html?parent-id=cosmetic-dentistry&child-id=dental-implants"
+                          ><i class="fa fa-caret-right" aria-hidden="true"></i>
+                          Implants</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="service.html?parent-id=teeth-replacement&child-id=dental-implants"
+                          ><i class="fa fa-caret-right" aria-hidden="true"></i>
+                          Aligner</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="service.html?parent-id=pain-relief&child-id=root-canal-treatment"
+                          ><i class="fa fa-caret-right" aria-hidden="true"></i>
+                          Root Canal</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="service.html?parent-id=pain-relief&child-id=tmj-tmd"
+                          ><i class="fa fa-caret-right" aria-hidden="true"></i>
+                          Third Molar</a
+                        >
+                      </li>
                     </ul>
-                    </div>
+                  </div>
                 </div>
-                </div>
+              </div>
             </div>
             <!-- Open Hours -->
             <div class="col-lg-4 col-md-6 col-12">
-                <div class="single-footer">
+              <div class="single-footer">
                 <h2>Clinic Hours</h2>
                 <p>
-                    We are here to help you achieve your best smile. Our clinic hours are designed to offer flexible appointment options.
+                  We are here to help you achieve your best smile. Our clinic
+                  hours are designed to offer flexible appointment options.
                 </p>
                 <ul class="time-sidual">
-                    <li class="day">Monday - Friday <span>8:00 AM - 8:00 PM</span></li>
-                    <li class="day">Saturday <span>9:00 AM - 6:30 PM</span></li>
-                    <li class="day">Sunday <span>Closed</span></li>
+                  <li class="day">
+                    Monday - Saturday <span>10:00 AM - 2:00 PM</span>
+                  </li>
+                  <li class="day">
+                    Monday - Saturday <span>5:00 PM - 8:30 PM</span>
+                  </li>
                 </ul>
-                </div>
+              </div>
             </div>
-            </div> <!-- row -->
-        </div> <!-- container -->
-        </div> <!-- footer-top -->
-        
-        <!-- Copyright -->
-        <div class="copyright">
+          </div>
+          <!-- row -->
+        </div>
+        <!-- container -->
+      </div>
+      <!-- footer-top -->
+
+      <!-- Copyright -->
+      <div class="copyright">
         <div class="container">
-            <div class="row">
+          <div class="row">
             <div class="col-lg-12 col-md-12 col-12">
-                <div class="copyright-content">
+              <div class="copyright-content">
                 <p>
-                    © Copyright 2025 | All Rights Reserved by 
-                    <a href="https://www.wpthemesgrid.com" target="_blank">The Arch &amp; Artt Dentistry</a>
+                  © Copyright
+                  <script>
+                    document.write(new Date().getFullYear());
+                  </script>
+                  | All Rights Reserved by
+                  <a href="" target="_blank">The Arch &amp; Artt Dentistry</a>
                 </p>
-                </div>
+              </div>
             </div>
-            </div>
+          </div>
         </div>
-        </div>
-        <!-- End Copyright -->
+      </div>
+      <!-- End Copyright -->
     </footer>
-    
     <!--/ End Footer Area -->
 
     <script>
-        document.getElementById("year-of-experience").innerHTML = new Date().getFullYear() - 2000;
+      document.getElementById("year-of-experience").innerHTML =
+        new Date().getFullYear() - 2000;
     </script>
     <!-- jquery Min JS -->
     <script src="js/jquery.min.js"></script>
@@ -805,6 +1140,5 @@
     <script src="js/bootstrap.min.js"></script>
     <!-- Main JS -->
     <script src="js/main.js"></script>
-
-</body>
+  </body>
 </html>
