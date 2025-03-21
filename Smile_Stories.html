@@ -52,11 +52,11 @@
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="css/responsive.css" />
-    <!-- <script src="./data.js"></script> -->
+    <script src="./data.js"></script>
   </head>
   <body>
     <a
-      href="https://wa.me/9158500021    "
+      href="https://wa.me/9158500021"
       class="whatsapp-float"
       target="_blank"
       style="
@@ -372,7 +372,7 @@
       <script>
         // Sample JSON data
         // 10 cases with images and videos
-        const data = [
+        const smileStoryData = [
           {
             "id": 1,
             "images": [
@@ -478,7 +478,7 @@
     
         // Build cards dynamically from JSON data
         const cardsContainer = document.getElementById('cardsContainer');
-        data.forEach(item => {
+        smileStoryData.forEach(item => {
           const card = document.createElement('div');
           card.style.width = "300px";
           card.style.background = "linear-gradient(135deg, #fff, #e7f0fa)";
