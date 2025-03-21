@@ -31,7 +31,7 @@ const data = [
         name: "TMJ/TMD",
         description:
           "Temporomandibular joint and muscle disorders, commonly called TMJ, are a group of conditions that cause pain and dysfunction in the jaw joint and muscles that control jaw movement.",
-        img: "/img/services/tmj-tmd.png",
+        img: "/img/services/tmj-tmd.jpg",
         id: "tmj-tmd",
       },
       {
@@ -48,11 +48,12 @@ const data = [
     id: "cosmetic-dentistry",
     description:
       "Cosmetic dentistry is generally used to refer to any dental work that improves the appearance (though not necessarily the function) of a person's teeth, gums and/or bite.",
+    img: "/img/services/cosmetic-dentistry.jpg",
     child: [
       {
         name: "Braces Treatment",
         description:
-          "<h3 id=\"-braces-treatment-at-arch-artt-dentistry-\"><strong>Braces Treatment at Arch &amp; Artt Dentistry</strong></h3>\r<p>At <strong>Arch &amp; Artt Dentistry</strong>, we specialize in providing high-quality <strong>orthodontic treatment</strong> to help you achieve a straighter, healthier, and more confident smile. Our <strong>braces treatment</strong> is designed to correct misaligned teeth, bite issues, and jaw irregularities, ensuring long-term oral health and a beautiful aesthetic.  </p>\r<h3 id=\"-why-choose-braces-\"><strong>Why Choose Braces?</strong></h3>\r<p>Braces are an effective solution for:<br>✅ Crooked or misaligned teeth<br>✅ Overbite, underbite, or crossbite correction<br>✅ Gaps between teeth<br>✅ Crowded teeth<br>✅ Jaw alignment issues  </p>\r<p>By using braces, we gradually move teeth into their correct positions, improving both function and appearance.  </p>\r<h3 id=\"-types-of-braces-we-offer-\"><strong>Types of Braces We Offer</strong></h3>\r<p>🔹 <strong>Metal Braces</strong> – Traditional and highly effective, made of stainless steel brackets and wires.<br>🔹 <strong>Ceramic Braces</strong> – Tooth-colored or clear brackets for a more discreet look.<br>🔹 <strong>Self-Ligating Braces</strong> – Advanced braces that require fewer adjustments and reduce discomfort.<br>🔹 <strong>Lingual Braces</strong> – Placed behind the teeth, making them invisible from the front.<br>🔹 <strong>Clear Aligners (Invisalign)</strong> – A removable, nearly invisible alternative to traditional braces.  </p>\r<h3 id=\"-our-treatment-process-\"><strong>Our Treatment Process</strong></h3>\r<p>1️⃣ <strong>Initial Consultation</strong> – A comprehensive examination, including X-rays and digital scans, to assess your orthodontic needs.<br>2️⃣ <strong>Customized Treatment Plan</strong> – We discuss your options and recommend the best type of braces for your condition.<br>3️⃣ <strong>Braces Placement</strong> – Painlessly attaching the brackets and wires or providing aligners tailored to your teeth.<br>4️⃣ <strong>Regular Adjustments</strong> – Monthly visits to ensure steady progress and adjustments for optimal results.<br>5️⃣ <strong>Retention Phase</strong> – After treatment, we provide retainers to maintain your new smile.  </p>\r<h3 id=\"-how-long-does-treatment-take-\"><strong>How Long Does Treatment Take?</strong></h3>\r<p>The duration of treatment varies depending on the severity of misalignment but typically ranges from <strong>6 months to 3 years</strong>. Our orthodontists will provide a detailed timeline based on your specific needs.  </p>\r<h3 id=\"-why-choose-arch-artt-dentistry-\"><strong>Why Choose Arch &amp; Artt Dentistry?</strong></h3>\r<p>✔ Experienced orthodontists with a patient-first approach<br>✔ Advanced technology for precise diagnosis and treatment<br>✔ Personalized treatment plans for all age groups<br>✔ Comfortable and modern dental clinic environment<br>✔ Affordable payment plans and financing options available  </p>\r<h3 id=\"-book-your-consultation-today-\"><strong>Book Your Consultation Today!</strong></h3>\r<p>Start your journey to a perfect smile with <strong>Arch &amp; Artt Dentistry</strong>. Schedule an appointment today and let us help you achieve a confident, healthy smile!  </p>\r",
+          '<h3 id="-braces-treatment-at-arch-artt-dentistry-"><strong>Braces Treatment at Arch &amp; Artt Dentistry</strong></h3>\r<p>At <strong>Arch &amp; Artt Dentistry</strong>, we specialize in providing high-quality <strong>orthodontic treatment</strong> to help you achieve a straighter, healthier, and more confident smile. Our <strong>braces treatment</strong> is designed to correct misaligned teeth, bite issues, and jaw irregularities, ensuring long-term oral health and a beautiful aesthetic.  </p>\r<h3 id="-why-choose-braces-"><strong>Why Choose Braces?</strong></h3>\r<p>Braces are an effective solution for:<br>✅ Crooked or misaligned teeth<br>✅ Overbite, underbite, or crossbite correction<br>✅ Gaps between teeth<br>✅ Crowded teeth<br>✅ Jaw alignment issues  </p>\r<p>By using braces, we gradually move teeth into their correct positions, improving both function and appearance.  </p>\r<h3 id="-types-of-braces-we-offer-"><strong>Types of Braces We Offer</strong></h3>\r<p>🔹 <strong>Metal Braces</strong> – Traditional and highly effective, made of stainless steel brackets and wires.<br>🔹 <strong>Ceramic Braces</strong> – Tooth-colored or clear brackets for a more discreet look.<br>🔹 <strong>Self-Ligating Braces</strong> – Advanced braces that require fewer adjustments and reduce discomfort.<br>🔹 <strong>Lingual Braces</strong> – Placed behind the teeth, making them invisible from the front.<br>🔹 <strong>Clear Aligners (Invisalign)</strong> – A removable, nearly invisible alternative to traditional braces.  </p>\r<h3 id="-our-treatment-process-"><strong>Our Treatment Process</strong></h3>\r<p>1️⃣ <strong>Initial Consultation</strong> – A comprehensive examination, including X-rays and digital scans, to assess your orthodontic needs.<br>2️⃣ <strong>Customized Treatment Plan</strong> – We discuss your options and recommend the best type of braces for your condition.<br>3️⃣ <strong>Braces Placement</strong> – Painlessly attaching the brackets and wires or providing aligners tailored to your teeth.<br>4️⃣ <strong>Regular Adjustments</strong> – Monthly visits to ensure steady progress and adjustments for optimal results.<br>5️⃣ <strong>Retention Phase</strong> – After treatment, we provide retainers to maintain your new smile.  </p>\r<h3 id="-how-long-does-treatment-take-"><strong>How Long Does Treatment Take?</strong></h3>\r<p>The duration of treatment varies depending on the severity of misalignment but typically ranges from <strong>6 months to 3 years</strong>. Our orthodontists will provide a detailed timeline based on your specific needs.  </p>\r<h3 id="-why-choose-arch-artt-dentistry-"><strong>Why Choose Arch &amp; Artt Dentistry?</strong></h3>\r<p>✔ Experienced orthodontists with a patient-first approach<br>✔ Advanced technology for precise diagnosis and treatment<br>✔ Personalized treatment plans for all age groups<br>✔ Comfortable and modern dental clinic environment<br>✔ Affordable payment plans and financing options available  </p>\r<h3 id="-book-your-consultation-today-"><strong>Book Your Consultation Today!</strong></h3>\r<p>Start your journey to a perfect smile with <strong>Arch &amp; Artt Dentistry</strong>. Schedule an appointment today and let us help you achieve a confident, healthy smile!  </p>\r',
         img: "/img/services/braces-treatment.jpg",
         id: "braces-treatment",
       },
@@ -91,6 +92,7 @@ const data = [
     id: "teeth-replacement",
     description:
       "Teeth replacement is a dental procedure that replaces missing teeth with artificial teeth.",
+    img: "/img/services/teeth-replacement.jpeg",
     child: [
       {
         name: "Dental Implants",
@@ -134,6 +136,7 @@ const data = [
     id: "preventive-dentistry",
     description:
       "Preventive dentistry is the practice of caring for your teeth to keep them healthy. This helps to avoid cavities, gum disease, enamel wear, and more.",
+    img: "/img/services/preventive-dentistry.jpg",
     child: [
       {
         name: "Cavity Fillings",
@@ -146,7 +149,7 @@ const data = [
         name: "Scaling & Polishing",
         description:
           "Scaling and polishing is a procedure that removes dental plaque, tartar and extrinsic stains from the teeth.",
-        img: "/img/services/scaling-polishing.png",
+        img: "/img/services/scaling-polishing.webp",
         id: "scaling-polishing",
       },
       {
@@ -160,7 +163,7 @@ const data = [
         name: "Bad Breath Treatment",
         description:
           "Bad breath, also known as halitosis, is a symptom in which a noticeably unpleasant odor is present on the breath.",
-        img: "/img/services/bad-breath-treatment.png",
+        img: "/img/services/bad-breath-treatment.jpg",
         id: "bad-breath-treatment",
       },
       {
