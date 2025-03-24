@@ -1525,151 +1525,139 @@
 
     <!-- Start clients -->
     <div
-      class="clients overlay"
+  class="clients overlay"
+  style="
+    padding: 60px 0;
+    background: linear-gradient(to right, #1c345c, #274a78);
+  "
+>
+  <section>
+    <div
       style="
-        padding: 60px 0;
-        background: linear-gradient(to right, #1c345c, #274a78);
+        background-image: url('assets/img/gallery/people-bg-1.png');
+        background-size: cover;
+        background-position: center;
+        padding: 40px 0;
       "
     >
-      <section>
-        <div
-          style="
-            background-image: url('assets/img/gallery/people-bg-1.png');
-            background-size: cover;
-            background-position: center;
-            padding: 40px 0;
-          "
-        >
-          <div class="container">
-            <div class="row justify-content-center">
-              <div
-                id="carouselPeople"
-                class="carousel slide"
-                data-bs-ride="carousel"
-                data-bs-interval="1000"
-                style="max-width: 900px"
-              >
-                <div class="carousel-inner" id="reviewsContainer"></div>
-                <div class="text-center mt-4">
-                  <ol
-                    class="carousel-indicators"
-                    style="position: relative; margin-top: 20px"
-                  ></ol>
-                </div>
-              </div>
+    
+      <div class="container">
+        
+        <div class="row justify-content-center">
+          <div
+            id="carouselPeople"
+            class="carousel slide"
+            data-bs-ride="false"
+            style="max-width: 900px"
+          >
+            <div class="carousel-inner" id="reviewsContainer"></div>
+            
+            <div class="text-center mt-4">
+              <span class="carousel-control-prev-icon" aria-hidden="true" style="cursor: pointer;" data-bs-target="#carouselPeople" data-bs-slide="prev"></span>
+              <span class="carousel-control-next-icon" aria-hidden="true" style="cursor: pointer;" data-bs-target="#carouselPeople" data-bs-slide="next"></span>
+            </div>
+            
+            <div class="text-center mt-4">
+              <ol
+                class="carousel-indicators"
+                style="position: relative; margin-top: 20px"
+              ></ol>
             </div>
           </div>
         </div>
-        <script>
-          document.addEventListener("DOMContentLoaded", function () {
-            const reviews = [
-              {
-                author_name: "Atul Virmani",
-                profile_photo_url:
-                  "https://lh3.googleusercontent.com/a-/ALV-UjWPLgH0yI1QiBbZw9cZTljK-YRRjnW4PIwYWxe81MTE9CI7P0rh=s128-c0x00000000-cc-rp-mo-ba2",
-                rating: 5,
-                relative_time_description: "a month ago",
-                text: "I am extremely happy with the care and treatment I received at The Arch & Artt Dentistry. The staff was welcoming, and the doctors were very professional. Highly recommended!",
-              },
-              {
-                author_name: "Chinmayee Prabhu",
-                profile_photo_url:
-                  "https://lh3.googleusercontent.com/a/ACg8ocLnqvASMgJwyLNS7iuQPjRKwSoKBQEPnfVcmfyyQw-uY1FKRw=s128-c0x00000000-cc-rp-mo",
-                rating: 5,
-                relative_time_description: "a month ago",
-                text: "Gandhi Dental Clinic did a great job. The environment was very clean, and the staff was friendly. My treatment was done quickly and professionally.",
-              },
-              {
-                author_name: "Sarika Harpale",
-                profile_photo_url:
-                  "https://lh3.googleusercontent.com/a/ACg8ocKaihlerfjl49CtlCAtg1jf6sRqU3YnrMsZUGjekNE5_UjL5A=s128-c0x00000000-cc-rp-mo",
-                rating: 5,
-                relative_time_description: "a week ago",
-                text: "Travelled 2 hours to this clinic, and it was worth it! Advanced technology, professional care, and a great overall experience.",
-              },
-              {
-                author_name: "Babita Goel",
-                profile_photo_url:
-                  "https://lh3.googleusercontent.com/a/ACg8ocIQIfsNg7u4BzdGnDUY96L_rvJSnderKs6UTQwFal_g3r705Q=s128-c0x00000000-cc-rp-mo",
-                rating: 5,
-                relative_time_description: "3 weeks ago",
-                text: "My teeth alignment was done with Invisalign in just 6 months. Excellent results and great service!",
-              },
-            ];
-        
-            function getStars(rating) {
-              let stars = "";
-              for (let i = 0; i < 5; i++) {
-                stars +=
-                  i < rating
-                    ? '<i class="fas fa-star" style="color: #d4b46c; margin-right: 3px;"></i>'
-                    : '<i class="far fa-star" style="color: #d4b46c; margin-right: 3px;"></i>';
-              }
-              return stars;
-            }
-        
-            const reviewsContainer = document.getElementById("reviewsContainer");
-            const indicatorsContainer = document.querySelector(".carousel-indicators");
-        
-            reviews.forEach((review, index) => {
-              // Create carousel item
-              const carouselItem = document.createElement("div");
-              carouselItem.classList.add("carousel-item");
-              if (index === 0) carouselItem.classList.add("active");
-        
-              carouselItem.innerHTML = `
-                <div class="d-flex align-items-center justify-content-center p-4 bg-white rounded shadow" style="transition: transform 0.3s ease;">
-                  <div class="text-center flex-shrink-0">
-                    <img src="${review.profile_photo_url}" width="80" style="border-radius: 50%; border: 4px solid #1c345c;">
-                    <h5 class="mt-2 fw-bold text-primary">${review.author_name}</h5>
-                    <p class="text-muted small">Verified Customer</p>
-                  </div>
-                  <div class="flex-grow-1 ps-3">
-                    <h4 class="text-primary fw-bold">Fantastic Experience!</h4>
-                    <div class="mb-2">${getStars(review.rating)}</div>
-                    <p class="text-dark small">"${review.text}"</p>
-                    <small class="text-muted">${review.relative_time_description}</small>
-                  </div>
-                </div>
-              `;
-        
-              reviewsContainer.appendChild(carouselItem);
-        
-              // Create indicators
-              const indicator = document.createElement("li");
-              indicator.setAttribute("data-bs-target", "#carouselPeople");
-              indicator.setAttribute("data-bs-slide-to", index);
-              if (index === 0) indicator.classList.add("active");
-        
-              indicator.style.width = "12px";
-              indicator.style.height = "12px";
-              indicator.style.background = "#ccc";
-              indicator.style.borderRadius = "50%";
-              indicator.style.margin = "5px";
-              indicator.style.cursor = "pointer";
-              indicator.style.transition = "background 0.3s ease";
-        
-              indicator.addEventListener("mouseover", function () {
-                indicator.style.background = "#1c345c";
-              });
-              indicator.addEventListener("mouseout", function () {
-                indicator.style.background = index === 0 ? "#FFD700" : "#ccc";
-              });
-        
-              indicatorsContainer.appendChild(indicator);
-            });
-        
-            // Ensure Bootstrap carousel initializes correctly
-            new bootstrap.Carousel(document.getElementById("carouselPeople"), {
-              interval: 3000, // Adjust time interval for auto-slide
-              ride: "carousel",
-            });
-          });
-        </script>
-        
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-      </section>
+      </div>
     </div>
+    
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const reviews = [
+          {
+            author_name: "Atul Virmani",
+            profile_photo_url:
+              "https://lh3.googleusercontent.com/a-/ALV-UjWPLgH0yI1QiBbZw9cZTljK-YRRjnW4PIwYWxe81MTE9CI7P0rh=s128-c0x00000000-cc-rp-mo-ba2",
+            rating: 5,
+            relative_time_description: "a month ago",
+            text: "I am extremely happy with the care and treatment I received at The Arch & Artt Dentistry. The staff was welcoming, and the doctors were very professional. Highly recommended!",
+          },
+          {
+            author_name: "Chinmayee Prabhu",
+            profile_photo_url:
+              "https://lh3.googleusercontent.com/a/ACg8ocLnqvASMgJwyLNS7iuQPjRKwSoKBQEPnfVcmfyyQw-uY1FKRw=s128-c0x00000000-cc-rp-mo",
+            rating: 5,
+            relative_time_description: "a month ago",
+            text: "Gandhi Dental Clinic did a great job. The environment was very clean, and the staff was friendly. My treatment was done quickly and professionally.",
+          },
+          {
+            author_name: "Sarika Harpale",
+            profile_photo_url:
+              "https://lh3.googleusercontent.com/a/ACg8ocKaihlerfjl49CtlCAtg1jf6sRqU3YnrMsZUGjekNE5_UjL5A=s128-c0x00000000-cc-rp-mo",
+            rating: 5,
+            relative_time_description: "a week ago",
+            text: "Travelled 2 hours to this clinic, and it was worth it! Advanced technology, professional care, and a great overall experience.",
+          },
+          {
+            author_name: "Babita Goel",
+            profile_photo_url:
+              "https://lh3.googleusercontent.com/a/ACg8ocIQIfsNg7u4BzdGnDUY96L_rvJSnderKs6UTQwFal_g3r705Q=s128-c0x00000000-cc-rp-mo",
+            rating: 5,
+            relative_time_description: "3 weeks ago",
+            text: "My teeth alignment was done with Invisalign in just 6 months. Excellent results and great service!",
+          },
+        ];
+    
+        function getStars(rating) {
+          let stars = "";
+          for (let i = 0; i < 5; i++) {
+            stars +=
+              i < rating
+                ? '<i class="fas fa-star" style="color: #d4b46c; margin-right: 3px;"></i>'
+                : '<i class="far fa-star" style="color: #d4b46c; margin-right: 3px;"></i>';
+          }
+          return stars;
+        }
+    
+        const reviewsContainer = document.getElementById("reviewsContainer");
+        const indicatorsContainer = document.querySelector(".carousel-indicators");
+    
+        reviews.forEach((review, index) => {
+          // Create carousel item
+          const carouselItem = document.createElement("div");
+          carouselItem.classList.add("carousel-item");
+          if (index === 0) carouselItem.classList.add("active");
+    
+          carouselItem.innerHTML = `
+            <div class="d-flex align-items-center justify-content-center p-4 bg-white rounded shadow">
+              <div class="text-center flex-shrink-0">
+                <img src="${review.profile_photo_url}" width="80" style="border-radius: 50%; border: 4px solid #1c345c;">
+                <h5 class="mt-2 fw-bold text-primary">${review.author_name}</h5>
+                <p class="text-muted small">Verified Customer</p>
+              </div>
+              <div class="flex-grow-1 ps-3">
+                <h4 class="text-primary fw-bold">Fantastic Experience!</h4>
+                <div class="mb-2">${getStars(review.rating)}</div>
+                <p class="text-dark small">"${review.text}"</p>
+                <small class="text-muted">${review.relative_time_description}</small>
+              </div>
+            </div>
+          `;
+    
+          reviewsContainer.appendChild(carouselItem);
+    
+          // Create indicators
+          const indicator = document.createElement("li");
+          indicator.setAttribute("data-bs-target", "#carouselPeople");
+          indicator.setAttribute("data-bs-slide-to", index);
+          if (index === 0) indicator.classList.add("active");
+    
+          indicatorsContainer.appendChild(indicator);
+        });
+      });
+    </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  </section>
+</div>
+
 
     <!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 
