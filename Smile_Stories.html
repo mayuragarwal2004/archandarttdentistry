@@ -15,7 +15,6 @@
     <!-- Title -->
     <title>The Arch & Artt Dentistry</title>
 
-  
     <!-- Favicon -->
     <!-- <link rel="icon" href="img/LOGO_The Arch & Artt Dentistry.png"> -->
     <link
@@ -118,7 +117,6 @@
 			</div>
 		</ul> -->
 
-    
     <!-- Header Area -->
     <header class="header">
       <!-- Topbar -->
@@ -316,7 +314,11 @@
               </div>
               <div class="col-lg-2 col-12">
                 <div class="get-quote">
-                  <a style="margin-top: 14px" href="Smile_Stories.html" class="btn">
+                  <a
+                    style="margin-top: 14px"
+                    href="Smile_Stories.html"
+                    class="btn"
+                  >
                     Smile Stories >
                   </a>
                 </div>
@@ -330,221 +332,387 @@
     <!-- End Header Area -->
 
     <div class="breadcrumbs overlay">
-        <div class="container">
-            <div class="bread-inner">
-                <div class="row">
-                    <div class="col-12">
-                        <h2 >Smile Stories</h2>
-                        <ul class="bread-list">
-                            <li><a href="index.html">Home</a></li>
-                            <li><i class="icofont-simple-right"></i></li>
-                            <li class="active">Smile Stories</li>
-                        </ul>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="bread-inner">
+          <div class="row">
+            <div class="col-12">
+              <h2>Smile Stories</h2>
+              <ul class="bread-list">
+                <li><a href="index.html">Home</a></li>
+                <li><i class="icofont-simple-right"></i></li>
+                <li class="active">Smile Stories</li>
+              </ul>
             </div>
-        </div>
-    </div>
-    <!-- End Breadcrumbs -->
-    
-
-
-
-
-
-  
-      
-      <!-- Container for dynamically generated cards -->
-      <div id="cardsContainer" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 20px;"></div>
-      
-      <!-- Modal Popup -->
-      <div id="modal" style="display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.8);">
-        <span id="modalClose" style="position: absolute; top: 20px; right: 35px; color: #fff; font-size: 40px; cursor: pointer;">&times;</span>
-        <div id="modalContent" style="margin: 5% auto; width: 90%; max-width: 900px; text-align: center; color: #fff;">
-          <h2 id="modalTitle"></h2>
-          <p id="modalDescription"></p>
-          <div id="mediaContainer">
-            <!-- Media (images and videos) will be inserted here -->
           </div>
         </div>
       </div>
-      
-      <script>
-        // Sample JSON data
-        // 10 cases with images and videos
-        const smileStoryData = [
-          {
-            "id": 1,
-            "images": [
-              "/img/patient stories/case (1)/final.png",
-            ],
-            "videos": [
-            ],
-            "title": "Case 1",
-            "description": "A slideshow of my favourite photos."
-          },
-          {
-            "id": 2,
-            "images": [
-            "/img/patient stories/case (2)/final.png",
-            ],
-            "videos": [
-            ],
-            "title": "Case 2",
-            "description": "A slideshow of my favourite photos."
-          },
-          {
-            "id": 3,
-            "images": [
-            "/img/patient stories/case (3)/final.png",
-            ],
-            "videos": [
-            ],
-            "title": "Case 3",
-            "description": "Another inspiring story."
-          },
-          {
-            "id": 4,
-            "images": [
-            "/img/patient stories/case (4)/final.png",
-            ],
-            "videos": [
-            ],
-            "title": "Case 4",
-            "description": "A new inspiring story."
-          },
-          {
-            "id": 5,
-            "images": [
-            "/img/patient stories/case (5)/final.png",
-            ],
-            "videos": [
-            ],
-            "title": "Case 5",
-            "description": "A new inspiring story."
-          },
-          {
-            "id": 6,
-            "images": [
-            "/img/patient stories/case (6)/final.png",
-            ],
-            "videos": [
-            ],
-            "title": "Case 6",
-            "description": "A new inspiring story."
-          },
-          {
-            "id": 7,
-            "images": [
-            "/img/patient stories/case (7)/final.png",
-            ],
-            "videos": [
-            ],
-            "title": "Case 7",
-            "description": "A new inspiring story."
-          },
-          {
-            "id": 8,
-            "images": [
-            "/img/patient stories/case (8)/final.png",
-            ],
-            "videos": [
-            ],
-            "title": "Case 8",
-            "description": "A new inspiring story."
-          },
-          {
-            "id": 9,
-            "images": [
-            "/img/patient stories/case (9)/final.png",
-            ],
-            "videos": [
-            ],
-            "title": "Case 9",
-            "description": "A new inspiring story."
-          },
-          {
-            "id": 10,
-            "images": [
-            "/img/patient stories/case (10)/final.png",
-            ],
-            "videos": [
-            ],
-            "title": "Case 10",
-            "description": "A new inspiring story."
-          }
-          
-        ];
-    
-        // Build cards dynamically from JSON data
-        const cardsContainer = document.getElementById('cardsContainer');
-        smileStoryData.forEach(item => {
-          const card = document.createElement('div');
-          card.style.width = "300px";
-          card.style.background = "linear-gradient(135deg, #fff, #e7f0fa)";
-          card.style.padding = "20px";
-          card.style.borderRadius = "15px";
-          card.style.border = "1px solid #dceefb";
-          card.style.boxShadow = "0 4px 8px rgba(0,0,0,0.1)";
-          card.style.textAlign = "center";
-    
-          // Create image element (using first image as main image)
-          const img = document.createElement('img');
-          img.src = item.images[0];
-          img.alt = item.title;
-          img.style.width = "100%";
-          img.style.borderRadius = "10px";
-          img.style.cursor = "pointer";
-          img.onclick = () => openModal(item);
-    
-          // Title and description
-          const title = document.createElement('h3');
-          title.textContent = item.title;
-          title.style.margin = "15px 0 10px";
-          title.style.color = "#2d2d2d";
-    
-          const desc = document.createElement('p');
-          desc.textContent = item.description;
-          desc.style.color = "#555";
-          desc.style.fontSize = "14px";
-    
-          // Append children to card and card to container
-          card.appendChild(img);
-          card.appendChild(title);
-          card.appendChild(desc);
-          cardsContainer.appendChild(card);
-        });
-    
-        // Modal elements
-        const modal = document.getElementById('modal');
-        const modalContent = document.getElementById('modalContent');
-        const modalTitle = document.getElementById('modalTitle');
-        const modalDescription = document.getElementById('modalDescription');
-        const mediaContainer = document.getElementById('mediaContainer');
-        const modalClose = document.getElementById('modalClose');
-    
-        modalClose.onclick = () => {
-          modal.style.display = 'none';
-          // Clear media content when modal is closed
+    </div>
+    <!-- End Breadcrumbs -->
+
+    <!-- Container for image cards -->
+    <h2 style="text-align: center; margin-top: 30px">Image Cases</h2>
+    <div
+      id="imageCardsContainer"
+      style="
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px;
+      "
+    ></div>
+
+    <!-- Container for portrait video cards -->
+    <h2 style="text-align: center; margin-top: 30px">Video Cases</h2>
+    <div
+      id="portraitVideoCardsContainer"
+      style="
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px;
+      "
+    ></div>
+
+    <!-- Container for landscape video cards -->
+    <!-- <h2 style="text-align: center; margin-top: 30px">Landscape Videos</h2> -->
+    <div
+      id="landscapeVideoCardsContainer"
+      style="
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px;
+      "
+    ></div>
+
+    <!-- Modal Popup -->
+    <div
+      id="modal"
+      style="
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.8);
+      "
+    >
+      <span
+        id="modalClose"
+        style="
+          position: absolute;
+          top: 20px;
+          right: 35px;
+          color: #fff;
+          font-size: 40px;
+          cursor: pointer;
+        "
+        >&times;</span
+      >
+      <div
+        id="modalContent"
+        style="
+          margin: 5% auto;
+          width: 90%;
+          max-width: 900px;
+          text-align: center;
+          color: #fff;
+        "
+      >
+        <h2 id="modalTitle"></h2>
+        <p id="modalDescription"></p>
+        <div id="mediaContainer">
+          <!-- Media (images and videos) will be inserted here -->
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Sample JSON data for image cases
+      const imageCasesData = [
+        {
+          id: 1,
+          images: ["/img/patient stories/case (1)/final.png"],
+          videos: [],
+          title: "Case 1",
+          description: "A slideshow of my favourite photos.",
+        },
+        {
+          id: 2,
+          images: ["/img/patient stories/case (2)/final.png"],
+          videos: [],
+          title: "Case 2",
+          description: "A slideshow of my favourite photos.",
+        },
+        {
+          id: 3,
+          images: ["/img/patient stories/case (3)/final.png"],
+          videos: [],
+          title: "Case 3",
+          description: "Another inspiring story.",
+        },
+        {
+          id: 4,
+          images: ["/img/patient stories/case (4)/final.png"],
+          videos: [],
+          title: "Case 4",
+          description: "A new inspiring story.",
+        },
+        {
+          id: 5,
+          images: ["/img/patient stories/case (5)/final.png"],
+          videos: [],
+          title: "Case 5",
+          description: "A new inspiring story.",
+        },
+        {
+          id: 6,
+          images: ["/img/patient stories/case (6)/final.png"],
+          videos: [],
+          title: "Case 6",
+          description: "A new inspiring story.",
+        },
+        {
+          id: 7,
+          images: ["/img/patient stories/case (7)/final.png"],
+          videos: [],
+          title: "Case 7",
+          description: "A new inspiring story.",
+        },
+        {
+          id: 8,
+          images: ["/img/patient stories/case (8)/final.png"],
+          videos: [],
+          title: "Case 8",
+          description: "A new inspiring story.",
+        },
+        {
+          id: 9,
+          images: ["/img/patient stories/case (9)/final.png"],
+          videos: [],
+          title: "Case 9",
+          description: "A new inspiring story.",
+        },
+        {
+          id: 10,
+          images: ["/img/patient stories/case (10)/final.png"],
+          videos: [],
+          title: "Case 10",
+          description: "A new inspiring story.",
+        },
+      ];
+
+      // 10 Sample JSON data for video cases
+      const videoCasesData = [
+        {
+          id: 101,
+          videos: ["/img/patient stories/video cases/case (1).mp4"],
+          title: "Video Case 1",
+          description: "Patient testimonial and treatment process.",
+          orientation: "portrait",
+        },
+        {
+          id: 102,
+          videos: ["/img/patient stories/video cases/case (2).mp4"],
+          title: "Video Case 2",
+          description: "Full treatment journey video.",
+          orientation: "portrait",
+        },
+        {
+          id: 103,
+          videos: ["/img/patient stories/video cases/case (3).mp4"],
+          title: "Video Case 3",
+          description: "Another patient testimonial.",
+          orientation: "portrait",
+        },
+        {
+          id: 104,
+          videos: ["/img/patient stories/video cases/case (4).mp4"],
+          title: "Video Case 4",
+          description: "A detailed overview of treatment.",
+          orientation: "landscape",
+        },
+
+        {
+          id: 105,
+          videos: ["/img/patient stories/video cases/case (5).mp4"],
+          title: "Video Case 5",
+          description: "An insightful patient journey.",
+          orientation: "portrait",
+        },
+        {
+          id: 106,
+          videos: ["/img/patient stories/video cases/case (6).mp4"],
+          title: "Video Case 6",
+          description: "A comprehensive look at treatment options.",
+          orientation: "portrait",
+        },
+        {
+          id: 107,
+          videos: ["/img/patient stories/video cases/case (7).mp4"],
+          title: "Video Case 7",
+          description: "A detailed overview of treatment.",
+          orientation: "portrait",
+        },
+        {
+          id: 108,
+          videos: ["/img/patient stories/video cases/case (8).mp4"],
+          title: "Video Case 8",
+          description: "An insightful patient journey.",
+          orientation: "portrait",
+        },
+        {
+          id: 109,
+          videos: ["/img/patient stories/video cases/case (9).mp4"],
+          title: "Video Case 9",
+          description: "A new patient testimonial.",
+          orientation: "landscape",
+        },
+        {
+          id: 110,
+          videos: ["/img/patient stories/video cases/case (10).mp4"],
+          title: "Video Case 10",
+          description: "A new patient testimonial.",
+          orientation: "portrait",
+        },
+      ];
+
+      // Function to create cards
+      function createCard(item, isVideo = false) {
+        const card = document.createElement("div");
+        card.style.width =
+          isVideo && item.orientation === "portrait" ? "200px" : "300px";
+        card.style.background = "linear-gradient(135deg, #fff, #e7f0fa)";
+        card.style.padding = "20px";
+        card.style.borderRadius = "15px";
+        card.style.border = "1px solid #dceefb";
+        card.style.boxShadow = "0 4px 8px rgba(0,0,0,0.1)";
+        card.style.textAlign = "center";
+
+        // Create media element (image or video)
+        let mediaElement;
+        if (isVideo) {
+          mediaElement = document.createElement("div");
+          mediaElement.style.position = "relative";
+
+          // Small video player
+          const videoPlayer = document.createElement("video");
+          videoPlayer.src = item.videos[0];
+          videoPlayer.controls = true;
+          videoPlayer.muted = true;
+          videoPlayer.autoplay = false;
+          videoPlayer.loop = true;
+          videoPlayer.style.width = "100%";
+          videoPlayer.style.borderRadius = "10px";
+          videoPlayer.style.cursor = "pointer";
+          videoPlayer.style.aspectRatio =
+            item.orientation === "portrait" ? "9/16" : "16/9";
+          videoPlayer.onclick = (e) => {
+            e.stopPropagation();
+            openModal(item);
+          };
+
+          // Play/pause when hovering
+          card.onmouseenter = () => videoPlayer.play();
+          card.onmouseleave = () => videoPlayer.pause();
+
+          mediaElement.appendChild(videoPlayer);
+        } else {
+          mediaElement = document.createElement("img");
+          mediaElement.src = item.images[0];
+          mediaElement.style.width = "100%";
+          mediaElement.style.borderRadius = "10px";
+          mediaElement.style.cursor = "pointer";
+        }
+
+        mediaElement.alt = item.title;
+        if (!isVideo) {
+          mediaElement.onclick = () => openModal(item);
+        }
+
+        // Title and description
+        const title = document.createElement("h3");
+        title.textContent = item.title;
+        title.style.margin = "15px 0 10px";
+        title.style.color = "#2d2d2d";
+
+        const desc = document.createElement("p");
+        desc.textContent = item.description;
+        desc.style.color = "#555";
+        desc.style.fontSize = "14px";
+
+        // Append children to card
+        card.appendChild(mediaElement);
+        card.appendChild(title);
+        card.appendChild(desc);
+
+        return card;
+      }
+
+      // Build image cards
+      const imageCardsContainer = document.getElementById(
+        "imageCardsContainer"
+      );
+      imageCasesData.forEach((item) => {
+        imageCardsContainer.appendChild(createCard(item));
+      });
+
+      // Build video cards - separate portrait and landscape
+      const portraitVideoCardsContainer = document.getElementById(
+        "portraitVideoCardsContainer"
+      );
+      const landscapeVideoCardsContainer = document.getElementById(
+        "landscapeVideoCardsContainer"
+      );
+
+      videoCasesData.forEach((item) => {
+        if (item.orientation === "portrait") {
+          portraitVideoCardsContainer.appendChild(createCard(item, true));
+        } else {
+          landscapeVideoCardsContainer.appendChild(createCard(item, true));
+        }
+      });
+
+      // Modal elements
+      const modal = document.getElementById("modal");
+      const modalContent = document.getElementById("modalContent");
+      const modalTitle = document.getElementById("modalTitle");
+      const modalDescription = document.getElementById("modalDescription");
+      const mediaContainer = document.getElementById("mediaContainer");
+      const modalClose = document.getElementById("modalClose");
+
+      modalClose.onclick = () => {
+        modal.style.display = "none";
+        const videos = mediaContainer.querySelectorAll("video");
+        videos.forEach((video) => video.pause());
+        mediaContainer.innerHTML = "";
+      };
+
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+          const videos = mediaContainer.querySelectorAll("video");
+          videos.forEach((video) => video.pause());
           mediaContainer.innerHTML = "";
-        };
-    
-        window.onclick = function(event) {
-          if (event.target == modal) {
-            modal.style.display = 'none';
-            mediaContainer.innerHTML = "";
-          }
-        };
-    
-        // Function to open modal and populate with data
-        function openModal(item) {
-          modalTitle.textContent = item.title;
-          modalDescription.textContent = item.description;
-          mediaContainer.innerHTML = ""; // Clear previous content
-    
-          // Add images to modal
-          item.images.forEach(imageUrl => {
-            const imageElem = document.createElement('img');
+        }
+      };
+
+      // Function to open modal and populate with data
+      function openModal(item) {
+        modalTitle.textContent = item.title;
+        modalDescription.textContent = item.description;
+        mediaContainer.innerHTML = "";
+
+        // Add images to modal (if any)
+        if (item.images) {
+          item.images.forEach((imageUrl) => {
+            const imageElem = document.createElement("img");
             imageElem.src = imageUrl;
             imageElem.alt = item.title;
             imageElem.style.width = "100%";
@@ -552,26 +720,26 @@
             imageElem.style.borderRadius = "10px";
             mediaContainer.appendChild(imageElem);
           });
-          
-          // Add videos to modal (if any)
-          item.videos.forEach(videoUrl => {
-            const videoElem = document.createElement('video');
+        }
+
+        // Add videos to modal (if any)
+        if (item.videos) {
+          item.videos.forEach((videoUrl) => {
+            const videoElem = document.createElement("video");
             videoElem.src = videoUrl;
             videoElem.controls = true;
+            videoElem.autoplay = true;
             videoElem.style.width = "100%";
+            videoElem.style.maxHeight = "80vh";
             videoElem.style.marginBottom = "15px";
             videoElem.style.borderRadius = "10px";
             mediaContainer.appendChild(videoElem);
           });
-    
-          modal.style.display = "block";
         }
-      </script>
-      
-    </body>
-    </html>
-    
 
+        modal.style.display = "block";
+      }
+    </script>
 
     <!-- Footer Area -->
     <footer id="footer" class="footer">
@@ -737,7 +905,8 @@
     <!--/ End Footer Area -->
 
     <script>
-        document.getElementById("year-of-experience").innerHTML = new Date().getFullYear() - 2000;
+      document.getElementById("year-of-experience").innerHTML =
+        new Date().getFullYear() - 2000;
     </script>
     <!-- jquery Min JS -->
     <script src="js/jquery.min.js"></script>
@@ -779,6 +948,5 @@
     <script src="js/bootstrap.min.js"></script>
     <!-- Main JS -->
     <script src="js/main.js"></script>
-
-</body>
+  </body>
 </html>
