@@ -972,8 +972,8 @@
                 <strong
                   >Bachelor of Dental Surgery graduate from Pravara Dental
                   College (Pune University, 2000)</strong
-                >, and she has built a thriving practice in Pune through expertise,
-                passion, and perseverance.
+                >, and she has built a thriving practice in Pune through
+                expertise, passion, and perseverance.
               </p>
               <p>
                 A <strong>self-made, patient-focused professional</strong>, Dr.
@@ -2090,6 +2090,11 @@
         // servicesDropdown.addEventListener("mouseleave", () => {
         //   dropdownMenu.style.display = "none";
         // });
+      });
+      video.addEventListener("canplaythrough", () => {
+        document
+          .querySelector(".preloader")
+          .classList.add("preloader-deactivate");
       });
     </script>
   </body>
