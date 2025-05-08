@@ -1610,7 +1610,7 @@
                 id="carouselPeople"
                 class="carousel slide"
                 data-bs-ride="false"
-                style="max-width: 900px"
+                style="max-width: 900px; width: 90%; overflow: hidden"
               >
                 <div class="carousel-inner" id="reviewsContainer"></div>
 
@@ -1806,7 +1806,7 @@
               if (index === 0) carouselItem.classList.add("active");
 
               carouselItem.innerHTML = `
-            <div class="d-flex align-items-center justify-content-center p-4 bg-white rounded shadow">
+            <div class="d-flex flex-column flex-md-row align-items-center justify-content-center p-4 bg-white rounded shadow">
               <div class="text-center flex-shrink-0">
                 <img src="${
                   review.profile_photo_url
