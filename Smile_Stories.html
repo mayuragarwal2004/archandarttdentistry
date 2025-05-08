@@ -352,7 +352,7 @@
     <!-- End Breadcrumbs -->
 
     <!-- Container for image cards -->
-    <h2 style="text-align: center; margin-top: 30px">Image Cases</h2>
+    <h2 style="text-align: center; margin-top: 30px">Smile Transformations</h2>
     <div
       id="imageCardsContainer"
       style="
@@ -365,7 +365,7 @@
     ></div>
 
     <!-- Container for portrait video cards -->
-    <h2 style="text-align: center; margin-top: 30px">Video Cases</h2>
+    <h2 style="text-align: center; margin-top: 30px">Patient Testimonials</h2>
     <div
       id="portraitVideoCardsContainer"
       style="
@@ -529,55 +529,54 @@
         {
           id: 101,
           videos: ["/img/patient stories/video cases/case (1).mp4"],
-          comments: "Denture treatment",
-          title: "Denture Success Story",
-          description: "Patient experience with full denture treatment.",
-          orientation: "portrait",
-        },
-        {
-          id: 102,
-          videos: ["/img/patient stories/video cases/case (2).mp4"],
-          title: "Post-Treatment Smile Reveal",
-          description: "Showcasing the patient's smile after treatment.",
+          comments: "Prosthetic dental treatment",
+          title: "Restorative Treatment Success Story",
+          description: "Patient experience with complete dental restoration.",
           orientation: "portrait",
         },
         {
           id: 103,
           videos: ["/img/patient stories/video cases/case (3).mp4"],
-          comments: "Denture treatment",
-          title: "Denture Testimonial",
-          description: "Patient shares their denture journey and results.",
+          comments: "Prosthetic dental treatment",
+          title: "Restorative Treatment Testimonial",
+          description:
+            "Patient shares their journey and results with dental restoration.",
           orientation: "portrait",
         },
         {
           id: 104,
           videos: ["/img/patient stories/video cases/case (4).mp4"],
           title: "Treatment Outcome Showcase",
-          description: "Visual journey of a patient's dental improvement.",
+          comments: "braces treatment",
+          description:
+            "Visual journey of a patient's dental improvement with braces.",
           orientation: "portrait",
         },
         {
           id: 105,
           videos: ["/img/patient stories/video cases/case (5).mp4"],
-          comments: "Denture treatment",
-          title: "Comprehensive Denture Journey",
-          description: "From diagnosis to smile with denture restoration.",
+          comments: "Prosthetic dental treatment",
+          title: "Comprehensive Restoration Journey",
+          description:
+            "From diagnosis to smile with a complete dental solution.",
           orientation: "portrait",
         },
         {
           id: 106,
           videos: ["/img/patient stories/video cases/case (6).mp4"],
-          comments: "Denture treatment",
-          title: "Full Denture Overview",
-          description: "Details on denture treatment and patient outcome.",
+          comments: "Prosthetic dental treatment",
+          title: "Full-Mouth Rehabilitation Overview",
+          description:
+            "Details on complete oral rehabilitation and patient outcome.",
           orientation: "portrait",
         },
         {
           id: 107,
           videos: ["/img/patient stories/video cases/case (7).mp4"],
-          comments: "Denture treatment",
-          title: "Patient Denture Experience",
-          description: "Insight into the patient experience with dentures.",
+          comments: "Prosthetic dental treatment",
+          title: "Patient Restoration Experience",
+          description:
+            "Insight into the patient’s full-mouth treatment journey.",
           orientation: "portrait",
         },
         {
@@ -591,16 +590,18 @@
           id: 109,
           videos: ["/img/patient stories/video cases/case (9).mp4"],
           comments: "pedo dontics - children treatment - tooth pain",
-          title: "Child Dental Pain Relief",
-          description: "Pediatric treatment addressing severe tooth pain.",
+          title: "Implant tooth ready for fixation",
+          description:
+            "A close-up view of a dental implant prepared for placement in the patient's mouth.",
           orientation: "landscape",
         },
         {
           id: 110,
           videos: ["/img/patient stories/video cases/case (10).mp4"],
-          comments: "Denture treatment",
-          title: "Denture Treatment Insights",
-          description: "Overview of full denture therapy and results.",
+          comments: "full mouth treatment testimonial for 83 year old",
+          title: "Full Mouth Rehabilitation for Senior Patient",
+          description:
+            "An 83-year-old patient shares their experience with full mouth dental treatment.",
           orientation: "landscape",
         },
       ];
@@ -616,6 +617,9 @@
         card.style.border = "1px solid #dceefb";
         card.style.boxShadow = "0 4px 8px rgba(0,0,0,0.1)";
         card.style.textAlign = "center";
+        card.style.hyphens= "auto";
+        card.style.overflowWrap= "break-word";
+
 
         // Create media element (image or video)
         let mediaElement;
