@@ -17,7 +17,7 @@
 
     <!-- Favicon -->
     <link rel="icon" href="img/favicon.ico" />
-    
+
     <!-- <link rel="icon" href="img/LOGO_The Arch & Artt Dentistry.png"> -->
     <link
       rel="stylesheet"
@@ -436,152 +436,172 @@
     </div>
 
     <script>
-      // Sample JSON data for image cases
       const imageCasesData = [
         {
           id: 1,
           images: ["/img/patient stories/case (1)/final.png"],
           videos: [],
-          title: "Case 1",
-          description: "A slideshow of my favourite photos.",
+          comments: "Crossbite correction - pedo dontics",
+          title: "Pediatric Crossbite Correction",
+          description:
+            "Orthodontic treatment for crossbite in a child patient.",
         },
         {
           id: 2,
           images: ["/img/patient stories/case (2)/final.png"],
           videos: [],
-          title: "Case 2",
-          description: "A slideshow of my favourite photos.",
+          comments: "Deep bite correction",
+          title: "Deep Bite Treatment",
+          description: "Comprehensive correction of a deep bite issue.",
         },
         {
           id: 3,
           images: ["/img/patient stories/case (3)/final.png"],
           videos: [],
-          title: "Case 3",
-          description: "Another inspiring story.",
+          comments: "root fill post - fixed teeth replacement",
+          title: "Root Canal & Fixed Prosthesis",
+          description:
+            "Root canal followed by post and fixed tooth replacement.",
         },
         {
           id: 4,
           images: ["/img/patient stories/case (4)/final.png"],
           videos: [],
-          title: "Case 4",
-          description: "A new inspiring story.",
+          comments: "Braces treatment - pedo dontics - children",
+          title: "Braces for Child Patient",
+          description:
+            "Early orthodontic intervention using braces for children.",
         },
         {
           id: 5,
           images: ["/img/patient stories/case (5)/final.png"],
           videos: [],
-          title: "Case 5",
-          description: "A new inspiring story.",
+          comments: "denture",
+          title: "Complete Denture Rehabilitation",
+          description: "Removable denture provided for full tooth loss.",
         },
         {
           id: 6,
           images: ["/img/patient stories/case (6)/final.png"],
           videos: [],
-          title: "Case 6",
-          description: "A new inspiring story.",
+          comments: "braces treatment",
+          title: "Orthodontic Braces",
+          description: "Fixed braces used to align and straighten teeth.",
         },
         {
           id: 7,
           images: ["/img/patient stories/case (7)/final.png"],
           videos: [],
-          title: "Case 7",
-          description: "A new inspiring story.",
+          comments: "zironica",
+          title: "Zirconia Crown Restoration",
+          description: "Aesthetic tooth restoration using zirconia crowns.",
         },
         {
           id: 8,
           images: ["/img/patient stories/case (8)/final.png"],
           videos: [],
-          title: "Case 8",
-          description: "A new inspiring story.",
+          comments: "cosmetic smile makeover",
+          title: "Smile Makeover",
+          description:
+            "Cosmetic dental procedures for a complete smile transformation.",
         },
         {
           id: 9,
           images: ["/img/patient stories/case (9)/final.png"],
           videos: [],
-          title: "Case 9",
-          description: "A new inspiring story.",
+          comments: "cosmetic fillings",
+          title: "Cosmetic Tooth Fillings",
+          description: "Tooth-colored restorations for aesthetic enhancement.",
         },
         {
           id: 10,
           images: ["/img/patient stories/case (10)/final.png"],
           videos: [],
-          title: "Case 10",
-          description: "A new inspiring story.",
+          comments: "braces treatment",
+          title: "Braces Alignment Case",
+          description: "Orthodontic alignment using fixed braces.",
         },
       ];
 
-      // 10 Sample JSON data for video cases
+      // 🎥 Video Cases:
+
       const videoCasesData = [
         {
           id: 101,
           videos: ["/img/patient stories/video cases/case (1).mp4"],
-          title: "Video Case 1",
-          description: "Patient testimonial and treatment process.",
+          comments: "Denture treatment",
+          title: "Denture Success Story",
+          description: "Patient experience with full denture treatment.",
           orientation: "portrait",
         },
         {
           id: 102,
           videos: ["/img/patient stories/video cases/case (2).mp4"],
-          title: "Video Case 2",
-          description: "Full treatment journey video.",
+          title: "Post-Treatment Smile Reveal",
+          description: "Showcasing the patient's smile after treatment.",
           orientation: "portrait",
         },
         {
           id: 103,
           videos: ["/img/patient stories/video cases/case (3).mp4"],
-          title: "Video Case 3",
-          description: "Another patient testimonial.",
+          comments: "Denture treatment",
+          title: "Denture Testimonial",
+          description: "Patient shares their denture journey and results.",
           orientation: "portrait",
         },
         {
           id: 104,
           videos: ["/img/patient stories/video cases/case (4).mp4"],
-          title: "Video Case 4",
-          description: "A detailed overview of treatment.",
-          orientation: "landscape",
+          title: "Treatment Outcome Showcase",
+          description: "Visual journey of a patient's dental improvement.",
+          orientation: "portrait",
         },
-
         {
           id: 105,
           videos: ["/img/patient stories/video cases/case (5).mp4"],
-          title: "Video Case 5",
-          description: "An insightful patient journey.",
+          comments: "Denture treatment",
+          title: "Comprehensive Denture Journey",
+          description: "From diagnosis to smile with denture restoration.",
           orientation: "portrait",
         },
         {
           id: 106,
           videos: ["/img/patient stories/video cases/case (6).mp4"],
-          title: "Video Case 6",
-          description: "A comprehensive look at treatment options.",
+          comments: "Denture treatment",
+          title: "Full Denture Overview",
+          description: "Details on denture treatment and patient outcome.",
           orientation: "portrait",
         },
         {
           id: 107,
           videos: ["/img/patient stories/video cases/case (7).mp4"],
-          title: "Video Case 7",
-          description: "A detailed overview of treatment.",
+          comments: "Denture treatment",
+          title: "Patient Denture Experience",
+          description: "Insight into the patient experience with dentures.",
           orientation: "portrait",
         },
         {
           id: 108,
           videos: ["/img/patient stories/video cases/case (8).mp4"],
-          title: "Video Case 8",
-          description: "An insightful patient journey.",
+          title: "Happy Patient Story",
+          description: "Gratifying results shared by a smiling patient.",
           orientation: "portrait",
         },
         {
           id: 109,
           videos: ["/img/patient stories/video cases/case (9).mp4"],
-          title: "Video Case 9",
-          description: "A new patient testimonial.",
+          comments: "pedo dontics - children treatment - tooth pain",
+          title: "Child Dental Pain Relief",
+          description: "Pediatric treatment addressing severe tooth pain.",
           orientation: "landscape",
         },
         {
           id: 110,
           videos: ["/img/patient stories/video cases/case (10).mp4"],
-          title: "Video Case 10",
-          description: "A new patient testimonial.",
-          orientation: "portrait",
+          comments: "Denture treatment",
+          title: "Denture Treatment Insights",
+          description: "Overview of full denture therapy and results.",
+          orientation: "landscape",
         },
       ];
 
@@ -906,10 +926,6 @@
     </footer>
     <!--/ End Footer Area -->
 
-    <script>
-      document.getElementById("year-of-experience").innerHTML =
-        new Date().getFullYear() - 2000;
-    </script>
     <!-- jquery Min JS -->
     <script src="js/jquery.min.js"></script>
     <!-- jquery Migrate JS -->
