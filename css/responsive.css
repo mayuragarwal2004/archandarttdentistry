@@ -380,6 +380,17 @@ Version:	1.1
 .hero-section{
 	height: 380px;
 }
+.slicknav_nav, .slicknav_nav ul{
+	overflow: visible;
+}
+.second-dropdown>li{
+	border-bottom: 1px solid #606060; /* light gray line */
+	padding: 8px 0; 
+	line-height: 1;
+}
+.second-dropdown>li:last-child {
+  border-bottom: none;
+}
 .header.sticky{
 	
 }
