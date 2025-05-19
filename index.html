@@ -335,7 +335,7 @@
 
     <!-- Slider Area -->
     <section class="slider slider-section hero-section">
-      <div class="hero-slider" >
+      <div class="hero-slider">
         <!-- Start Single Slider -->
         <div class="single-slider" style="position: relative; overflow: hidden">
           <!-- Overlay -->
@@ -380,9 +380,9 @@
         <div class="single-slider" style="position: relative; overflow: hidden">
           <!-- Background Video -->
           <!-- <video autoplay loop muted playsinline style="position: absolute; top: 50%; left: 50%; min-width: 100%; min-height: 100%; width: auto; height: auto; z-index: 1; transform: translate(-50%, -50%);">
-            <source src="/img/CLINIC VIDEO.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video> -->
+        <source src="/img/CLINIC VIDEO.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video> -->
           <!-- Overlay -->
           <div
             style="
@@ -2160,6 +2160,34 @@
         document
           .querySelector(".preloader")
           .classList.add("preloader-deactivate");
+      });
+    </script>
+    <script>
+      window.addEventListener("load", function () {
+        const section = document.querySelector(".hero-section");
+
+        const video = document.createElement("video");
+        video.setAttribute("autoplay", "");
+        video.setAttribute("loop", "");
+        video.setAttribute("muted", true);
+        video.setAttribute("playsinline", "");
+        video.muted = true;
+        video.style.position = "absolute";
+        video.style.top = "50%";
+        video.style.left = "50%";
+        video.style.minWidth = "100%";
+        video.style.minHeight = "100%";
+        video.style.width = "auto";
+        video.style.height = "auto";
+        video.style.zIndex = "1";
+        video.style.transform = "translate(-50%, -50%)";
+
+        const source = document.createElement("source");
+        source.src = "img/CLINIC VIDEO.mp4";
+        source.type = "video/mp4";
+
+        video.appendChild(source);
+        section.appendChild(video);
       });
     </script>
   </body>
